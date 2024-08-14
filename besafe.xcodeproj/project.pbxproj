@@ -1,0 +1,1156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
+		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
+		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
+		FB6264102C6C22A000CC2597 /* besafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62640F2C6C22A000CC2597 /* besafeTests.swift */; };
+		FB62641A2C6C22A000CC2597 /* besafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264192C6C22A000CC2597 /* besafeUITests.swift */; };
+		FB62641C2C6C22A000CC2597 /* besafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62641B2C6C22A000CC2597 /* besafeUITestsLaunchTests.swift */; };
+		FB6264222C6C22A000CC2597 /* besafe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FB6264212C6C22A000CC2597 /* besafe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264262C6C22A000CC2597 /* besafeApp.swift */; };
+		FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264282C6C22A000CC2597 /* ContentView.swift */; };
+		FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB62642A2C6C22A000CC2597 /* Assets.xcassets */; };
+		FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB62642D2C6C22A000CC2597 /* Preview Assets.xcassets */; };
+		FB6264382C6C22A100CC2597 /* besafe_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264372C6C22A100CC2597 /* besafe_Watch_AppTests.swift */; };
+		FB6264422C6C22A100CC2597 /* besafe_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264412C6C22A100CC2597 /* besafe_Watch_AppUITests.swift */; };
+		FB6264442C6C22A100CC2597 /* besafe_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264432C6C22A100CC2597 /* besafe_Watch_AppUITestsLaunchTests.swift */; };
+		FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62645E2C6C34BE00CC2597 /* Router.swift */; };
+		FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264602C6C35F200CC2597 /* HomeView.swift */; };
+		FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264622C6C360100CC2597 /* DependencyInjection.swift */; };
+		FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264662C6C39E700CC2597 /* Page2.storyboard */; };
+		FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264672C6C39E700CC2597 /* Page2ViewController.swift */; };
+		FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264692C6C39E700CC2597 /* Page1.storyboard */; };
+		FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */; };
+		FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */; };
+		FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */; };
+		FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264792C6C917C00CC2597 /* LocalDataSource.swift */; };
+		FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
+		FB6264802C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
+		FB6264812C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
+		FB6264832C6C976B00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264822C6C976B00CC2597 /* Router.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB62640C2C6C22A000CC2597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB6263FA2C6C229E00CC2597;
+			remoteInfo = besafe;
+		};
+		FB6264162C6C22A000CC2597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB6263FA2C6C229E00CC2597;
+			remoteInfo = besafe;
+		};
+		FB6264232C6C22A000CC2597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB6264202C6C22A000CC2597;
+			remoteInfo = "besafe Watch App";
+		};
+		FB6264342C6C22A100CC2597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB6264202C6C22A000CC2597;
+			remoteInfo = "besafe Watch App";
+		};
+		FB62643E2C6C22A100CC2597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB6264202C6C22A000CC2597;
+			remoteInfo = "besafe Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB62644A2C6C22A100CC2597 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FB6264222C6C22A000CC2597 /* besafe Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
+		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB62640B2C6C22A000CC2597 /* besafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = besafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB62640F2C6C22A000CC2597 /* besafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeTests.swift; sourceTree = "<group>"; };
+		FB6264152C6C22A000CC2597 /* besafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = besafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6264192C6C22A000CC2597 /* besafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeUITests.swift; sourceTree = "<group>"; };
+		FB62641B2C6C22A000CC2597 /* besafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB6264212C6C22A000CC2597 /* besafe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "besafe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6264262C6C22A000CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
+		FB6264282C6C22A000CC2597 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB62642A2C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB62642D2C6C22A000CC2597 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB6264332C6C22A100CC2597 /* besafe Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "besafe Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6264372C6C22A100CC2597 /* besafe_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafe_Watch_AppTests.swift; sourceTree = "<group>"; };
+		FB62643D2C6C22A100CC2597 /* besafe Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "besafe Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6264412C6C22A100CC2597 /* besafe_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafe_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		FB6264432C6C22A100CC2597 /* besafe_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafe_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB62645E2C6C34BE00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FB6264602C6C35F200CC2597 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB6264622C6C360100CC2597 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		FB6264662C6C39E700CC2597 /* Page2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
+		FB6264672C6C39E700CC2597 /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
+		FB6264692C6C39E700CC2597 /* Page1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page1.storyboard; sourceTree = "<group>"; };
+		FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
+		FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Viewmodel.swift; sourceTree = "<group>"; };
+		FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContextManager.swift; sourceTree = "<group>"; };
+		FB6264792C6C917C00CC2597 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		FB62647F2C6C968800CC2597 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		FB6264822C6C976B00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB6263F82C6C229E00CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264082C6C22A000CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264122C6C22A000CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62641E2C6C22A000CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264302C6C22A100CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62643A2C6C22A100CC2597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB6263F22C6C229E00CC2597 = {
+			isa = PBXGroup;
+			children = (
+				FB62647E2C6C966800CC2597 /* shared */,
+				FB6263FD2C6C229E00CC2597 /* besafe */,
+				FB62640E2C6C22A000CC2597 /* besafeTests */,
+				FB6264182C6C22A000CC2597 /* besafeUITests */,
+				FB6264252C6C22A000CC2597 /* besafe Watch App */,
+				FB6264362C6C22A100CC2597 /* besafe Watch AppTests */,
+				FB6264402C6C22A100CC2597 /* besafe Watch AppUITests */,
+				FB6263FC2C6C229E00CC2597 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB6263FC2C6C229E00CC2597 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB6263FB2C6C229E00CC2597 /* besafe.app */,
+				FB62640B2C6C22A000CC2597 /* besafeTests.xctest */,
+				FB6264152C6C22A000CC2597 /* besafeUITests.xctest */,
+				FB6264212C6C22A000CC2597 /* besafe Watch App.app */,
+				FB6264332C6C22A100CC2597 /* besafe Watch AppTests.xctest */,
+				FB62643D2C6C22A100CC2597 /* besafe Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB6263FD2C6C229E00CC2597 /* besafe */ = {
+			isa = PBXGroup;
+			children = (
+				FB62647D2C6C93FC00CC2597 /* Model */,
+				FB62645D2C6C2EF800CC2597 /* App */,
+				FB62645B2C6C22B500CC2597 /* View */,
+				FB62645A2C6C22AD00CC2597 /* Data */,
+				FB6264022C6C22A000CC2597 /* Assets.xcassets */,
+				FB6264042C6C22A000CC2597 /* Preview Content */,
+			);
+			path = besafe;
+			sourceTree = "<group>";
+		};
+		FB6264042C6C22A000CC2597 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB62640E2C6C22A000CC2597 /* besafeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB62640F2C6C22A000CC2597 /* besafeTests.swift */,
+			);
+			path = besafeTests;
+			sourceTree = "<group>";
+		};
+		FB6264182C6C22A000CC2597 /* besafeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264192C6C22A000CC2597 /* besafeUITests.swift */,
+				FB62641B2C6C22A000CC2597 /* besafeUITestsLaunchTests.swift */,
+			);
+			path = besafeUITests;
+			sourceTree = "<group>";
+		};
+		FB6264252C6C22A000CC2597 /* besafe Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264752C6C4BB700CC2597 /* View */,
+				FB6264742C6C4BAE00CC2597 /* App */,
+				FB62642A2C6C22A000CC2597 /* Assets.xcassets */,
+				FB62642C2C6C22A000CC2597 /* Preview Content */,
+			);
+			path = "besafe Watch App";
+			sourceTree = "<group>";
+		};
+		FB62642C2C6C22A000CC2597 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB62642D2C6C22A000CC2597 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB6264362C6C22A100CC2597 /* besafe Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264372C6C22A100CC2597 /* besafe_Watch_AppTests.swift */,
+			);
+			path = "besafe Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FB6264402C6C22A100CC2597 /* besafe Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264412C6C22A100CC2597 /* besafe_Watch_AppUITests.swift */,
+				FB6264432C6C22A100CC2597 /* besafe_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "besafe Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		FB62645A2C6C22AD00CC2597 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264762C6C913500CC2597 /* LocalDataSource */,
+				FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FB62645B2C6C22B500CC2597 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB62646C2C6C39E700CC2597 /* Page1 */,
+				FB6264682C6C39E700CC2597 /* Page2 */,
+				FB6264602C6C35F200CC2597 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB62645D2C6C2EF800CC2597 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB6263FE2C6C229E00CC2597 /* besafeApp.swift */,
+				FB62645E2C6C34BE00CC2597 /* Router.swift */,
+				FB6264622C6C360100CC2597 /* DependencyInjection.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB6264682C6C39E700CC2597 /* Page2 */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264662C6C39E700CC2597 /* Page2.storyboard */,
+				FB6264672C6C39E700CC2597 /* Page2ViewController.swift */,
+			);
+			path = Page2;
+			sourceTree = "<group>";
+		};
+		FB62646C2C6C39E700CC2597 /* Page1 */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264692C6C39E700CC2597 /* Page1.storyboard */,
+				FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */,
+				FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */,
+			);
+			path = Page1;
+			sourceTree = "<group>";
+		};
+		FB6264742C6C4BAE00CC2597 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264262C6C22A000CC2597 /* besafeApp.swift */,
+				FB6264822C6C976B00CC2597 /* Router.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB6264752C6C4BB700CC2597 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264282C6C22A000CC2597 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB6264762C6C913500CC2597 /* LocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */,
+				FB6264792C6C917C00CC2597 /* LocalDataSource.swift */,
+			);
+			path = LocalDataSource;
+			sourceTree = "<group>";
+		};
+		FB62647D2C6C93FC00CC2597 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB62647E2C6C966800CC2597 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				FB62647F2C6C968800CC2597 /* Extension.swift */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB6263FA2C6C229E00CC2597 /* besafe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB62644B2C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe" */;
+			buildPhases = (
+				FB6263F72C6C229E00CC2597 /* Sources */,
+				FB6263F82C6C229E00CC2597 /* Frameworks */,
+				FB6263F92C6C229E00CC2597 /* Resources */,
+				FB62644A2C6C22A100CC2597 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB6264242C6C22A000CC2597 /* PBXTargetDependency */,
+			);
+			name = besafe;
+			productName = besafe;
+			productReference = FB6263FB2C6C229E00CC2597 /* besafe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB62640A2C6C22A000CC2597 /* besafeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB62644E2C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafeTests" */;
+			buildPhases = (
+				FB6264072C6C22A000CC2597 /* Sources */,
+				FB6264082C6C22A000CC2597 /* Frameworks */,
+				FB6264092C6C22A000CC2597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB62640D2C6C22A000CC2597 /* PBXTargetDependency */,
+			);
+			name = besafeTests;
+			productName = besafeTests;
+			productReference = FB62640B2C6C22A000CC2597 /* besafeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB6264142C6C22A000CC2597 /* besafeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6264512C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafeUITests" */;
+			buildPhases = (
+				FB6264112C6C22A000CC2597 /* Sources */,
+				FB6264122C6C22A000CC2597 /* Frameworks */,
+				FB6264132C6C22A000CC2597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB6264172C6C22A000CC2597 /* PBXTargetDependency */,
+			);
+			name = besafeUITests;
+			productName = besafeUITests;
+			productReference = FB6264152C6C22A000CC2597 /* besafeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FB6264202C6C22A000CC2597 /* besafe Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6264472C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch App" */;
+			buildPhases = (
+				FB62641D2C6C22A000CC2597 /* Sources */,
+				FB62641E2C6C22A000CC2597 /* Frameworks */,
+				FB62641F2C6C22A000CC2597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "besafe Watch App";
+			productName = "besafe Watch App";
+			productReference = FB6264212C6C22A000CC2597 /* besafe Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB6264322C6C22A100CC2597 /* besafe Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6264542C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch AppTests" */;
+			buildPhases = (
+				FB62642F2C6C22A100CC2597 /* Sources */,
+				FB6264302C6C22A100CC2597 /* Frameworks */,
+				FB6264312C6C22A100CC2597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB6264352C6C22A100CC2597 /* PBXTargetDependency */,
+			);
+			name = "besafe Watch AppTests";
+			productName = "besafe Watch AppTests";
+			productReference = FB6264332C6C22A100CC2597 /* besafe Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB62643C2C6C22A100CC2597 /* besafe Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6264572C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch AppUITests" */;
+			buildPhases = (
+				FB6264392C6C22A100CC2597 /* Sources */,
+				FB62643A2C6C22A100CC2597 /* Frameworks */,
+				FB62643B2C6C22A100CC2597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB62643F2C6C22A100CC2597 /* PBXTargetDependency */,
+			);
+			name = "besafe Watch AppUITests";
+			productName = "besafe Watch AppUITests";
+			productReference = FB62643D2C6C22A100CC2597 /* besafe Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB6263F32C6C229E00CC2597 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FB6263FA2C6C229E00CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FB62640A2C6C22A000CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FB6263FA2C6C229E00CC2597;
+					};
+					FB6264142C6C22A000CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FB6263FA2C6C229E00CC2597;
+					};
+					FB6264202C6C22A000CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FB6264322C6C22A100CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FB6264202C6C22A000CC2597;
+					};
+					FB62643C2C6C22A100CC2597 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FB6264202C6C22A000CC2597;
+					};
+				};
+			};
+			buildConfigurationList = FB6263F62C6C229E00CC2597 /* Build configuration list for PBXProject "besafe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB6263F22C6C229E00CC2597;
+			productRefGroup = FB6263FC2C6C229E00CC2597 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB6263FA2C6C229E00CC2597 /* besafe */,
+				FB62640A2C6C22A000CC2597 /* besafeTests */,
+				FB6264142C6C22A000CC2597 /* besafeUITests */,
+				FB6264202C6C22A000CC2597 /* besafe Watch App */,
+				FB6264322C6C22A100CC2597 /* besafe Watch AppTests */,
+				FB62643C2C6C22A100CC2597 /* besafe Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB6263F92C6C229E00CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
+				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
+				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
+				FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264092C6C22A000CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264132C6C22A000CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62641F2C6C22A000CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
+				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264312C6C22A100CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62643B2C6C22A100CC2597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB6263F72C6C229E00CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
+				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
+				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
+				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
+				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
+				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
+				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
+				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
+				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
+				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
+				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264072C6C22A000CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6264102C6C22A000CC2597 /* besafeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264112C6C22A000CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB62641C2C6C22A000CC2597 /* besafeUITestsLaunchTests.swift in Sources */,
+				FB62641A2C6C22A000CC2597 /* besafeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62641D2C6C22A000CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
+				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
+				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB62642F2C6C22A100CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6264382C6C22A100CC2597 /* besafe_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6264392C6C22A100CC2597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6264442C6C22A100CC2597 /* besafe_Watch_AppUITestsLaunchTests.swift in Sources */,
+				FB6264422C6C22A100CC2597 /* besafe_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB62640D2C6C22A000CC2597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB6263FA2C6C229E00CC2597 /* besafe */;
+			targetProxy = FB62640C2C6C22A000CC2597 /* PBXContainerItemProxy */;
+		};
+		FB6264172C6C22A000CC2597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB6263FA2C6C229E00CC2597 /* besafe */;
+			targetProxy = FB6264162C6C22A000CC2597 /* PBXContainerItemProxy */;
+		};
+		FB6264242C6C22A000CC2597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB6264202C6C22A000CC2597 /* besafe Watch App */;
+			targetProxy = FB6264232C6C22A000CC2597 /* PBXContainerItemProxy */;
+		};
+		FB6264352C6C22A100CC2597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB6264202C6C22A000CC2597 /* besafe Watch App */;
+			targetProxy = FB6264342C6C22A100CC2597 /* PBXContainerItemProxy */;
+		};
+		FB62643F2C6C22A100CC2597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB6264202C6C22A000CC2597 /* besafe Watch App */;
+			targetProxy = FB62643E2C6C22A100CC2597 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB6264452C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB6264462C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FB6264482C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kirby.besafe;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		FB6264492C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kirby.besafe;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		FB62644C2C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB62644D2C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB62644F2C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/besafe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/besafe";
+			};
+			name = Debug;
+		};
+		FB6264502C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/besafe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/besafe";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB6264522C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = besafe;
+			};
+			name = Debug;
+		};
+		FB6264532C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = besafe;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB6264552C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/besafe Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/besafe Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		FB6264562C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/besafe Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/besafe Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		FB6264582C6C22A100CC2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "besafe Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		FB6264592C6C22A100CC2597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "besafe Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB6263F62C6C229E00CC2597 /* Build configuration list for PBXProject "besafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6264452C6C22A100CC2597 /* Debug */,
+				FB6264462C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6264472C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6264482C6C22A100CC2597 /* Debug */,
+				FB6264492C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB62644B2C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB62644C2C6C22A100CC2597 /* Debug */,
+				FB62644D2C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB62644E2C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB62644F2C6C22A100CC2597 /* Debug */,
+				FB6264502C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6264512C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6264522C6C22A100CC2597 /* Debug */,
+				FB6264532C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6264542C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6264552C6C22A100CC2597 /* Debug */,
+				FB6264562C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6264572C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB6264582C6C22A100CC2597 /* Debug */,
+				FB6264592C6C22A100CC2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB6263F32C6C229E00CC2597 /* Project object */;
+}
