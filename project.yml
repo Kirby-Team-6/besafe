@@ -1,0 +1,36 @@
+name: besafe
+settings:
+  MARKETING_VERSION: "1.0"
+  CURRENT_PROJECT_VERSION: 1
+options:
+  bundleIdPrefix: com.kirby
+targets:
+  besafe:
+    type: application
+    platform: iOS
+    sources: [besafe]
+    resources: [Resources]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.kirby.besafe
+      INFOPLIST_FILE: besafe/Info.plist
+    dependencies:
+  MVVM-Combine-SwiftUI-Tests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [MVVM-Combine-SwiftUI-Tests]
+    dependencies:
+      - target: MVVM-Combine-SwiftUI
+    settings:
+      base:
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/MVVM-Combine-SwiftUI.app/MVVM-Combine-SwiftUI"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+schemes:
+  MVVM-Combine-SwiftUI:
+    build:
+      targets:
+        MVVM-Combine-SwiftUI: all
+        MVVM-Combine-SwiftUI-Tests: all
+    test:
+        targets:
+        - name: MVVM-Combine-SwiftUI-Tests
+        gatherCoverageData: true

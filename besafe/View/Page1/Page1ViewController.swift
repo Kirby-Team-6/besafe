@@ -18,7 +18,7 @@ struct Page1: UIViewControllerRepresentable {
         let storyboard = UIStoryboard(name: "Page1", bundle: Bundle.main)
         let controller = storyboard.instantiateViewController(identifier: "Page1") as! Page1ViewController
         controller.router = router
-        
+        controller.viewmodel = DI.shared.page1Viewmodel()
         return controller
     }
 
