@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.page1]
-    @Published var rootView: Screen = Screen.page1
+    @Published var path: [Screen] = [Screen.safeplaceview]
+    @Published var rootView: Screen = Screen.safeplaceview
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
     
@@ -62,6 +62,10 @@ class Router: ObservableObject {
             Page1().navigationBarBackButtonHidden(true)
         case .page2:
             Page2()
+        case .homeview:
+            HomeView()
+        case .safeplaceview:
+            SafePlaceView()
         }
     }
     
@@ -85,6 +89,8 @@ class Router: ObservableObject {
 enum Screen: Identifiable, Hashable {
     case page1
     case page2
+    case homeview
+    case safeplaceview
     
     var id: Self { return self }
 }

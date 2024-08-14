@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */; };
+		40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */; };
+		40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */; };
+		40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
@@ -92,6 +96,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceView.swift; sourceTree = "<group>"; };
+		40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceModel.swift; sourceTree = "<group>"; };
+		40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceViewModel.swift; sourceTree = "<group>"; };
+		40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GoogleMapsData.json; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
@@ -173,6 +181,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40B72FCC2C6D0E3200145D66 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FB6263F22C6C229E00CC2597 = {
 			isa = PBXGroup;
 			children = (
@@ -203,8 +219,9 @@
 		FB6263FD2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXGroup;
 			children = (
-				FB62647D2C6C93FC00CC2597 /* Model */,
 				FB62645D2C6C2EF800CC2597 /* App */,
+				FB62647D2C6C93FC00CC2597 /* Model */,
+				40B72FCC2C6D0E3200145D66 /* ViewModel */,
 				FB62645B2C6C22B500CC2597 /* View */,
 				FB62645A2C6C22AD00CC2597 /* Data */,
 				FB6264022C6C22A000CC2597 /* Assets.xcassets */,
@@ -277,6 +294,7 @@
 		FB62645A2C6C22AD00CC2597 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */,
 				FB6264762C6C913500CC2597 /* LocalDataSource */,
 				FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */,
 			);
@@ -289,6 +307,7 @@
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
 				FB6264602C6C35F200CC2597 /* HomeView.swift */,
+				40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
+				40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -537,6 +557,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */,
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
@@ -590,9 +611,12 @@
 			files = (
 				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
+				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
+				40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
+				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
