@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+   @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+   var body: some View {
+      Map(position: $position){
+         UserAnnotation()
+      }
+      .onAppear{
+         CLLocationManager().requestWhenInUseAuthorization()
+      }
+   }
 }
 
 #Preview {

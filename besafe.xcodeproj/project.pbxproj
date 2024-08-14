@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
+		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -90,6 +92,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -348,6 +351,7 @@
 		FB62647D2C6C93FC00CC2597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -589,6 +593,7 @@
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
+				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
@@ -621,6 +626,7 @@
 			files = (
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
 			);
@@ -796,10 +802,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kirby.besafe;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -814,7 +821,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -826,10 +833,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kirby.besafe;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -845,7 +853,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -862,12 +870,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -895,12 +904,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
