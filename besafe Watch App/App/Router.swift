@@ -41,7 +41,7 @@ class Router: ObservableObject {
     func build(_ screen: Screen) -> some View {
         switch screen {
         case .home:
-            ContentView().navigationBarBackButtonHidden(true)
+            ContentView().navigationBarBackButtonHidden()
         }
         
         //    @ViewBuilder

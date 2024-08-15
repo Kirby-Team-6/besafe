@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
+		FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4856D02C6D1861002669F3 /* DirectionView.swift */; };
+		FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -93,6 +95,10 @@
 
 /* Begin PBXFileReference section */
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		FB4856D02C6D1861002669F3 /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
+		FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
+		FB60697A2C6D2E2E00BE1D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB60697B2C6D2E4F00BE1D22 /* besafe-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "besafe-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +179,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB4856CF2C6D184C002669F3 /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				FB4856D02C6D1861002669F3 /* DirectionView.swift */,
+				FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */,
+			);
+			path = Direction;
+			sourceTree = "<group>";
+		};
 		FB6263F22C6C229E00CC2597 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +218,7 @@
 		FB6263FD2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXGroup;
 			children = (
+				FB60697A2C6D2E2E00BE1D22 /* Info.plist */,
 				FB62647D2C6C93FC00CC2597 /* Model */,
 				FB62645D2C6C2EF800CC2597 /* App */,
 				FB62645B2C6C22B500CC2597 /* View */,
@@ -241,6 +257,7 @@
 		FB6264252C6C22A000CC2597 /* besafe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				FB60697B2C6D2E4F00BE1D22 /* besafe-Watch-App-Info.plist */,
 				FB6264752C6C4BB700CC2597 /* View */,
 				FB6264742C6C4BAE00CC2597 /* App */,
 				FB62642A2C6C22A000CC2597 /* Assets.xcassets */,
@@ -286,6 +303,7 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB4856CF2C6D184C002669F3 /* Direction */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
 				FB6264602C6C35F200CC2597 /* HomeView.swift */,
@@ -594,9 +612,11 @@
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
+				FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
+				FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */,
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
@@ -802,9 +822,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ARLGKL6RC3;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "besafe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -833,9 +854,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ARLGKL6RC3;
+				DEVELOPMENT_TEAM = 68FP6TZ275;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "besafe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -869,6 +891,7 @@
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = besafe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -903,6 +926,7 @@
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = besafe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

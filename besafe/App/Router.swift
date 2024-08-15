@@ -9,10 +9,16 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.page1]
-    @Published var rootView: Screen = Screen.page1
+    @Published var path: [Screen]
+    @Published var rootView: Screen
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
+    
+    init() {
+        let rootView = Screen.page1
+        self.rootView = rootView
+        path = [rootView]
+    }
     
     
     // MARK: - Navigation Functions
@@ -59,9 +65,14 @@ class Router: ObservableObject {
     func build(_ screen: Screen) -> some View {
         switch screen {
         case .page1:
-            Page1().navigationBarBackButtonHidden(true)
+            Page1().navigationBarBackButtonHidden(rootView == .page1)
         case .page2:
             Page2()
+        case .direction:
+            DirectionView()
+                .environmentObject(DI.shared.directionViewModel())
+                .navigationBarBackButtonHidden(rootView == .direction)
+        
         }
     }
     
@@ -85,6 +96,7 @@ class Router: ObservableObject {
 enum Screen: Identifiable, Hashable {
     case page1
     case page2
+    case direction
     
     var id: Self { return self }
 }
