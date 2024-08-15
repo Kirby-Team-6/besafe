@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.safeplaceview]
-    @Published var rootView: Screen = Screen.safeplaceview
+    @Published var path: [Screen] = [Screen.homeview]
+    @Published var rootView: Screen = Screen.homeview
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
     

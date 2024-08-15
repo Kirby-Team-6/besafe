@@ -11,6 +11,7 @@
 		40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */; };
 		40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */; };
 		40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */; };
+		40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
@@ -100,6 +101,7 @@
 		40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceModel.swift; sourceTree = "<group>"; };
 		40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceViewModel.swift; sourceTree = "<group>"; };
 		40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GoogleMapsData.json; sourceTree = "<group>"; };
+		40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceView.swift; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				FB6264682C6C39E700CC2597 /* Page2 */,
 				FB6264602C6C35F200CC2597 /* HomeView.swift */,
 				40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */,
+				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */,
+				40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
