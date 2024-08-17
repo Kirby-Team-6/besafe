@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct besafeApp: App {
-    @StateObject var router = Router()
+    @StateObject var router = Router(initialRoute: Screen.direction)
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path) {
@@ -18,10 +18,10 @@ struct besafeApp: App {
                         router.build(screen)
                     }
                     .sheet(item: $router.sheet) { sheet in
-//                        router.build(sheet)
+                        router.build(sheet)
                     }
                     .fullScreenCover(item: $router.fullScreenCover) { fullScreenCover in
-//                        appCoordinator.build(fullScreenCover)
+                        router.build(fullScreenCover)
                     }
             }
             .environmentObject(router)

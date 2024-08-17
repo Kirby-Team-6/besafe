@@ -12,5 +12,10 @@ protocol LocalDataSource {
 }
 
 class LocalDataSourceImpl: LocalDataSource {
+    private let swiftDataManager: SwiftDataContextManager
+    
+    init(_ swiftDataManager: SwiftDataContextManager) {
+        self.swiftDataManager = swiftDataManager
+    }
     
 }

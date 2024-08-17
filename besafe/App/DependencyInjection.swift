@@ -10,15 +10,14 @@ import Foundation
 class DI {
     static let shared = DI()
     
-    private init() {
-        
-    }
+    private init() {}
     
-    lazy var localDataSource: LocalDataSource = LocalDataSourceImpl()
+    let swiftDataManager = SwiftDataContextManager.shared
+    lazy var localDataSource: LocalDataSource = LocalDataSourceImpl(swiftDataManager)
     lazy var remoteDataSource: RemoteDataSource  = RemoteDataSourceImpl()
     
     func page1Viewmodel() -> Page1Viewmodel {
-        return Page1Viewmodel()
+        return Page1Viewmodel(remoteDataSource)
     }
     
     func directionViewModel() -> DirectionViewmodel {

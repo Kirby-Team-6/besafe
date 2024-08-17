@@ -24,8 +24,7 @@ class DirectionViewmodel: ObservableObject {
         self.region = region
     }
     
-    func getDirections(to destination: CLLocationCoordinate2D) {
-        let source = region.center
+    func getDirections( from source: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: source))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
@@ -54,7 +53,8 @@ class DirectionViewmodel: ObservableObject {
             print("Advisory notices: \(route.advisoryNotices.joined(separator: ", "))")
             print("Steps:")
             for step in route.steps {
-                print("\t- \(step.instructions) (\(step.distance) meters)")
+                print("\t- \(step.instructions) (\(step.distance) meters) \(step.polyline.coordinate)")
+                
             }
         }
 }

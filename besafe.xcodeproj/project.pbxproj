@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
+		FB452EB92C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
+		FB452EBA2C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
 		FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4856D02C6D1861002669F3 /* DirectionView.swift */; };
 		FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */; };
+		FB60697E2C6D85BB00BE1D22 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60697D2C6D85BB00BE1D22 /* Route.swift */; };
+		FB6069802C6D8F3100BE1D22 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60697F2C6D8F3100BE1D22 /* PlaceModel.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -39,6 +43,7 @@
 		FB6264802C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264812C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264832C6C976B00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264822C6C976B00CC2597 /* Router.swift */; };
+		FB8A1E822C6E61A400BD83F0 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8A1E812C6E61A400BD83F0 /* PageControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,10 +100,13 @@
 
 /* Begin PBXFileReference section */
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		FB452EB82C71155A009C0DB6 /* TimeFormated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormated.swift; sourceTree = "<group>"; };
 		FB4856D02C6D1861002669F3 /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FB60697A2C6D2E2E00BE1D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB60697B2C6D2E4F00BE1D22 /* besafe-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "besafe-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FB60697D2C6D85BB00BE1D22 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		FB60697F2C6D8F3100BE1D22 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 		FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FB62647F2C6C968800CC2597 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FB6264822C6C976B00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FB8A1E812C6E61A400BD83F0 /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +188,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB452EB72C711540009C0DB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB452EB82C71155A009C0DB6 /* TimeFormated.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FB4856CF2C6D184C002669F3 /* Direction */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +203,15 @@
 				FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */,
 			);
 			path = Direction;
+			sourceTree = "<group>";
+		};
+		FB60697C2C6D859100BE1D22 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FB62645E2C6C34BE00CC2597 /* Router.swift */,
+				FB60697D2C6D85BB00BE1D22 /* Route.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		FB6263F22C6C229E00CC2597 = {
@@ -303,6 +329,7 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB8A1E802C6E619100BD83F0 /* Component */,
 				FB4856CF2C6D184C002669F3 /* Direction */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
@@ -314,8 +341,8 @@
 		FB62645D2C6C2EF800CC2597 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FB60697C2C6D859100BE1D22 /* Router */,
 				FB6263FE2C6C229E00CC2597 /* besafeApp.swift */,
-				FB62645E2C6C34BE00CC2597 /* Router.swift */,
 				FB6264622C6C360100CC2597 /* DependencyInjection.swift */,
 			);
 			path = App;
@@ -370,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
+				FB60697F2C6D8F3100BE1D22 /* PlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,9 +405,18 @@
 		FB62647E2C6C966800CC2597 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				FB452EB72C711540009C0DB6 /* Model */,
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		FB8A1E802C6E619100BD83F0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FB8A1E812C6E61A400BD83F0 /* PageControlView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +437,8 @@
 				FB6264242C6C22A000CC2597 /* PBXTargetDependency */,
 			);
 			name = besafe;
+			packageProductDependencies = (
+			);
 			productName = besafe;
 			productReference = FB6263FB2C6C229E00CC2597 /* besafe.app */;
 			productType = "com.apple.product-type.application";
@@ -536,6 +575,8 @@
 				Base,
 			);
 			mainGroup = FB6263F22C6C229E00CC2597;
+			packageReferences = (
+			);
 			productRefGroup = FB6263FC2C6C229E00CC2597 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,16 +648,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
+				FB6069802C6D8F3100BE1D22 /* PlaceModel.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
+				FB60697E2C6D85BB00BE1D22 /* Route.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */,
+				FB8A1E822C6E61A400BD83F0 /* PageControlView.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
 				FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */,
+				FB452EB92C71155A009C0DB6 /* TimeFormated.swift in Sources */,
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
@@ -646,6 +691,7 @@
 			files = (
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				FB452EBA2C71155A009C0DB6 /* TimeFormated.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,

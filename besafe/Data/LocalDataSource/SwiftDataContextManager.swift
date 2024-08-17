@@ -13,7 +13,7 @@ public class SwiftDataContextManager {
     var container: ModelContainer?
     var context: ModelContext?
 
-    init() {
+    private init() {
         do {
 //            container = try ModelContainer(for: NoteListLocalEntity.self)
 //            if let container {
