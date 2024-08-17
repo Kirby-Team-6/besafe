@@ -13,7 +13,6 @@ class Router: ObservableObject {
     @Published var rootView: Screen = Screen.home
     
     
-    // MARK: - Navigation Functions
     func push(_ screen: Screen) {
         path.append(screen)
     }
@@ -36,12 +35,13 @@ class Router: ObservableObject {
         }
     }
     
-    // MARK: - Presentation Style Providers
     @ViewBuilder
     func build(_ screen: Screen) -> some View {
         switch screen {
         case .home:
             ContentView().navigationBarBackButtonHidden()
+        case .onboarding:
+            OnboardingView()
         }
         
         //    @ViewBuilder
@@ -64,6 +64,7 @@ class Router: ObservableObject {
 
 enum Screen: Identifiable, Hashable {
     case home
+    case onboarding
     
     var id: Self { return self }
 }

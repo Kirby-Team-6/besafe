@@ -11,6 +11,7 @@
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		FB452EB92C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
 		FB452EBA2C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
+		FB452EBC2C712BE7009C0DB6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EBB2C712BE7009C0DB6 /* OnboardingView.swift */; };
 		FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4856D02C6D1861002669F3 /* DirectionView.swift */; };
 		FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */; };
 		FB60697E2C6D85BB00BE1D22 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60697D2C6D85BB00BE1D22 /* Route.swift */; };
@@ -101,6 +102,7 @@
 /* Begin PBXFileReference section */
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		FB452EB82C71155A009C0DB6 /* TimeFormated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormated.swift; sourceTree = "<group>"; };
+		FB452EBB2C712BE7009C0DB6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FB4856D02C6D1861002669F3 /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FB60697A2C6D2E2E00BE1D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				FB6264282C6C22A000CC2597 /* ContentView.swift */,
+				FB452EBB2C712BE7009C0DB6 /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
+				FB452EBC2C712BE7009C0DB6 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
