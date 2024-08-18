@@ -26,8 +26,9 @@ class Page1Viewmodel: ObservableObject {
     
     
     func loadData() {
+        state = AppState.loading
         Task{
-            state = AppState.loading
+            
             let result = await remoteDataSource.getNearbyPlaces()
             switch result{
             case .success(let value):

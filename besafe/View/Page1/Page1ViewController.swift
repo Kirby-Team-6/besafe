@@ -41,7 +41,9 @@ class Page1ViewController: UIViewController {
         viewmodel?.$state
             .receive(on: DispatchQueue.main)
             .sink { [weak self] state in
-                print(state)
+                if state == .success {
+                    self?.label.text = self?.viewmodel?.data.count.description
+                }
             }
             .store(in: &cancellables)
         

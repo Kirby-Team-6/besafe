@@ -14,9 +14,16 @@ protocol RemoteDataSource {
 class RemoteDataSourceImpl: RemoteDataSource {
     func getNearbyPlaces() async -> Result<[PlaceModel], Error> {
         do {
-            let urlString = "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io/maps/api/place/nearbysearch/json?location=-6.299127463352122,106.6716764147274&radius=1500&type=hospital&opennow=true"
+            var urlComps = URLComponents(string: "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io/maps/api/place/nearbysearch/json")!
+            let queryItems = [
+                URLQueryItem(name: "location", value: "-6.299127463352122,106.6716764147274"),
+                URLQueryItem(name: "radius", value: "1500"),
+                URLQueryItem(name: "type", value: "hospital"),
+                URLQueryItem(name: "opennow", value: "true"),
+            ]
+            urlComps.queryItems = queryItems
             
-            guard let url = URL(string: urlString) else {
+            guard let url = urlComps.url else {
                 throw URLError(.badURL)
             }
             

@@ -141,7 +141,10 @@ struct DirectionView: View {
         }
         .onAppear{
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                viewmodel.getDirections(from: CLLocationManager().location!.coordinate,  to: CLLocationCoordinate2D(latitude: 37.775511594494446,longitude:  -122.41872632127603))
+                if let cordinate = CLLocationManager().location?.coordinate {
+                    viewmodel.getDirections(from: cordinate,  to: CLLocationCoordinate2D(latitude: 37.775511594494446,longitude:  -122.41872632127603))
+                }
+                
             }
             
         }
