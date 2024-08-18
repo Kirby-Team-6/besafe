@@ -3,9 +3,14 @@ import CoreLocation
 
 class SafePlacesViewModel: ObservableObject {
     @Published var safePlaces: [SafePlace] = []
+    @Published var selectedSafePlace: SafePlace?
+    
     private var userLocation: CLLocation = CLLocation(latitude: -6.200000, longitude: 106.816666)
+    private var excludedPlace: SafePlace?
+    private var exclusionTimestamp: Date?
     
     private let priorityOrder: [String: Int] = [
+        // TODO: Tambahin custom safe place nya user yang jadi priority 1
         "police_station": 1,
         "hospital": 2,
         "hotel": 3,
@@ -21,6 +26,7 @@ class SafePlacesViewModel: ObservableObject {
             if let loadedPlaces = loadSafePlaces(from: jsonData) {
                 let sortedPlaces = sortSafePlaces(loadedPlaces, from: userLocation)
                 self.safePlaces = sortedPlaces
+                selectTopSafePlace()
             }
         }
     }
@@ -71,7 +77,46 @@ class SafePlacesViewModel: ObservableObject {
         }
     }
     
+    private func selectTopSafePlace() {
+        if !safePlaces.isEmpty {
+            selectedSafePlace = safePlaces.first
+        }
+    }
+    
+    func reroute() {
+        if let selectedPlace = selectedSafePlace {
+            // Exclude the current selected place for 12 hours
+            excludedPlace = selectedPlace
+            exclusionTimestamp = Date()
+            
+            // Reload safe places, excluding the selected place
+            let filteredPlaces = safePlaces.filter { $0.name != selectedPlace.name }
+            let sortedPlaces = sortSafePlaces(filteredPlaces, from: userLocation)
+            safePlaces = sortedPlaces
+            
+            // Select the next top place
+            selectTopSafePlace()
+        }
+    }
+    
     func distanceToPlace(_ place: SafePlace) -> Double {
         return calculateDistance(from: userLocation, to: place)
+    }
+    
+    func shouldExcludePlace(_ place: SafePlace) -> Bool {
+        if let excludedPlace = excludedPlace, let exclusionTimestamp = exclusionTimestamp {
+            let timeInterval = Date().timeIntervalSince(exclusionTimestamp)
+            let twelveHours: TimeInterval = 12 * 60 * 60
+            
+            // Check if the exclusion period (12 hours) has passed
+            if timeInterval < twelveHours {
+                return place.name == excludedPlace.name
+            } else {
+                // Reset exclusion after 12 hours
+                self.excludedPlace = nil
+                self.exclusionTimestamp = nil
+            }
+        }
+        return false
     }
 }
