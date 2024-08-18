@@ -12,6 +12,8 @@
 		FB452EB92C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
 		FB452EBA2C71155A009C0DB6 /* TimeFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EB82C71155A009C0DB6 /* TimeFormated.swift */; };
 		FB452EBC2C712BE7009C0DB6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452EBB2C712BE7009C0DB6 /* OnboardingView.swift */; };
+		FB452EC62C721F96009C0DB6 /* walkdatamock.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB452EC52C721F96009C0DB6 /* walkdatamock.gpx */; };
+		FB452EC72C721F96009C0DB6 /* walkdatamock.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB452EC52C721F96009C0DB6 /* walkdatamock.gpx */; };
 		FB4856D12C6D1861002669F3 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4856D02C6D1861002669F3 /* DirectionView.swift */; };
 		FB6069792C6D237600BE1D22 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */; };
 		FB60697E2C6D85BB00BE1D22 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60697D2C6D85BB00BE1D22 /* Route.swift */; };
@@ -103,6 +105,7 @@
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		FB452EB82C71155A009C0DB6 /* TimeFormated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormated.swift; sourceTree = "<group>"; };
 		FB452EBB2C712BE7009C0DB6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FB452EC52C721F96009C0DB6 /* walkdatamock.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = walkdatamock.gpx; sourceTree = "<group>"; };
 		FB4856D02C6D1861002669F3 /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FB6069782C6D237600BE1D22 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FB60697A2C6D2E2E00BE1D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +199,14 @@
 				FB452EB82C71155A009C0DB6 /* TimeFormated.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FB452EC42C721F72009C0DB6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FB452EC52C721F96009C0DB6 /* walkdatamock.gpx */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		FB4856CF2C6D184C002669F3 /* Direction */ = {
@@ -408,6 +419,7 @@
 		FB62647E2C6C966800CC2597 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				FB452EC42C721F72009C0DB6 /* Mock */,
 				FB452EB72C711540009C0DB6 /* Model */,
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
 			);
@@ -603,6 +615,7 @@
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
 				FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */,
+				FB452EC62C721F96009C0DB6 /* walkdatamock.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +639,7 @@
 			files = (
 				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
+				FB452EC72C721F96009C0DB6 /* walkdatamock.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -96,7 +96,7 @@ struct ContentView: View {
            .padding(.horizontal, 10)
            .padding(.top, 0.5)
        }
-       .fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/){
+       .fullScreenCover(isPresented: .constant(false)){
            VStack {
                Text("You have arrived at\nthe safe place")
                    .fixedSize(horizontal: false, vertical: true)
