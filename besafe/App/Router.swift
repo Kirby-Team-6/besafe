@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.emergencycontactsview]
-    @Published var rootView: Screen = Screen.emergencycontactsview
+    @Published var path: [Screen] = [Screen.direction]
+    @Published var rootView: Screen = Screen.direction
     @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
     
@@ -70,6 +70,10 @@ class Router: ObservableObject {
             NearbyPlacesView()
         case .emergencycontactsview:
             EmergencyContactsView()
+        case .direction:
+            DirectionView()
+                .navigationBarBackButtonHidden(true)
+                .environmentObject(DI.shared.directionViewmodel())
         }
     }
     
@@ -97,6 +101,7 @@ enum Screen: Identifiable, Hashable {
     case safeplaceview
     case nearbyplacesview
     case emergencycontactsview
+    case direction
     
     var id: Self { return self }
 }

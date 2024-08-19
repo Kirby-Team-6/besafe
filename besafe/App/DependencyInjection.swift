@@ -20,4 +20,8 @@ class DI {
     func page1Viewmodel() -> Page1Viewmodel {
         return Page1Viewmodel()
     }
+    
+    func directionViewmodel() -> DirectionViewmodel {
+        DirectionViewmodel()
+    }
 }

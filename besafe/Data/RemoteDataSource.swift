@@ -8,9 +8,54 @@
 import Foundation
 
 protocol RemoteDataSource {
-    
+    func getNearbyPlaces() async -> Result<[PlaceModel], Error>
 }
 
 class RemoteDataSourceImpl: RemoteDataSource {
+    func getNearbyPlaces() async -> Result<[PlaceModel], Error> {
+        do {
+            var urlComps = URLComponents(string: "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io/maps/api/place/nearbysearch/json")!
+            let queryItems = [
+                URLQueryItem(name: "location", value: "-6.299127463352122,106.6716764147274"),
+                URLQueryItem(name: "radius", value: "1500"),
+                URLQueryItem(name: "type", value: "hospital"),
+                URLQueryItem(name: "opennow", value: "true"),
+            ]
+            urlComps.queryItems = queryItems
+            
+            guard let url = urlComps.url else {
+                throw URLError(.badURL)
+            }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                throw URLError(.badServerResponse)
+            }
+            
+            
+            if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                let resultDict = jsonDict["results"]
+                
+                let resultData = try JSONSerialization.data(withJSONObject: resultDict as Any, options: [])
+                
+                let places = try JSONDecoder().decode([PlaceModel].self, from: resultData)
+                
+                return .success(places)
+            } else {
+                throw URLError(.cannotDecodeRawData)
+            }
+            
+            
+        } catch {
+            return .failure(error)
+        }
+    }
+    
     
 }
