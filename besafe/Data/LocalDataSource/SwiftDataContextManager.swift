@@ -5,68 +5,83 @@
 //  Created by Rifat Khadafy on 14/08/24.
 //
 
-//import Foundation
-//import SwiftData
-//
-//public class SwiftDataContextManager {
-//    public static var shared = SwiftDataContextManager()
-//    var container: ModelContainer?
-//    var context: ModelContext?
-//
-//    init() {
-//        do {
-//
-////            container = try ModelContainer(for: NoteListLocalEntity.self)
-////            if let container {
-////                context = ModelContext(container)
-////            }
-//        } catch {
-//            debugPrint("Error initializing database container:", error)
-//        }
-//    }
-//}
-
-
-
 import Foundation
 import SwiftData
 
 class SwiftDataService {
-    private let modelContainer: ModelContainer
-    private let modelContext: ModelContext
-
-    @MainActor
-    static let shared = SwiftDataService()
-
-    @MainActor
-    init() {
-        self.modelContainer = try! ModelContainer(for: EmergencyContact.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
-        self.modelContext = modelContainer.mainContext
-    }
-
-    func fetchEmergencyContacts() -> [EmergencyContact] {
-        do {
-            return try modelContext.fetch(FetchDescriptor<EmergencyContact>())
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-    }
-
-    func addEmergencyContact(contact: EmergencyContact) {
-        modelContext.insert(contact)
-        do {
-            try modelContext.save()
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-    }
-
-    func deleteEmergencyContact(contact: EmergencyContact) {
-        modelContext.delete(contact)
-        do {
-            try modelContext.save()
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-    }
+   private let container: ModelContainer
+   private let context: ModelContext
+   
+   @MainActor
+   static let shared = SwiftDataService()
+   
+   @MainActor
+   init() {
+      self.container = try! ModelContainer(for: EmergencyContact.self, MapPoint.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+      self.context = container.mainContext
+   }
+   
+   func fetchEmergencyContacts() -> [EmergencyContact] {
+      do {
+         return try context.fetch(FetchDescriptor<EmergencyContact>())
+      } catch {
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func addEmergencyContact(contact: EmergencyContact) {
+      context.insert(contact)
+      do {
+         try context.save()
+      } catch {
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func deleteEmergencyContact(contact: EmergencyContact) {
+      context.delete(contact)
+      do {
+         try context.save()
+      } catch {
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func fetchMapPoints() -> [MapPoint]{
+      do{
+         return try context.fetch(FetchDescriptor<MapPoint>())
+      }catch{
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func addMapPoint(point: MapPoint){
+      context.insert(point)
+      do{
+         try context.save()
+      }catch{
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func updateMapPoint(point: MapPoint, name: String, lat: Double, long: Double){
+      do{
+         point.name = name
+         point.latitude = lat
+         point.longitude = long
+         
+         try context.save()
+      }catch{
+         fatalError(error.localizedDescription)
+      }
+   }
+   
+   func deleteMapPoint(point: MapPoint){
+      context.delete(point)
+      do{
+         try context.save()
+      }catch{
+         fatalError(error.localizedDescription)
+      }
+   }
 }
