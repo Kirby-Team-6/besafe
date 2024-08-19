@@ -9,12 +9,14 @@ import SwiftUI
 import MapKit
 
 struct DirectionView: View {
-    @EnvironmentObject var router: Router
-    @EnvironmentObject var viewmodel: DirectionViewmodel
+    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var viewmodel: DirectionViewmodel
+    @StateObject private var locationManager = LocationManager()
     
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var selection = 0
     @State private var tabViewCount = 0
+    @State private var completeRoute = false
     
     var body: some View {
         ZStack {
@@ -26,61 +28,10 @@ struct DirectionView: View {
                         .stroke(Color.blue, style: strokeStyle)
                 }
             }
-            .onAppear{
-                //                CLLocationManager().location?.coordinate
-            }
-            .onChange(of: position){ old, new in
-                if new.region != nil {
-                    viewmodel.updateRegion(with: new.region!)
-                }
-            }
             VStack{
-                VStack{
-                    TabView(selection : $selection){
-                        ForEach(
-                            Array((viewmodel.route?.steps ?? []).enumerated()), id: \.offset)
-                        { index, element in
-                            let distance = Int(element.distance.rounded())
-                            HStack (alignment: .top){
-                                if (distance > 0){
-                                    Image(systemName: "arrow.turn.up.left")
-                                        .font(.system(size: 50))
-                                        .foregroundColor(.white)
-                                        .padding(.leading, 10)
-                                        .padding(.trailing, 20)
-
-                                }
-                                                                
-                                VStack(alignment: .leading) {
-                                    if(distance > 0 ){
-                                        Text("\(distance) m")
-                                            .font(.title)
-                                            .fontWeight(.bold)
-                                            .foregroundColor(.white)
-                                    }
-                                   
-                                    Text(element.instructions)
-                                        .font(.title3)
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(.white)
-                                }
-                                Spacer()
-
-                            }
-                            
-                        }
-                        
-                    }
-                    .tabViewStyle(.page(indexDisplayMode: .never))
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
-                    .padding(.bottom, 0)
-                    
-                    PageControlView(currentPage: $selection, numberOfPages: $tabViewCount)
+                if (viewmodel.route != nil){
+                    HeaderDirectionView(selection: $selection, tabViewCount: $tabViewCount)
                 }
-                .padding()
-                .background(.black)
-                .frame(width: UIScreen.main.bounds.width, height: 150, alignment: .top)
-                
                 
                 Spacer()
                 
@@ -113,7 +64,10 @@ struct DirectionView: View {
                         .padding(.horizontal, 60)
                         
                         Button(action: {
-                            
+                            withAnimation {
+                                viewmodel.route = nil
+                                CLLocationManager().stopUpdatingLocation()
+                            }
                         }, label: {
                             Image(systemName: "xmark.circle.fill")
                                 .symbolRenderingMode(.multicolor)
@@ -125,11 +79,61 @@ struct DirectionView: View {
                     .padding(.top, 12)
                     .background(.black)
                     .frame(width: UIScreen.main.bounds.width, alignment: .top)
-
+                    .transition(.move(edge: .bottom))
+                    .animation(.default, value: viewmodel.route != nil)
                 }
             }
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .top)
+        .fullScreenCover(isPresented: $completeRoute){
+            VStack {
+                Text("You have arrived at\nthe safe place")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    .padding(.bottom, 24)
+                    
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("Reroute")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: UIScreen.main.bounds.width / 1.5)
+                })
+                .tint(.greyC6)
+                .buttonBorderShape(.capsule)
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .padding(.bottom, 10)
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("Done")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: UIScreen.main.bounds.width / 1.5)
+                })
+                .tint(.blue)
+                .buttonBorderShape(.capsule)
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+            }
+            .padding(.horizontal, 10)
+            .toolbar(.hidden, for: .navigationBar)
+        }
+        .onReceive(locationManager.$location){ location in
+            if location == nil {
+                return
+            }
+            if let route = viewmodel.route  {
+                guard let lastStep2d = route.steps.last?.polyline.coordinate else {
+                    return
+                }
+                let lastStep = CLLocation(latitude: lastStep2d.latitude, longitude: lastStep2d.longitude)
+                let distance = lastStep.distance(from: location!)
+                if distance <= 10 {
+                    self.completeRoute = true
+                }
+            }
+        }
         .onChange(of: selection){  old, newValue in
             let data = viewmodel.route!.steps[newValue]
             position = .camera(.init(centerCoordinate: data.polyline.coordinate, distance: 700))
@@ -139,7 +143,14 @@ struct DirectionView: View {
                 tabViewCount = v!.steps.count
             }
         }
+        .onChange(of: position){ old, new in
+            if new.region != nil {
+                viewmodel.updateRegion(with: new.region!)
+            }
+        }
         .onAppear{
+            CLLocationManager().requestWhenInUseAuthorization()
+            CLLocationManager().startUpdatingLocation()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 if let cordinate = CLLocationManager().location?.coordinate {
                     viewmodel.getDirections(from: cordinate,  to: CLLocationCoordinate2D(latitude: 37.775511594494446,longitude:  -122.41872632127603))
