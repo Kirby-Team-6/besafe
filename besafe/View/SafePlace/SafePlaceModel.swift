@@ -1,5 +1,7 @@
 import CoreLocation
 
+//TODO: Sementara -> ganti pake punya paul
+
 struct SafePlace: Codable {
     let name: String
     let types: [String]
