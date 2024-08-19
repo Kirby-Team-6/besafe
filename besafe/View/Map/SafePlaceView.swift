@@ -10,8 +10,10 @@ struct SafePlaceView: View {
         }
         .onAppear {
             viewModel.loadSafePlaces()
+           
         }
     }
+
 }
 
 

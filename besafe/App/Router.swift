@@ -63,7 +63,7 @@ class Router: ObservableObject {
         case .page2:
             Page2()
         case .homeview:
-            HomeView()
+           HomeView().navigationBarBackButtonHidden(rootView == .homeview)
         case .safeplaceview:
             SafePlaceView()
         }
