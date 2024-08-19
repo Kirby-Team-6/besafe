@@ -20,7 +20,8 @@
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
-		E45CFFD32C72EA2000F5BFC3 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD22C72EA2000F5BFC3 /* SocketManager.swift */; };
+		E45CFFD32C72EA2000F5BFC3 /* SocketManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD22C72EA2000F5BFC3 /* SocketManagerProtocol.swift */; };
+		E45CFFD52C72ED6D00F5BFC3 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD42C72ED6D00F5BFC3 /* SocketManager.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -116,7 +117,8 @@
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
-		E45CFFD22C72EA2000F5BFC3 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		E45CFFD22C72EA2000F5BFC3 /* SocketManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManagerProtocol.swift; sourceTree = "<group>"; };
+		E45CFFD42C72ED6D00F5BFC3 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,7 +240,8 @@
 		E45CFFD12C72E9D000F5BFC3 /* RealtimeDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				E45CFFD22C72EA2000F5BFC3 /* SocketManager.swift */,
+				E45CFFD22C72EA2000F5BFC3 /* SocketManagerProtocol.swift */,
+				E45CFFD42C72ED6D00F5BFC3 /* SocketManager.swift */,
 			);
 			path = RealtimeDataSource;
 			sourceTree = "<group>";
@@ -675,7 +678,8 @@
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
-				E45CFFD32C72EA2000F5BFC3 /* SocketManager.swift in Sources */,
+				E45CFFD52C72ED6D00F5BFC3 /* SocketManager.swift in Sources */,
+				E45CFFD32C72EA2000F5BFC3 /* SocketManagerProtocol.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
