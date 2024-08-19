@@ -64,6 +64,7 @@
 		FBC3ED1D2C73C29D00996946 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */; };
 		FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */; };
 		FBC3ED202C73C2FA00996946 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */; };
+		FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED212C73C56000996946 /* FooterDirectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		FBC3ED162C73C28000996946 /* TimeFormated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormated.swift; sourceTree = "<group>"; };
 		FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
+		FBC3ED212C73C56000996946 /* FooterDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterDirectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */,
+				FBC3ED212C73C56000996946 /* FooterDirectionView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
+				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
