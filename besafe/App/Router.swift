@@ -76,6 +76,8 @@ class Router: ObservableObject {
             .environmentObject(DI.shared.directionViewmodel())
       case .temporary:
           TemporaryInitialView().navigationBarBackButtonHidden(true)
+      case .emergencypageview:
+          EmergencyPageView()
       }
    }
    
