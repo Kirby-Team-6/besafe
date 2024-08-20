@@ -41,7 +41,7 @@ struct LocationDetailView: View {
             TextField("Marker name", text: $name)
          }
          .padding(12)
-         .background(.white)
+         .background(.customWhite)
          .clipShape(RoundedRectangle(cornerRadius: 12))
          
          Spacer()

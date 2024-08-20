@@ -40,7 +40,7 @@ struct CustomLocationNameView: View {
             
             TextField("Enter Marker Name", text: $searchText)
                .padding()
-               .background(.white)
+               .background(.customWhite)
                .clipShape(RoundedRectangle(cornerRadius: 12))
             
             Spacer()

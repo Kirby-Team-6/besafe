@@ -11,6 +11,7 @@ import SwiftUI
 struct besafeApp: App {
    @StateObject var router = Router()
    @StateObject var pointViewModel = MapPointViewModel(dataSource: .shared)
+   @StateObject var watchConnect = WatchConnector()
    var body: some Scene {
       WindowGroup {
          NavigationStack(path: $router.path) {
@@ -27,7 +28,7 @@ struct besafeApp: App {
          }
          .environmentObject(router)
          .environmentObject(pointViewModel)
+         .environmentObject(watchConnect)
       }
-      .modelContainer(for: [MapPoint.self, EmergencyContact.self])
    }
 }
