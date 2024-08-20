@@ -29,20 +29,7 @@ struct LocationDetailView: View {
             dismiss()
          })
          
-         HStack {
-            ZStack {
-               Circle()
-                  .frame(width: 35, height: 35)
-                  .foregroundStyle(.red)
-               Image(systemName: "heart.fill")
-                  .font(.headline)
-                  .foregroundStyle(.white)
-            }
-            TextField("Marker name", text: $name)
-         }
-         .padding(12)
-         .background(.customWhite)
-         .clipShape(RoundedRectangle(cornerRadius: 12))
+         TextfieldWithMarkerView(color: .red, img: "heart.fill", textfieldString: $name)
          
          Spacer()
       }
