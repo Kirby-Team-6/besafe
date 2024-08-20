@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404346982C743A0F004ED850 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404346972C743A0F004ED850 /* WidgetKit.framework */; };
+		4043469A2C743A0F004ED850 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404346992C743A0F004ED850 /* SwiftUI.framework */; };
+		4043469D2C743A10004ED850 /* ComplicationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4043469C2C743A10004ED850 /* ComplicationWidget.swift */; };
+		404346A12C743A11004ED850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404346A02C743A11004ED850 /* Assets.xcassets */; };
+		404346A52C743A11004ED850 /* ComplicationWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 404346952C743A0F004ED850 /* ComplicationWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */; };
 		40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */; };
 		40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */; };
@@ -18,6 +23,18 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
+		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
+		AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
+		AC464E5D2C73A1EB0027AB69 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC464E5C2C73A1EB0027AB69 /* WatchConnectivity.framework */; };
+		AC7E58792C74180100E591A1 /* MapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58782C74180100E591A1 /* MapOverlayView.swift */; };
+		AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E587B2C74192500E591A1 /* PointLogo.swift */; };
+		AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
+		AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */; };
+		AC7E58812C741A0600E591A1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58802C741A0600E591A1 /* Screen.swift */; };
+		AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58822C741A2600E591A1 /* Sheet.swift */; };
+		AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */; };
@@ -72,6 +89,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		404346A32C743A11004ED850 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 404346942C743A0F004ED850;
+			remoteInfo = ComplicationWidgetExtension;
+		};
 		FB62640C2C6C22A000CC2597 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FB6263F32C6C229E00CC2597 /* Project object */;
@@ -110,6 +134,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		404346A62C743A11004ED850 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				404346A52C743A11004ED850 /* ComplicationWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB62644A2C6C22A100CC2597 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +159,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		404346952C743A0F004ED850 /* ComplicationWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ComplicationWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		404346972C743A0F004ED850 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		404346992C743A0F004ED850 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4043469C2C743A10004ED850 /* ComplicationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationWidget.swift; sourceTree = "<group>"; };
+		404346A02C743A11004ED850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		404346A22C743A11004ED850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceView.swift; sourceTree = "<group>"; };
 		40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceModel.swift; sourceTree = "<group>"; };
 		40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +176,16 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
+		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
+		AC395CFD2C743925003626BF /* MarkerIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIcon.swift; sourceTree = "<group>"; };
+		AC464E5A2C73A1DE0027AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC464E5C2C73A1EB0027AB69 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		AC7E58782C74180100E591A1 /* MapOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlayView.swift; sourceTree = "<group>"; };
+		AC7E587B2C74192500E591A1 /* PointLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointLogo.swift; sourceTree = "<group>"; };
+		AC7E58802C741A0600E591A1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		AC7E58822C741A2600E591A1 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenCover.swift; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewModel.swift; sourceTree = "<group>"; };
 		ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocationNameView.swift; sourceTree = "<group>"; };
@@ -188,10 +239,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		404346922C743A0F004ED850 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4043469A2C743A0F004ED850 /* SwiftUI.framework in Frameworks */,
+				404346982C743A0F004ED850 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB6263F82C6C229E00CC2597 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC464E5D2C73A1EB0027AB69 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,45 +294,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40B72FD82C71C1F200145D66 /* SafePlace */ = {
+		404346962C743A0F004ED850 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */,
-				40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */,
+				404346972C743A0F004ED850 /* WidgetKit.framework */,
+				404346992C743A0F004ED850 /* SwiftUI.framework */,
 			);
-			path = SafePlace;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40B72FD92C71C20A00145D66 /* NearbyPlace */ = {
+		4043469B2C743A10004ED850 /* ComplicationWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4043469C2C743A10004ED850 /* ComplicationWidget.swift */,
+				404346A02C743A11004ED850 /* Assets.xcassets */,
+				404346A22C743A11004ED850 /* Info.plist */,
+			);
+			path = ComplicationWidget;
+			sourceTree = "<group>";
+		};
+		AC464E5B2C73A1EB0027AB69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC464E5C2C73A1EB0027AB69 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC7E587A2C74191500E591A1 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				AC7E587B2C74192500E591A1 /* PointLogo.swift */,
+				AC7E58802C741A0600E591A1 /* Screen.swift */,
+				AC7E58822C741A2600E591A1 /* Sheet.swift */,
+				AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		AC7E58862C741A5E00E591A1 /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				40B72FD32C6DA51000145D66 /* NearbyPlacesView.swift */,
-				40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */,
-				40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */,
-			);
-			path = NearbyPlace;
-			sourceTree = "<group>";
-		};
-		40B72FDA2C71C21300145D66 /* SearchPlace */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchPlace;
-			sourceTree = "<group>";
-		};
-		40B72FDF2C71F02800145D66 /* EmergencyContacts */ = {
-			isa = PBXGroup;
-			children = (
-				40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */,
+				40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */,
 				40B72FDB2C71EC2F00145D66 /* EmergencyContactsView.swift */,
-				40B72FDD2C71EDC600145D66 /* EmergencyContactsViewModel.swift */,
+				FB6264602C6C35F200CC2597 /* HomeView.swift */,
 			);
-			path = EmergencyContacts;
+			path = Root;
+			sourceTree = "<group>";
+		};
+		AC7E58872C741A8A00E591A1 /* Separated */ = {
+			isa = PBXGroup;
+			children = (
+				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
+				ACE50A792C73053D007CA42D /* LocationDetailView.swift */,
+				AC7E58782C74180100E591A1 /* MapOverlayView.swift */,
+			);
+			path = Separated;
 			sourceTree = "<group>";
 		};
 		ACE50A7B2C730636007CA42D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */,
+				40B72FDD2C71EDC600145D66 /* EmergencyContactsViewModel.swift */,
 				40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */,
 				ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */,
 			);
@@ -281,21 +367,22 @@
 		ACE50A7C2C73064D007CA42D /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
-				ACE50A792C73053D007CA42D /* LocationDetailView.swift */,
-				FB6264602C6C35F200CC2597 /* HomeView.swift */,
+				AC7E58872C741A8A00E591A1 /* Separated */,
+				AC7E58862C741A5E00E591A1 /* Root */,
 			);
 			path = Map;
 			sourceTree = "<group>";
 		};
-		ACE50A7D2C730654007CA42D /* Custom Components */ = {
+		ACE50A7D2C730654007CA42D /* Custom Shared Components */ = {
 			isa = PBXGroup;
 			children = (
 				FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */,
 				ACE50A772C73051E007CA42D /* ModalityTitleView.swift */,
 				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
+				AC395CF92C743309003626BF /* MarkerIconView.swift */,
+				AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */,
 			);
-			path = "Custom Components";
+			path = "Custom Shared Components";
 			sourceTree = "<group>";
 		};
 		E45CFFD12C72E9D000F5BFC3 /* RealtimeDataSource */ = {
@@ -325,7 +412,10 @@
 				FB6264252C6C22A000CC2597 /* besafe Watch App */,
 				FB6264362C6C22A100CC2597 /* besafe Watch AppTests */,
 				FB6264402C6C22A100CC2597 /* besafe Watch AppUITests */,
+				4043469B2C743A10004ED850 /* ComplicationWidget */,
+				404346962C743A0F004ED850 /* Frameworks */,
 				FB6263FC2C6C229E00CC2597 /* Products */,
+				AC464E5B2C73A1EB0027AB69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,6 +428,7 @@
 				FB6264212C6C22A000CC2597 /* besafe Watch App.app */,
 				FB6264332C6C22A100CC2597 /* besafe Watch AppTests.xctest */,
 				FB62643D2C6C22A100CC2597 /* besafe Watch AppUITests.xctest */,
+				404346952C743A0F004ED850 /* ComplicationWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,6 +436,8 @@
 		FB6263FD2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXGroup;
 			children = (
+				AC464E5A2C73A1DE0027AB69 /* Info.plist */,
+				AC7E587A2C74191500E591A1 /* Enum */,
 				ACE50A7B2C730636007CA42D /* ViewModel */,
 				FB62645D2C6C2EF800CC2597 /* App */,
 				FB62647D2C6C93FC00CC2597 /* Model */,
@@ -432,15 +525,11 @@
 			isa = PBXGroup;
 			children = (
 				FBC3ED0D2C73C14A00996946 /* Direction */,
-				ACE50A7D2C730654007CA42D /* Custom Components */,
+				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				E45CFFD62C72F10F00F5BFC3 /* SendSOS */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
-				40B72FD82C71C1F200145D66 /* SafePlace */,
-				40B72FDA2C71C21300145D66 /* SearchPlace */,
-				40B72FD92C71C20A00145D66 /* NearbyPlace */,
-				40B72FDF2C71F02800145D66 /* EmergencyContacts */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,7 +593,11 @@
 			isa = PBXGroup;
 			children = (
 				FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */,
+				40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */,
+				40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */,
+				40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */,
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
+				AC395CFD2C743925003626BF /* MarkerIcon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,6 +652,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		404346942C743A0F004ED850 /* ComplicationWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404346A92C743A11004ED850 /* Build configuration list for PBXNativeTarget "ComplicationWidgetExtension" */;
+			buildPhases = (
+				404346912C743A0F004ED850 /* Sources */,
+				404346922C743A0F004ED850 /* Frameworks */,
+				404346932C743A0F004ED850 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComplicationWidgetExtension;
+			productName = ComplicationWidgetExtension;
+			productReference = 404346952C743A0F004ED850 /* ComplicationWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FB6263FA2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB62644B2C6C22A100CC2597 /* Build configuration list for PBXNativeTarget "besafe" */;
@@ -621,10 +731,12 @@
 				FB62641D2C6C22A000CC2597 /* Sources */,
 				FB62641E2C6C22A000CC2597 /* Frameworks */,
 				FB62641F2C6C22A000CC2597 /* Resources */,
+				404346A62C743A11004ED850 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				404346A42C743A11004ED850 /* PBXTargetDependency */,
 			);
 			name = "besafe Watch App";
 			productName = "besafe Watch App";
@@ -674,9 +786,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					404346942C743A0F004ED850 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					FB6263FA2C6C229E00CC2597 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -720,11 +835,20 @@
 				FB6264202C6C22A000CC2597 /* besafe Watch App */,
 				FB6264322C6C22A100CC2597 /* besafe Watch AppTests */,
 				FB62643C2C6C22A100CC2597 /* besafe Watch AppUITests */,
+				404346942C743A0F004ED850 /* ComplicationWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		404346932C743A0F004ED850 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404346A12C743A11004ED850 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB6263F92C6C229E00CC2597 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,6 +901,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		404346912C743A0F004ED850 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4043469D2C743A10004ED850 /* ComplicationWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB6263F72C6C229E00CC2597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -785,21 +917,28 @@
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
+				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
+				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FBC3ED1D2C73C29D00996946 /* PlaceModel.swift in Sources */,
+				AC7E58812C741A0600E591A1 /* Screen.swift in Sources */,
+				AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */,
 				40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */,
 				FBC3ED202C73C2FA00996946 /* PageControlView.swift in Sources */,
 				FBC3ED182C73C28000996946 /* Direction.swift in Sources */,
 				FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */,
 				40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */,
+				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				E45CFFD82C72F27F00F5BFC3 /* SendSOSViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
+				AC7E58792C74180100E591A1 /* MapOverlayView.swift in Sources */,
+				AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				E45CFFD52C72ED6D00F5BFC3 /* SocketManager.swift in Sources */,
@@ -816,6 +955,7 @@
 				ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
+				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
@@ -846,12 +986,15 @@
 			files = (
 				FBC3ED192C73C28000996946 /* Direction.swift in Sources */,
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
+				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
 				FBC3ED1B2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
+				AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */,
+				AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +1019,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		404346A42C743A11004ED850 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 404346942C743A0F004ED850 /* ComplicationWidgetExtension */;
+			targetProxy = 404346A32C743A11004ED850 /* PBXContainerItemProxy */;
+		};
 		FB62640D2C6C22A000CC2597 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB6263FA2C6C229E00CC2597 /* besafe */;
@@ -904,6 +1052,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		404346A72C743A11004ED850 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Y742356Q3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ComplicationWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe.watchkitapp.ComplicationWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		404346A82C743A11004ED850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Y742356Q3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ComplicationWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafe.watchkitapp.ComplicationWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		FB6264452C6C22A100CC2597 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1021,12 +1230,13 @@
 		FB6264482C6C22A100CC2597 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1052,12 +1262,13 @@
 		FB6264492C6C22A100CC2597 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1090,9 +1301,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = besafe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSContactsUsageDescription = "BeSafe needs access to your contacts to retrieve emergency contacts.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
@@ -1125,9 +1337,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = besafe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
 				INFOPLIST_KEY_NSContactsUsageDescription = "BeSafe needs access to your contacts to retrieve emergency contacts.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Get user location";
@@ -1323,6 +1536,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		404346A92C743A11004ED850 /* Build configuration list for PBXNativeTarget "ComplicationWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404346A72C743A11004ED850 /* Debug */,
+				404346A82C743A11004ED850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FB6263F62C6C229E00CC2597 /* Build configuration list for PBXProject "besafe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

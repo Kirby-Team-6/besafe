@@ -3,15 +3,6 @@ import MapKit
 import CoreLocation
 import SwiftData
 
-enum PointLogo {
-   case heart
-   case education
-   case work
-   case home
-   case store
-   case park
-}
-
 struct HomeView: View {
    @EnvironmentObject var pointViewModel: MapPointViewModel
    
@@ -44,44 +35,7 @@ struct HomeView: View {
             }
             .overlay(alignment: .bottom) {
                // TODO: Semua overlay mending jadiin separated function
-               GeometryReader { geometry in
-                  VStack {
-                     if addingPoint {
-                        VStack {
-                           CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, addingPoint: $addingPoint, reader: reader)
-                              .environmentObject(pointViewModel)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: customSafePlaceHeight)
-                        .offset(y: geometry.size.height - customSafePlaceHeight)
-                        .transition(.move(edge: .bottom))
-                     } else {
-                        VStack {
-                           SearchPlaceView(addingPoint: $addingPoint)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: overlayHeight)
-                        .offset(y: geometry.size.height - overlayHeight)
-                        .gesture(
-                           DragGesture()
-                              .onChanged { value in
-                                 if value.translation.height < 0 {
-                                    let newHeight = min(geometry.size.height, geometry.size.height * 0.9)
-                                    withAnimation {
-                                       overlayHeight = newHeight
-                                    }
-                                 } else {
-                                    withAnimation {
-                                       overlayHeight = UIScreen.main.bounds.height * 0.3
-                                    }
-                                 }
-                              }
-                        )
-                        .transition(.move(edge: .top))
-                     }
-                  }
-               }
-               .ignoresSafeArea()
+               MapOverlayView(addingPoint: $addingPoint, onTapAdd: $onTapAdd, searchText: $searchText, customSafePlaceHeight: $customSafePlaceHeight, overlayHeight: $overlayHeight, reader:reader)
             }
             .sheet(isPresented: $showingLocationDetail, onDismiss: {
                withAnimation{
@@ -101,7 +55,7 @@ struct HomeView: View {
          }
          
          if addingPoint {
-            Image(.customMarker)
+            Image(.customPinpoint)
                .foregroundColor(.red)
                .font(.title)
          }
