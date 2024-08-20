@@ -12,6 +12,7 @@
 		4043469D2C743A10004ED850 /* ComplicationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4043469C2C743A10004ED850 /* ComplicationWidget.swift */; };
 		404346A12C743A11004ED850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404346A02C743A11004ED850 /* Assets.xcassets */; };
 		404346A52C743A11004ED850 /* ComplicationWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 404346952C743A0F004ED850 /* ComplicationWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		404346AD2C745390004ED850 /* EmergencyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404346AC2C745390004ED850 /* EmergencyPageView.swift */; };
 		40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */; };
 		40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */; };
 		40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */; };
@@ -149,6 +150,7 @@
 		4043469C2C743A10004ED850 /* ComplicationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationWidget.swift; sourceTree = "<group>"; };
 		404346A02C743A11004ED850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404346A22C743A11004ED850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404346AC2C745390004ED850 /* EmergencyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyPageView.swift; sourceTree = "<group>"; };
 		40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceView.swift; sourceTree = "<group>"; };
 		40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceModel.swift; sourceTree = "<group>"; };
 		40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceViewModel.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				40B72FDA2C71C21300145D66 /* SearchPlace */,
 				40B72FD92C71C20A00145D66 /* NearbyPlace */,
 				40B72FDF2C71F02800145D66 /* EmergencyContacts */,
+				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
+				404346AD2C745390004ED850 /* EmergencyPageView.swift in Sources */,
 				ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
