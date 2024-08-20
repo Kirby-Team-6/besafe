@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-   @Published var path: [Screen] = [Screen.temporary]
-   @Published var rootView: Screen = Screen.temporary
+   @Published var path: [Screen] = [Screen.main]
+   @Published var rootView: Screen = Screen.main
    @Published var sheet: Sheet?
    @Published var fullScreenCover: FullScreenCover?
    
@@ -70,14 +70,14 @@ class Router: ObservableObject {
          NearbyPlacesView()
       case .emergencycontactsview:
          EmergencyContactsView()
+      case .main:
+          MainView().navigationBarBackButtonHidden(true)
       case .direction:
-         DirectionView()
-            .navigationBarBackButtonHidden(true)
-            .environmentObject(DI.shared.directionViewmodel())
+        EmptyView()
       case .temporary:
           TemporaryInitialView().navigationBarBackButtonHidden(true)
       case .emergencypageview:
-          EmergencyPageView()
+          EmptyView()
       }
    }
    

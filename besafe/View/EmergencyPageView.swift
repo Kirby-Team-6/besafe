@@ -2,6 +2,8 @@ import SwiftUI
 import CoreHaptics
 
 struct EmergencyPageView: View {
+    let onTap: () -> Void
+    
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var engine: CHHapticEngine?
@@ -18,7 +20,7 @@ struct EmergencyPageView: View {
                     Spacer()
                     
                     Button(action: {
-                        // TODO: information page -> UIKit
+                        // TODO: information page -> UIKit\
                         print("Info button tapped")
                     }) {
                         ZStack {
@@ -115,7 +117,7 @@ struct EmergencyPageView: View {
                                     stopCountdown()
                                 }
                             }, perform: {
-                                // TODO: LongPress -> NAVIGATE TO SAFE PLACE
+                                onTap()
                                 print("Long press completed!")
                             })
                             .padding()
@@ -205,6 +207,6 @@ struct EmergencyPageView: View {
 
 struct EmergencyPageView2_Previews: PreviewProvider {
     static var previews: some View {
-        EmergencyPageView()
+        EmergencyPageView {}
     }
 }

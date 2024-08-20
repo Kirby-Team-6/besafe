@@ -9,26 +9,24 @@ import SwiftUI
 import CoreLocation
 
 struct FooterDirectionView: View {
-    @EnvironmentObject private var viewmodel: DirectionViewmodel
+    @EnvironmentObject private var viewmodel: MainViewModel
     
     var body: some View {
-        let time = viewmodel.route!.expectedTravelTime.rounded().secTimeFormatted()
-        let distance = viewmodel.route!.distance.rounded()
         HStack(alignment: .center) {
             Spacer()
             VStack(alignment: .center) {
-                Text(time.time.description)
+                Text(getTime()?.time.description ?? "")
                     .font(.system(size: 36))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text("\(time.time)")
+                Text("\(getTime()?.time ?? 0)")
                     .font(.system(size: 24))
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
             }
             
             VStack(alignment: .center) {
-                Text("\(Int(distance))")
+                Text("\(Int(getDistance() ?? 0.0))")
                     .font(.system(size: 36))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -57,6 +55,14 @@ struct FooterDirectionView: View {
         .frame(width: UIScreen.main.bounds.width, alignment: .top)
         .transition(.move(edge: .bottom))
         .animation(.default, value: viewmodel.route != nil)
+    }
+    
+    private func getTime() -> TimeFormated? {
+        return viewmodel.route?.expectedTravelTime.rounded().secTimeFormatted()
+    }
+    
+    private func getDistance() -> Double? {
+        return viewmodel.route?.distance.rounded()
     }
     
 }
