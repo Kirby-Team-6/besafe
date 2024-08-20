@@ -94,30 +94,6 @@ class Router: ObservableObject {
    //    }
 }
 
-enum Screen: Identifiable, Hashable {
-    case page1
-    case page2
-    case homeview
-    case safeplaceview
-    case nearbyplacesview
-    case emergencycontactsview
-    case direction
-    
-    var id: Self { return self }
-}
-
-enum Sheet: Identifiable, Hashable {
-    case detailTask
-    
-    var id: Self { return self }
-}
-
-enum FullScreenCover: Identifiable, Hashable {
-    case addHabit
-
-    var id: Self { return self }
-}
-
 extension FullScreenCover {
     // Conform to Hashable
     func hash(into hasher: inout Hasher) {

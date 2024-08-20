@@ -14,6 +14,7 @@ enum Screen: Identifiable, Hashable {
    case safeplaceview
    case nearbyplacesview
    case emergencycontactsview
+   case direction
    
    var id: Self { return self }
 }
