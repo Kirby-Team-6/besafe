@@ -8,29 +8,48 @@
 import Foundation
 
 protocol RemoteDataSource {
-    func getNearbyPlaces() async -> Result<[PlaceModel], Error>
+    func getNearbyPlaces(_ latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error>
 }
 
 class RemoteDataSourceImpl: RemoteDataSource {
-    func getNearbyPlaces() async -> Result<[PlaceModel], Error> {
+    func getNearbyPlaces(_ latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error> {
         do {
-            var urlComps = URLComponents(string: "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io/maps/api/place/nearbysearch/json")!
-            let queryItems = [
-                URLQueryItem(name: "location", value: "-6.299127463352122,106.6716764147274"),
-                URLQueryItem(name: "radius", value: "1500"),
-                URLQueryItem(name: "type", value: "hospital"),
-                URLQueryItem(name: "opennow", value: "true"),
-            ]
-            urlComps.queryItems = queryItems
+            let baseUrl = if false {
+                "https://places.googleapis.com"
+            } else {
+                "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io"
+            }
+            
+            var urlComps = URLComponents(string: "\(baseUrl)/v1/places:searchNearby")!
             
             guard let url = urlComps.url else {
                 throw URLError(.badURL)
             }
             
             var request = URLRequest(url: url)
-            request.httpMethod = "GET"
+            request.httpMethod = "POST"
+            request.setValue("X-Goog-Api-Key", forHTTPHeaderField: "AIzaSyABab06jHMfr3Od5-WYiJzxajdBrQh6odA")
+            request.setValue("X-Goog-FieldMask", forHTTPHeaderField: "places.id,places.primaryType,places.location,places.currentOpeningHours.openNow,places.shortFormattedAddress")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+            
+            let body: [String: Any] = [
+                "includedTypes": [
+                    "police", "hospital", "church", "convenience_store", "department_store", "fire_station", "gas_station", "hindu_temple", "mosque", "shopping_mall", "synagogue", "university", "hotel", "resort_hotel", "bank", "supermarket"
+                ],
+                "maxResultCount": 15,
+                "locationRestriction": [
+                    "circle": [
+                        "center": [
+                            "latitude": latitude,
+                            "longitude": longitude,
+                        ],
+                        "radius": 1000
+                    ]
+                ]
+            ]
+            let jsonData = try? JSONSerialization.data(withJSONObject: body, options: [])
+            request.httpBody = jsonData
+            
             let (data, response) = try await URLSession.shared.data(for: request)
             
             
@@ -40,7 +59,7 @@ class RemoteDataSourceImpl: RemoteDataSource {
             
             
             if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                let resultDict = jsonDict["results"]
+                let resultDict = jsonDict["places"]
                 
                 let resultData = try JSONSerialization.data(withJSONObject: resultDict as Any, options: [])
                 
