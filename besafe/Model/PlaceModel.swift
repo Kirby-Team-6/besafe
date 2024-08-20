@@ -8,12 +8,17 @@
 import Foundation
 
 struct PlaceModel: Codable {
-    let id: String?
+    let id: String
     let location: Location?
     let currentOpeningHours: CurrentOpeningHours?
-    let primaryType, shortFormattedAddress: String?
+    let primaryType: String
+    let displayName: DisplayName?
+    let shortFormattedAddress: String?
 }
 
+struct DisplayName: Codable {
+    let text, languageCode: String?
+}
 
 struct CurrentOpeningHours: Codable {
     let openNow: Bool?

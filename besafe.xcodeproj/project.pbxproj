@@ -69,6 +69,9 @@
 		FB6264802C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264812C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264832C6C976B00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264822C6C976B00CC2597 /* Router.swift */; };
+		FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */; };
+		FBACF0AC2C74820300C3E522 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0AB2C74820300C3E522 /* MainView.swift */; };
+		FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0C2C73C14A00996946 /* DirectionViewmodel.swift */; };
@@ -82,6 +85,7 @@
 		FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */; };
 		FBC3ED202C73C2FA00996946 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */; };
 		FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED212C73C56000996946 /* FooterDirectionView.swift */; };
+		FBC3ED242C74474B00996946 /* TemporaryInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED232C74474A00996946 /* TemporaryInitialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +223,9 @@
 		FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FB62647F2C6C968800CC2597 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FB6264822C6C976B00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryInitialViewmodel.swift; sourceTree = "<group>"; };
+		FBACF0AB2C74820300C3E522 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0C2C73C14A00996946 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
@@ -228,6 +235,7 @@
 		FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
 		FBC3ED212C73C56000996946 /* FooterDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterDirectionView.swift; sourceTree = "<group>"; };
+		FBC3ED232C74474A00996946 /* TemporaryInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryInitialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +506,8 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBACF0AA2C7481F800C3E522 /* Main */,
+				FBACF0A52C74482600C3E522 /* TemporaryInitial */,
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
@@ -583,6 +593,24 @@
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		FBACF0A52C74482600C3E522 /* TemporaryInitial */ = {
+			isa = PBXGroup;
+			children = (
+				FBC3ED232C74474A00996946 /* TemporaryInitialView.swift */,
+				FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */,
+			);
+			path = TemporaryInitial;
+			sourceTree = "<group>";
+		};
+		FBACF0AA2C7481F800C3E522 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBACF0AB2C74820300C3E522 /* MainView.swift */,
+				FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		FBC3ED0A2C73C14A00996946 /* Component */ = {
@@ -885,6 +913,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */,
 				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
@@ -902,7 +931,9 @@
 				FBC3ED182C73C28000996946 /* Direction.swift in Sources */,
 				FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */,
 				40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */,
+				FBC3ED242C74474B00996946 /* TemporaryInitialView.swift in Sources */,
 				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
+				FBACF0AC2C74820300C3E522 /* MainView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
@@ -913,6 +944,7 @@
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
+				FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,

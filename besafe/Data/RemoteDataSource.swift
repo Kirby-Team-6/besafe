@@ -14,13 +14,13 @@ protocol RemoteDataSource {
 class RemoteDataSourceImpl: RemoteDataSource {
     func getNearbyPlaces(_ latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error> {
         do {
-            let baseUrl = if false {
+            let baseUrl = if true {
                 "https://places.googleapis.com"
             } else {
                 "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io"
             }
             
-            var urlComps = URLComponents(string: "\(baseUrl)/v1/places:searchNearby")!
+            let urlComps = URLComponents(string: "\(baseUrl)/v1/places:searchNearby")!
             
             guard let url = urlComps.url else {
                 throw URLError(.badURL)
@@ -28,8 +28,8 @@ class RemoteDataSourceImpl: RemoteDataSource {
             
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-            request.setValue("X-Goog-Api-Key", forHTTPHeaderField: "AIzaSyABab06jHMfr3Od5-WYiJzxajdBrQh6odA")
-            request.setValue("X-Goog-FieldMask", forHTTPHeaderField: "places.id,places.primaryType,places.location,places.currentOpeningHours.openNow,places.shortFormattedAddress")
+            request.setValue("AIzaSyABab06jHMfr3Od5-WYiJzxajdBrQh6odA", forHTTPHeaderField: "X-Goog-Api-Key")
+            request.setValue("places.id,places.primaryType,places.location,places.currentOpeningHours.openNow,places.shortFormattedAddress,places.displayName", forHTTPHeaderField:"X-Goog-FieldMask")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             let body: [String: Any] = [
@@ -51,7 +51,6 @@ class RemoteDataSourceImpl: RemoteDataSource {
             request.httpBody = jsonData
             
             let (data, response) = try await URLSession.shared.data(for: request)
-            
             
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                 throw URLError(.badServerResponse)

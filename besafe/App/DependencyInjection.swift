@@ -14,8 +14,8 @@ class DI {
         
     }
     
-    lazy var localDataSource: LocalDataSource = LocalDataSourceImpl()
-    lazy var remoteDataSource: RemoteDataSource  = RemoteDataSourceImpl()
+    private lazy var localDataSource: LocalDataSource = LocalDataSourceImpl()
+    private lazy var remoteDataSource: RemoteDataSource = RemoteDataSourceImpl()
     
     func page1Viewmodel() -> Page1Viewmodel {
         return Page1Viewmodel()
@@ -23,5 +23,9 @@ class DI {
     
     func directionViewmodel() -> DirectionViewmodel {
         DirectionViewmodel()
+    }
+    
+    func temporaryInitialViewmodel() -> TemporaryInitialViewmodel {
+        TemporaryInitialViewmodel(remoteDataSource: remoteDataSource)
     }
 }
