@@ -56,12 +56,13 @@ class SwiftDataService {
    }
    
    func addMapPoint(point: MapPoint){
-      context.insert(point)
-      do{
-         try context.save()
-      }catch{
-         fatalError(error.localizedDescription)
-      }
+         self.context.insert(point)
+         do{
+            try self.context.save()
+         }catch{
+            fatalError(error.localizedDescription)
+         }
+      
    }
    
    func updateMapPoint(point: MapPoint, name: String, lat: Double, long: Double){

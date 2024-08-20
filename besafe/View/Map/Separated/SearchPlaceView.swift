@@ -7,6 +7,7 @@ struct SearchPlaceView: View {
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
    @Binding var addingPoint: Bool
+//   @EnvironmentObject var watchConnect: WatchConnector
    
    var body: some View {
       ZStack{
@@ -15,13 +16,17 @@ struct SearchPlaceView: View {
             ModalityTitleView(cancelString: "Cancel", title: "New preferred custom", confirmString: "Submit") {
                
             } submitFunc: {
-               
+//               if watchConnect.session.isReachable{
+//                  searchText = "Done"
+//               }else{
+//                  searchText = "Nope"
+//               }
             }
 
             // Search Bar
             TextField("Search Maps", text: $searchText)
                .padding()
-               .background(.white)
+               .background(.customWhite)
                .clipShape(RoundedRectangle(cornerRadius: 12))
                .onChange(of: searchText) {
                   searchPlaces()
@@ -45,10 +50,9 @@ struct SearchPlaceView: View {
                }
                .padding()
                .frame(maxWidth: .infinity, alignment: .leading)
-               .background(.white)
                .clipShape(RoundedRectangle(cornerRadius: 12))
+               .background(.customWhite)
             }
-            .background(Color(.systemGray6))
             .clipShape(RoundedRectangle(cornerRadius: 12))
             
             // Suggested Places (Search Results)
