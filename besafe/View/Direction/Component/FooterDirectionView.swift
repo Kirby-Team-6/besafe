@@ -21,7 +21,7 @@ struct FooterDirectionView: View {
                     .font(.system(size: 36))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text("\(time.type.self)")
+                Text("\(time.time)")
                     .font(.system(size: 24))
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
