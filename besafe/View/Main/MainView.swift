@@ -10,10 +10,11 @@ import CoreLocation
 import MapKit
 
 struct MainView: View {
-    @StateObject var viewmodel = MainViewModel()
+    @StateObject var viewmodel = DI.shared.mainViewmodel()
     
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var showInitialView = true
+    @State private var showCompleteDirection = false
     @State private var loadMap = false
     
     var body: some View {
@@ -29,6 +30,14 @@ struct MainView: View {
                 }
                 DirectionView(position: $position)
             }
+        }
+        .fullScreenCover(isPresented: $showCompleteDirection) {
+            ComplateDirectionView(onReroute: {}, onDone: {
+                self.showCompleteDirection = false
+                self.showInitialView = true
+            })
+                .background(BackgroundBlurView())
+                .ignoresSafeArea(.all, edges: .all)
         }
         .fullScreenCover(isPresented: $showInitialView) {
             EmergencyPageView {

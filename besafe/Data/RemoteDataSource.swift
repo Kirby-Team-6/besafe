@@ -8,13 +8,13 @@
 import Foundation
 
 protocol RemoteDataSource {
-    func getNearbyPlaces(_ latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error>
+    func getNearbyPlaces( latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error>
 }
 
 class RemoteDataSourceImpl: RemoteDataSource {
-    func getNearbyPlaces(_ latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error> {
+    func getNearbyPlaces( latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error> {
         do {
-            let baseUrl = if true {
+            let baseUrl = if false {
                 "https://places.googleapis.com"
             } else {
                 "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io"

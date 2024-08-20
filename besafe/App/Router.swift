@@ -75,7 +75,7 @@ class Router: ObservableObject {
       case .direction:
         EmptyView()
       case .temporary:
-          TemporaryInitialView().navigationBarBackButtonHidden(true)
+          EmptyView()
       case .emergencypageview:
           EmptyView()
       }

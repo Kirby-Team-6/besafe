@@ -19,7 +19,7 @@ struct FooterDirectionView: View {
                     .font(.system(size: 36))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text("\(getTime()?.time ?? 0)")
+                Text("\(getTime()?.type ?? TimeFormatedType.days)")
                     .font(.system(size: 24))
                     .fontWeight(.medium)
                     .foregroundColor(.gray)

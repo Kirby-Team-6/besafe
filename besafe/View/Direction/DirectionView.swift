@@ -9,14 +9,12 @@ import SwiftUI
 import MapKit
 
 struct DirectionView: View {
-//    @EnvironmentObject private var router: Router
     @EnvironmentObject private var viewmodel: MainViewModel
     @StateObject private var locationManager = LocationManager()
     
     @Binding var position: MapCameraPosition
     @State private var selection = 0
     @State private var tabViewCount = 0
-    @State private var completeRoute = false
     
     var body: some View {
         VStack{
@@ -58,7 +56,7 @@ struct DirectionView: View {
                 let lastStep = CLLocation(latitude: lastStep2d.latitude, longitude: lastStep2d.longitude)
                 let distance = lastStep.distance(from: location!)
                 if distance <= 10 {
-                    self.completeRoute = true
+                    
                 }
             }
         }

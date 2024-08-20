@@ -15,21 +15,21 @@ class TemporaryInitialViewmodel: ObservableObject {
         self.remoteDataSource = remoteDataSource
     }
     
-    func getNearbyPlace(latitude: Double, longitude: Double)  {
-        Task {
-            let result = await remoteDataSource.getNearbyPlaces(latitude, longitude: longitude)
-            switch result {
-            case .success(let success):
-                let sortedPlaces = sortSafePlaces(success, from: userLocation)
-                
-                sortedPlaces.forEach { v in
-                    print(v.displayName?.text)
-                }
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
+//    func getNearbyPlace(latitude: Double, longitude: Double)  {
+//        Task {
+//            let result = await remoteDataSource.getNearbyPlaces(latitude, longitude: longitude)
+//            switch result {
+//            case .success(let success):
+//                let sortedPlaces = sortSafePlaces(success, from: userLocation)
+//                
+//                sortedPlaces.forEach { v in
+//                    print(v.displayName?.text)
+//                }
+//            case .failure(let failure):
+//                print(failure)
+//            }
+//        }
+//    }
     
     @Published var safePlaces: [PlaceModel] = []
     @Published var selectedSafePlace: PlaceModel?

@@ -4,6 +4,7 @@ import CoreHaptics
 struct EmergencyPageView: View {
     let onTap: () -> Void
     
+    @EnvironmentObject private var viewmodel: MainViewModel
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var engine: CHHapticEngine?
@@ -105,6 +106,7 @@ struct EmergencyPageView: View {
                             }
                             .scaleEffect(buttonScale)
                             .onLongPressGesture(minimumDuration: 2.0, maximumDistance: .infinity, pressing: { pressing in
+                                viewmodel.getSafePlace()
                                 if pressing {
                                     startCountdown()
                                     withAnimation(.easeIn(duration: 2.0)) {

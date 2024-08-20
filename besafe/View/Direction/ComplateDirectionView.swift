@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ComplateDirectionView: View {
+    let onReroute: () -> Void
+    let onDone: () -> Void
+    
     var body: some View {
         VStack {
+            Spacer()
             Text("You have arrived at\nthe safe place")
                 .fixedSize(horizontal: false, vertical: true)
-                .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .padding(.bottom, 24)
                 
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                onReroute()
+            }, label: {
                 Text("Reroute")
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
@@ -29,7 +35,9 @@ struct ComplateDirectionView: View {
             .controlSize(.large)
             .padding(.bottom, 10)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                onDone()
+            }, label: {
                 Text("Done")
                     .fontWeight(.semibold)
                     .frame(maxWidth: UIScreen.main.bounds.width / 1.5)
@@ -38,12 +46,16 @@ struct ComplateDirectionView: View {
             .buttonBorderShape(.capsule)
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
         .padding(.horizontal, 10)
         .toolbar(.hidden, for: .navigationBar)
     }
 }
 
 #Preview {
-    ComplateDirectionView()
+    ComplateDirectionView(onReroute: {}) {
+        
+    }
 }

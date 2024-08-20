@@ -20,12 +20,8 @@ class DI {
     func page1Viewmodel() -> Page1Viewmodel {
         return Page1Viewmodel()
     }
-    
-    func directionViewmodel() -> DirectionViewmodel {
-        DirectionViewmodel()
-    }
-    
-    func temporaryInitialViewmodel() -> TemporaryInitialViewmodel {
-        TemporaryInitialViewmodel(remoteDataSource: remoteDataSource)
+        
+    func mainViewmodel() -> MainViewModel {
+        MainViewModel(remoteDataSource: remoteDataSource)
     }
 }
