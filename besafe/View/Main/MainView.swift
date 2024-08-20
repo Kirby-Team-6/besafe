@@ -31,20 +31,31 @@ struct MainView: View {
                 DirectionView(position: $position)
             }
         }
+        .onReceive(viewmodel.$coverScreen){ v in
+            self.showInitialView = false
+            self.showCompleteDirection = false
+            
+            switch v {
+            case .direction:
+                ""
+            case .complete:
+                self.showCompleteDirection = true
+            case .initial:
+                self.showInitialView = true
+            case .none:
+                ""
+            }
+        }
         .fullScreenCover(isPresented: $showCompleteDirection) {
             ComplateDirectionView(onReroute: {}, onDone: {
-                self.showCompleteDirection = false
-                self.showInitialView = true
+                viewmodel.coverScreen = CoverScreen.initial
             })
                 .background(BackgroundBlurView())
                 .ignoresSafeArea(.all, edges: .all)
         }
         .fullScreenCover(isPresented: $showInitialView) {
             EmergencyPageView {
-                self.showInitialView = false
-                if let cordinate = CLLocationManager().location?.coordinate {
-                    viewmodel.navigateToSafePlace(latitude: cordinate.latitude, longitude: cordinate.longitude)
-                }
+                viewmodel.coverScreen = CoverScreen.direction
             }
             .frame(maxWidth: .infinity)
             .background(BackgroundBlurView())
@@ -57,6 +68,6 @@ struct MainView: View {
     }
 }
 
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}

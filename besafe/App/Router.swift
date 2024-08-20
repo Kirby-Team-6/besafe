@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-   @Published var path: [Screen] = [Screen.main]
-   @Published var rootView: Screen = Screen.main
+   @Published var path: [Screen] = [Screen.homeview]
+   @Published var rootView: Screen = Screen.homeview
    @Published var sheet: Sheet?
    @Published var fullScreenCover: FullScreenCover?
    
@@ -56,30 +56,22 @@ class Router: ObservableObject {
    
    // MARK: - Presentation Style Providers
    @ViewBuilder
-   func build(_ screen: Screen) -> some View {
-      switch screen {
-      case .page1:
-         Page1().navigationBarBackButtonHidden(true)
-      case .page2:
-         Page2()
-      case .homeview:
-         HomeView().navigationBarBackButtonHidden(true)
-      case .safeplaceview:
-         SafePlaceView()
-      case .nearbyplacesview:
-         NearbyPlacesView()
-      case .emergencycontactsview:
-         EmergencyContactsView()
-      case .main:
-          MainView().navigationBarBackButtonHidden(true)
-      case .direction:
-        EmptyView()
-      case .temporary:
-          EmptyView()
-      case .emergencypageview:
-          EmptyView()
-      }
-   }
+    func build(_ screen: Screen) -> some View {
+        switch screen {
+        case .page1:
+            Page1().navigationBarBackButtonHidden(true)
+        case .homeview:
+            HomeView().navigationBarBackButtonHidden(true)
+        case .safeplaceview:
+            SafePlaceView()
+        case .nearbyplacesview:
+            NearbyPlacesView()
+        case .emergencycontactsview:
+            EmergencyContactsView()
+        case .main:
+            MainView().navigationBarBackButtonHidden(true)
+        }
+    }
    
    //    @ViewBuilder
    //    func build(_ sheet: Sheet) -> some View {

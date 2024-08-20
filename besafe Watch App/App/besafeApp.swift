@@ -13,7 +13,7 @@ struct besafe_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path) {
-                router.build(router.path.first!)
+                EmptyView()
                     .navigationDestination(for: Screen.self) { screen in
                         router.build(screen)
                     }

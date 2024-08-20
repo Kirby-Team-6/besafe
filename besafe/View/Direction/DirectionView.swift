@@ -18,7 +18,7 @@ struct DirectionView: View {
     
     var body: some View {
         VStack{
-            if (viewmodel.route != nil){
+            if (viewmodel.route != nil && viewmodel.coverScreen == .direction){
                 HeaderDirectionView(selection: $selection, tabViewCount: $tabViewCount)
             }
             
@@ -41,7 +41,7 @@ struct DirectionView: View {
             }
             .padding()
             
-            if (viewmodel.route != nil) {
+            if (viewmodel.route != nil && viewmodel.coverScreen == .direction) {
                 FooterDirectionView()
             }
         }
@@ -56,7 +56,7 @@ struct DirectionView: View {
                 let lastStep = CLLocation(latitude: lastStep2d.latitude, longitude: lastStep2d.longitude)
                 let distance = lastStep.distance(from: location!)
                 if distance <= 10 {
-                    
+                    viewmodel.coverScreen = .complete
                 }
             }
         }

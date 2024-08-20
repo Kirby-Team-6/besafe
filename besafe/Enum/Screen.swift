@@ -8,16 +8,12 @@
 import Foundation
 
 enum Screen: Identifiable, Hashable {
-   case page1
-   case page2
-   case homeview
-   case safeplaceview
-   case nearbyplacesview
-   case emergencycontactsview
-   case direction
-    case temporary
-    case emergencypageview
+    case page1
+    case homeview
+    case safeplaceview
+    case nearbyplacesview
+    case emergencycontactsview
     case main
-   
-   var id: Self { return self }
+    
+    var id: Self { return self }
 }

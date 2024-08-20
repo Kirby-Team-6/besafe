@@ -24,13 +24,14 @@ class MainViewModel: ObservableObject {
     @Published var route: MKRoute?
     @Published var coverScreen = CoverScreen.initial
     @Published var listSafePlaces: [PlaceModel] = []
-    private var task: Task<Void, Never>?
+    private var loadData = false
     
     func getSafePlace() {
-        if task?.isCancelled == false {
+        if loadData == true {
             return
         }
-        task = Task {
+        Task {
+            self.loadData = true
             guard let location = CLLocationManager().location?.coordinate else {
                 return
             }
@@ -45,16 +46,18 @@ class MainViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.listSafePlaces = data
                     print(data.count)
+                    self.loadData = false
                 }
-                navigateToSafePlace(latitude: location.latitude, longitude: location.longitude)
+                navigateToSafePlace(safePlaces: data, latitude: location.latitude, longitude: location.longitude)
             case .failure(let failure):
                 print(failure)
+                self.loadData = false
             }
         }
     }
     
-    func navigateToSafePlace(latitude: Double, longitude: Double) {
-        guard let safePlaces = listSafePlaces.first?.location else {
+    func navigateToSafePlace(safePlaces: [PlaceModel], latitude: Double, longitude: Double) {
+        guard let safePlaces = safePlaces.first?.location else {
             return
         }
         let source = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

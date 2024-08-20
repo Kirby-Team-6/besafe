@@ -59,8 +59,6 @@
 		FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62645E2C6C34BE00CC2597 /* Router.swift */; };
 		FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264602C6C35F200CC2597 /* HomeView.swift */; };
 		FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264622C6C360100CC2597 /* DependencyInjection.swift */; };
-		FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264662C6C39E700CC2597 /* Page2.storyboard */; };
-		FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264672C6C39E700CC2597 /* Page2ViewController.swift */; };
 		FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264692C6C39E700CC2597 /* Page1.storyboard */; };
 		FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */; };
 		FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */; };
@@ -79,6 +77,9 @@
 		FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */; };
 		FBACF0B82C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
 		FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
+		FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */; };
+		FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */; };
+		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
@@ -219,8 +220,6 @@
 		FB62645E2C6C34BE00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FB6264602C6C35F200CC2597 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB6264622C6C360100CC2597 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
-		FB6264662C6C39E700CC2597 /* Page2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
-		FB6264672C6C39E700CC2597 /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		FB6264692C6C39E700CC2597 /* Page1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page1.storyboard; sourceTree = "<group>"; };
 		FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Viewmodel.swift; sourceTree = "<group>"; };
@@ -236,6 +235,9 @@
 		FBACF0B12C74F16500C3E522 /* ComplateDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplateDirectionView.swift; sourceTree = "<group>"; };
 		FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceUtils.swift; sourceTree = "<group>"; };
 		FBACF0B72C750B2300C3E522 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
+		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED112C73C25700996946 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 		FB6264252C6C22A000CC2597 /* besafe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				FBACF0C02C752BC700C3E522 /* viewmodel */,
 				FB6264752C6C4BB700CC2597 /* View */,
 				FB6264742C6C4BAE00CC2597 /* App */,
 				FB62642A2C6C22A000CC2597 /* Assets.xcassets */,
@@ -521,7 +524,6 @@
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
-				FB6264682C6C39E700CC2597 /* Page2 */,
 				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
 			);
 			path = View;
@@ -535,15 +537,6 @@
 				FB6264622C6C360100CC2597 /* DependencyInjection.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		FB6264682C6C39E700CC2597 /* Page2 */ = {
-			isa = PBXGroup;
-			children = (
-				FB6264662C6C39E700CC2597 /* Page2.storyboard */,
-				FB6264672C6C39E700CC2597 /* Page2ViewController.swift */,
-			);
-			path = Page2;
 			sourceTree = "<group>";
 		};
 		FB62646C2C6C39E700CC2597 /* Page1 */ = {
@@ -568,7 +561,9 @@
 		FB6264752C6C4BB700CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */,
 				FB6264282C6C22A000CC2597 /* ContentView.swift */,
+				FBACF0C32C752C7C00C3E522 /* CompleteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -629,6 +624,14 @@
 				FBACF0B72C750B2300C3E522 /* ViewState.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FBACF0C02C752BC700C3E522 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		FBC3ED0A2C73C14A00996946 /* Component */ = {
@@ -876,7 +879,6 @@
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
-				FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,7 +935,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */,
-				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
@@ -1006,9 +1007,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */,
 				FBC3ED192C73C28000996946 /* Direction.swift in Sources */,
+				FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */,
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
+				FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
