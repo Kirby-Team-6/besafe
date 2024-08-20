@@ -46,7 +46,7 @@ struct SimpleComplicationView: View {
     
     var body: some View {
         // MARK: Image for the complication
-        Image(systemName: "paperplane.fill")
+        Image(systemName: "location.fill")
             .resizable()
             .scaledToFit()
             .padding(10)
