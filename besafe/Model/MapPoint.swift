@@ -10,7 +10,8 @@ import MapKit
 import CoreLocation
 import SwiftData
 
-@Model class MapPoint {
+@Model 
+class MapPoint {
     var name: String
     var latitude: Double
     var longitude: Double
