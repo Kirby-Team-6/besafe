@@ -41,7 +41,7 @@ class Page1ViewController: UIViewController {
     
     
     @IBAction func buttonClick(_ sender: Any) {
-        router?.push(Screen.page2)
+        
     }
     
 }
