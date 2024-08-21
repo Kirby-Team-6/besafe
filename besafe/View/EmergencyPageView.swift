@@ -21,7 +21,7 @@ struct EmergencyPageView: View {
                     Spacer()
                     
                     Button(action: {
-                        // TODO: information page -> UIKit\
+                        // TODO: information page -> UIKit
                         print("Info button tapped")
                     }) {
                         ZStack {
@@ -39,8 +39,9 @@ struct EmergencyPageView: View {
                     }
                     .padding(.trailing, 30)
                     .padding(.top, 70)
+                    .opacity(isCountingDown ? 0 : 1)
+                    .disabled(isCountingDown)
                 }
-                
                 VStack(spacing: 70) {
                     VStack(spacing: 8) {
                         if isCountingDown {
@@ -129,19 +130,43 @@ struct EmergencyPageView: View {
                 }
             }
             
-            // Set Emergency Contact Button
-            Button(action: {
-                // TODO: Action for setting emergency contact
-            }) {
-                Text("Set emergency contact")
-                    .foregroundColor(.black)
+            VStack(spacing: 15) {
+                
+                // Set Emergency Contact Button
+                Button(action: {
+                    // TODO: Action for setting emergency contact
+                }) {
+                    Text("Set emergency contact")
+                        .font(.system(size: 17))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(100)
+                }
+                .opacity(isCountingDown ? 0 : 1)
+                .disabled(isCountingDown)
+                
+                // Set Emergency Contact Button
+                Button(action: {
+                    // TODO: Action for setting emergency contact
+                }) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "mappin")
+                            .font(.system(size: 19))
+                        
+                        Text("Custom safe place")
+                            .font(.system(size: 17))
+                    }
                     .padding()
-                    .background(Color.white)
-                    .cornerRadius(15)
-                    .shadow(radius: 10)
-            }
-            .padding(.bottom, 30)
-    }
+                    .padding(.horizontal, 6)
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(100)
+                }
+                .padding(.bottom, 30)
+                .opacity(isCountingDown ? 0 : 1)
+                .disabled(isCountingDown)
+            }        }
         .onAppear {
             prepareHaptics()
         }
