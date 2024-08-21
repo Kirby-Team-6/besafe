@@ -5,8 +5,8 @@
              "business_status": "OPERATIONAL",
              "geometry": {
                  "location": {
-                     "lat": -6.298974100000001,
-                     "lng": 106.669916
+                     "lat": -6.2989741,
+                    "lng": 106.669916
                  },
                  "viewport": {
                      "northeast": {
@@ -58,7 +58,7 @@
              "geometry": {
                  "location": {
                      "lat": -6.2960459,
-                     "lng": 106.668499
+                    "lng": 106.668499
                  },
                  "viewport": {
                      "northeast": {
@@ -110,7 +110,7 @@
              "geometry": {
                  "location": {
                      "lat": -6.3030374,
-                     "lng": 106.6797355
+                    "lng": 106.6797355
                  },
                  "viewport": {
                      "northeast": {
@@ -162,7 +162,7 @@
              "geometry": {
                  "location": {
                      "lat": -6.294478,
-                     "lng": 106.6843069
+                    "lng": 106.6843069
                  },
                  "viewport": {
                      "northeast": {
@@ -215,7 +215,7 @@
              "geometry": {
                  "location": {
                      "lat": -6.2989782,
-                     "lng": 106.6699382
+                            "lng": 106.6699382
                  },
                  "viewport": {
                      "northeast": {

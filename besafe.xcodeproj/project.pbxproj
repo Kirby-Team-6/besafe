@@ -24,6 +24,8 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		40E996952C74D70C0076CD3A /* LoadingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996942C74D70C0076CD3A /* LoadingPageView.swift */; };
+		40E996972C74FFE40076CD3A /* SafePlaceViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996962C74FFE40076CD3A /* SafePlaceViewModel2.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
 		AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
@@ -174,6 +176,8 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		40E996942C74D70C0076CD3A /* LoadingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPageView.swift; sourceTree = "<group>"; };
+		40E996962C74FFE40076CD3A /* SafePlaceViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceViewModel2.swift; sourceTree = "<group>"; };
 		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
 		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
 		AC395CFD2C743925003626BF /* MarkerIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIcon.swift; sourceTree = "<group>"; };
@@ -288,6 +292,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4025B2A82C74904700BD3118 /* Emergency Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				40B72FDB2C71EC2F00145D66 /* EmergencyContactsView.swift */,
+			);
+			path = "Emergency Contacts";
+			sourceTree = "<group>";
+		};
 		404346962C743A0F004ED850 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,7 +343,6 @@
 			children = (
 				40B72FD32C6DA51000145D66 /* NearbyPlacesView.swift */,
 				40B72FC62C6D0D8B00145D66 /* SafePlaceView.swift */,
-				40B72FDB2C71EC2F00145D66 /* EmergencyContactsView.swift */,
 				FB6264602C6C35F200CC2597 /* HomeView.swift */,
 			);
 			path = Root;
@@ -353,6 +364,7 @@
 				40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */,
 				40B72FDD2C71EDC600145D66 /* EmergencyContactsViewModel.swift */,
 				40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */,
+				40E996962C74FFE40076CD3A /* SafePlaceViewModel2.swift */,
 				ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */,
 			);
 			path = ViewModel;
@@ -502,10 +514,12 @@
 			children = (
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
+				4025B2A82C74904700BD3118 /* Emergency Contacts */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
 				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
+				40E996942C74D70C0076CD3A /* LoadingPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -912,6 +926,7 @@
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				AC7E58792C74180100E591A1 /* MapOverlayView.swift in Sources */,
+				40E996952C74D70C0076CD3A /* LoadingPageView.swift in Sources */,
 				AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
@@ -931,6 +946,7 @@
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
+				40E996972C74FFE40076CD3A /* SafePlaceViewModel2.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

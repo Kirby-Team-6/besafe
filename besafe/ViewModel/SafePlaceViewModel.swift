@@ -11,14 +11,22 @@ class SafePlacesViewModel: ObservableObject {
     
     private let priorityOrder: [String: Int] = [
         // TODO: Tambahin custom safe place nya user yang jadi priority 1
-        "police_station": 1,
-        "hospital": 2,
-        "hotel": 3,
-        "convenience_store": 4,
-        "gas_station": 5,
-        "shopping_mall": 6,
-        "university": 7,
-        "place_of_worship": 8
+            "police": 1,
+            "hospital": 2,
+            "hotel": 3,
+            "resort_hotel": 3,
+            "bank": 4,
+            "fire_station": 5,
+            "convenience_store": 6,
+            "supermarket": 6,
+            "gas_station": 7,
+            "shopping_mall": 8,
+            "department_store": 8,
+            "university": 9,
+            "hindu_temple": 10,
+            "mosque": 10,
+            "synagogue": 10,
+            "church": 10
     ]
     
     func loadSafePlaces() {
@@ -62,20 +70,47 @@ class SafePlacesViewModel: ObservableObject {
         return userLocation.distance(from: placeLocation)
     }
     
+//    private func sortSafePlaces(_ places: [SafePlace], from userLocation: CLLocation) -> [SafePlace] {
+//        return places.sorted { (place1, place2) -> Bool in
+//            let distance1 = calculateDistance(from: userLocation, to: place1)
+//            let distance2 = calculateDistance(from: userLocation, to: place2)
+//            
+//            if distance1 != distance2 {
+//                return distance1 < distance2
+//            } else {
+//                let priority1 = priorityOrder[place1.types.first ?? ""] ?? Int.max
+//                let priority2 = priorityOrder[place2.types.first ?? ""] ?? Int.max
+//                return priority1 < priority2
+//            }
+//        }
+//    }
+    
     private func sortSafePlaces(_ places: [SafePlace], from userLocation: CLLocation) -> [SafePlace] {
         return places.sorted { (place1, place2) -> Bool in
             let distance1 = calculateDistance(from: userLocation, to: place1)
             let distance2 = calculateDistance(from: userLocation, to: place2)
             
-            if distance1 != distance2 {
-                return distance1 < distance2
-            } else {
+            let distanceDifference = abs(distance1 - distance2)
+            let distanceTolerance: Double = 10.0 // 10 meter tolerance
+
+            if distanceDifference <= distanceTolerance {
+                // If distances are within tolerance, sort by priority
                 let priority1 = priorityOrder[place1.types.first ?? ""] ?? Int.max
                 let priority2 = priorityOrder[place2.types.first ?? ""] ?? Int.max
-                return priority1 < priority2
+                
+                if priority1 != priority2 {
+                    return priority1 < priority2
+                } else {
+                    // If priority is the same, sort alphabetically by name
+                    return place1.name < place2.name
+                }
+            } else {
+                // If distances are not within tolerance, sort by distance
+                return distance1 < distance2
             }
         }
     }
+
     
     private func selectTopSafePlace() {
         if !safePlaces.isEmpty {

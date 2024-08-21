@@ -8,7 +8,7 @@ struct EmergencyPageView: View {
     @State private var countdown = 3
     @State private var isCountingDown = false
     @State private var timer: Timer?
-    
+
     var body: some View {
         VStack {
             
@@ -36,20 +36,22 @@ struct EmergencyPageView: View {
                     }
                     .padding(.trailing, 30)
                     .padding(.top, 70)
+                    .opacity(isCountingDown ? 0 : 1)
+                    .disabled(isCountingDown)
                 }
                 
                 VStack(spacing: 70) {
                     VStack(spacing: 8) {
                         if isCountingDown {
                             VStack(spacing: 12) {
-                                Text("You will be navigated to the nearest safe place")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
+                                Text("You will be navigated to\nthe nearest safe place")
+                                    .font(.system(size: 17))
+                                    .foregroundColor(.black)
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
                                 
                                 Text("in \(countdown) second\(countdown > 1 ? "s" : "")")
-                                    .font(.title)
+                                    .font(.system(size: 34))
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .fixedSize(horizontal: false, vertical: true)
@@ -58,13 +60,13 @@ struct EmergencyPageView: View {
                         } else {
                             VStack(spacing: 12) {
                                 Text("Hold the button\nif you’re being followed")
-                                    .font(.title2)
+                                    .font(.system(size: 22))
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
                                 
-                                Text("You will be navigated to the nearest safe place and your live location will be sent to emergency contact")
-                                    .font(.subheadline)
+                                Text("You’ll be guided to the nearest safe spot, and your live location will be sent to your emergency contact.")
+                                    .font(.system(size: 13))
                                     .foregroundColor(.gray)
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
@@ -116,6 +118,7 @@ struct EmergencyPageView: View {
                                 }
                             }, perform: {
                                 // TODO: LongPress -> NAVIGATE TO SAFE PLACE
+                                // Loading Page View
                                 print("Long press completed!")
                             })
                             .padding()
@@ -125,19 +128,44 @@ struct EmergencyPageView: View {
                 }
             }
             
-            // Set Emergency Contact Button
-            Button(action: {
-                // TODO: Action for setting emergency contact
-            }) {
-                Text("Set emergency contact")
-                    .foregroundColor(.black)
+            VStack(spacing: 15) {
+                
+                // Set Emergency Contact Button
+                Button(action: {
+                    // TODO: Action for setting emergency contact
+                }) {
+                    Text("Set emergency contact")
+                        .font(.system(size: 17))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(100)
+                }
+                .opacity(isCountingDown ? 0 : 1)
+                .disabled(isCountingDown)
+                
+                // Set Emergency Contact Button
+                Button(action: {
+                    // TODO: Action for setting emergency contact
+                }) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "mappin")
+                            .font(.system(size: 19))
+                        
+                        Text("Custom safe place")
+                            .font(.system(size: 17))
+                    }
                     .padding()
-                    .background(Color.white)
-                    .cornerRadius(15)
-                    .shadow(radius: 10)
+                    .padding(.horizontal, 6)
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(100)
+                }
+                .padding(.bottom, 30)
+                .opacity(isCountingDown ? 0 : 1)
+                .disabled(isCountingDown)
             }
-            .padding(.bottom, 30)
-    }
+        }
         .onAppear {
             prepareHaptics()
         }
@@ -203,7 +231,7 @@ struct EmergencyPageView: View {
     }
 }
 
-struct EmergencyPageView2_Previews: PreviewProvider {
+struct EmergencyPageView_Previews: PreviewProvider {
     static var previews: some View {
         EmergencyPageView()
     }
