@@ -12,6 +12,7 @@ import SwiftData
 
 @Model
 class MapPoint {
+    //TODO: ini gada id, address ?
    var name: String
    var latitude: Double
    var longitude: Double

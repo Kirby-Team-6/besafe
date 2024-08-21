@@ -26,16 +26,22 @@ class MainViewModel: ObservableObject {
     
     @Published var route: MKRoute?
     @Published var coverScreen = CoverScreen.initial
+    @Published var mapPoints: [MapPoint] = []
     
     private var listSafePlaces: [PlaceModel] = []
     var selectedSafePlace: PlaceModel?
     private var loadData = false
     
-    func getSafePlace() {
+    func loadCustomPlaces(mapPointViewModel: MapPointViewModel) {
+            self.mapPoints = mapPointViewModel.mapPoint
+        }
+    
+    func getSafePlace(mapPointViewModel: MapPointViewModel) {
         if loadData == true {
             return
         }
         Task {
+            self.loadCustomPlaces(mapPointViewModel: mapPointViewModel)
             self.loadData = true
             guard let location = CLLocationManager().location?.coordinate else {
                 return
@@ -47,7 +53,7 @@ class MainViewModel: ObservableObject {
             
             switch result {
             case .success(let success):
-                let data = SafePlaceUtils.sortSafePlaces(success, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+                let data = SafePlaceUtils.sortSafePlaces(success, customPlaces: mapPoints, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
                 DispatchQueue.main.async {
                     self.listSafePlaces = data
                     data.forEach{ v in
@@ -122,7 +128,7 @@ class MainViewModel: ObservableObject {
             
             // Reload safe places, excluding the selected place
             let filteredPlaces = listSafePlaces.filter { $0.id != selectedPlace.id }
-            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, customPlaces: mapPoints, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
             listSafePlaces = sortedPlaces
             
             
