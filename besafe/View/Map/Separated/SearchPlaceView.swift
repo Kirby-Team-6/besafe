@@ -8,13 +8,14 @@ struct SearchPlaceView: View {
    @State private var isSearching: Bool = false
    @Binding var addingPoint: Bool
 //   @EnvironmentObject var watchConnect: WatchConnect
+    @EnvironmentObject var router: Router
    
    var body: some View {
       ZStack{
          Color.neutral.ignoresSafeArea()
          VStack(spacing: 16) {
             ModalityTitleView(cancelString: "Cancel", title: "New preferred custom", confirmString: "Submit") {
-               
+                router.pop()
             } submitFunc: {
 //               watchConnect.increment()
             }

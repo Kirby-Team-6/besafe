@@ -6,7 +6,6 @@ struct EmergencyPageView: View {
     
     @EnvironmentObject private var viewmodel: MainViewModel
     @EnvironmentObject private var router: Router
-    @Binding var showFulscreen: Bool
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var engine: CHHapticEngine?
@@ -134,9 +133,8 @@ struct EmergencyPageView: View {
             
             VStack(spacing: 15) {
                 
-                // Set Emergency Contact Button
+        
                 Button(action: {
-//                    self.showFulscreen = false
                     router.push(.emergencycontactsview)
                 }) {
                     Text("Set emergency contact")
@@ -149,9 +147,7 @@ struct EmergencyPageView: View {
                 .opacity(isCountingDown ? 0 : 1)
                 .disabled(isCountingDown)
                 
-                // Set Emergency Contact Button
                 Button(action: {
-                    self.showFulscreen = false
                     router.push(.homeview)
                 }) {
                     HStack(spacing: 8) {
