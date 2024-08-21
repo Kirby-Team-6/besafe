@@ -5,6 +5,8 @@ struct EmergencyPageView: View {
     let onTap: () -> Void
     
     @EnvironmentObject private var viewmodel: MainViewModel
+    @EnvironmentObject private var router: Router
+    @Binding var showFulscreen: Bool
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var engine: CHHapticEngine?
@@ -134,7 +136,8 @@ struct EmergencyPageView: View {
                 
                 // Set Emergency Contact Button
                 Button(action: {
-                    // TODO: Action for setting emergency contact
+                    self.showFulscreen = false
+                    router.push(.emergencycontactsview)
                 }) {
                     Text("Set emergency contact")
                         .font(.system(size: 17))
@@ -148,7 +151,8 @@ struct EmergencyPageView: View {
                 
                 // Set Emergency Contact Button
                 Button(action: {
-                    // TODO: Action for setting emergency contact
+                    self.showFulscreen = false
+                    router.push(.homeview)
                 }) {
                     HStack(spacing: 8) {
                         Image(systemName: "mappin")
@@ -232,8 +236,8 @@ struct EmergencyPageView: View {
     }
 }
 
-struct EmergencyPageView2_Previews: PreviewProvider {
-    static var previews: some View {
-        EmergencyPageView {}
-    }
-}
+//struct EmergencyPageView2_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EmergencyPageView {}
+//    }
+//}

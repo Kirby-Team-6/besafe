@@ -3,9 +3,17 @@ import SwiftUI
 struct EmergencyContactsView: View {
     @StateObject private var viewModel = EmergencyContactsViewModel()
     @State private var hasContactAccess = false
-    @State private var showDeleteConfirmation = false
-    @State private var showContactAccessAlert = false
+    @State private var activeAlert: ActiveAlert? = nil
     @State private var contactToDelete: EmergencyContact?
+
+    enum ActiveAlert: Identifiable {
+        case deleteConfirmation
+        case contactAccess
+
+        var id: Int {
+            hashValue
+        }
+    }
     
     var body: some View {
         VStack {
@@ -43,26 +51,20 @@ struct EmergencyContactsView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.blue)
                         }
-                        .swipeActions {
-                            Button("Delete", role: .destructive) {
-//                                contactToDelete = contact
-                                showDeleteConfirmation = true
-                            }
+                    }
+                    .onDelete { indexSet in
+                        if let index = indexSet.first {
+                            contactToDelete = viewModel.selectedContacts[index]
+                            activeAlert = .deleteConfirmation
                         }
                     }
-                    //                    .onDelete { indexSet in
-                    //                        if let index = indexSet.first {
-                    //                            contactToDelete = viewModel.selectedContacts[index]
-                    //                            showDeleteConfirmation = true
-                    //                        }
-                    //                    }
                 }
                 
                 Button(action: {
                     if hasContactAccess {
                         viewModel.showContactPicker()
                     } else {
-                        showContactAccessAlert = true
+                        activeAlert = .contactAccess
                     }
                 }) {
                     HStack(spacing: 8) {
@@ -77,7 +79,7 @@ struct EmergencyContactsView: View {
                 }
             }
         }
-        .background(Color(UIColor.systemGray6)) // Update with appropriate background color
+        .background(.grayBackground)
         .onAppear {
             viewModel.requestContactAccess { granted in
                 hasContactAccess = granted
@@ -86,28 +88,30 @@ struct EmergencyContactsView: View {
                 }
             }
         }
-        .alert(isPresented: $showDeleteConfirmation) {
-            Alert(
-                title: Text("Are you sure you want to delete this emergency contact?"),
-                primaryButton: .destructive(Text("Delete")) {
-                    if let contact = contactToDelete {
-                        viewModel.deleteContact(contact: contact)
-                    }
-                },
-                secondaryButton: .cancel()
-            )
-        }
-        .alert(isPresented: $showContactAccessAlert) {
-            Alert(
-                title: Text("Contact Access Denied"),
-                message: Text("Please allow contact access in Settings to add an emergency contact."),
-                primaryButton: .default(Text("Open Settings")) {
-                    if let url = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(url)
-                    }
-                },
-                secondaryButton: .cancel()
-            )
+        .alert(item: $activeAlert) { alert in
+            switch alert {
+            case .deleteConfirmation:
+                return Alert(
+                    title: Text("Are you sure you want to delete this emergency contact?"),
+                    primaryButton: .destructive(Text("Delete")) {
+                        if let contact = contactToDelete {
+                            viewModel.deleteContact(contact: contact)
+                        }
+                    },
+                    secondaryButton: .cancel()
+                )
+            case .contactAccess:
+                return Alert(
+                    title: Text("Contact Access Denied"),
+                    message: Text("Please allow contact access in Settings to add an emergency contact."),
+                    primaryButton: .default(Text("Open Settings")) {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url)
+                        }
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
         }
     }
 }

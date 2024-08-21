@@ -54,9 +54,9 @@ struct MainView: View {
                 .ignoresSafeArea(.all, edges: .all)
         }
         .fullScreenCover(isPresented: $showInitialView) {
-            EmergencyPageView {
+            EmergencyPageView(onTap: {
                 viewmodel.coverScreen = CoverScreen.direction
-            }
+            }, showFulscreen: $showInitialView)
             .frame(maxWidth: .infinity)
             .background(BackgroundBlurView())
             .ignoresSafeArea(.all, edges: .all)
