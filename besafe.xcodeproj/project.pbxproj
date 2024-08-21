@@ -91,6 +91,7 @@
 		FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */; };
 		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
 		FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
+		FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
@@ -498,7 +499,6 @@
 			isa = PBXGroup;
 			children = (
 				AC9BA3EB2C756614000021E3 /* besafe Watch App.entitlements */,
-				AC2C96362C739A4700AF65AE /* WatchToiOSConnector.swift */,
 				FBACF0C02C752BC700C3E522 /* viewmodel */,
 				FB6264752C6C4BB700CC2597 /* View */,
 				FB6264742C6C4BAE00CC2597 /* App */,
@@ -1048,6 +1048,7 @@
 				FBC3ED192C73C28000996946 /* Direction.swift in Sources */,
 				FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */,
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
+				FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */,
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
 				FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,

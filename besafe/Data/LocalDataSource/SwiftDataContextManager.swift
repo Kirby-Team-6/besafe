@@ -18,7 +18,7 @@ class SwiftDataService {
    @MainActor
    init() {
       do{
-         self.container = try! ModelContainer(for: EmergencyContact.self, MapPoint.self, ExcludePlaceModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+         self.container = try ModelContainer(for: EmergencyContact.self, MapPoint.self, ExcludePlaceModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
          self.context = container.mainContext
       }catch{
          fatalError(error.localizedDescription)
