@@ -10,6 +10,7 @@ import MapKit
 
 class DirectionViewmodel: ObservableObject {
     
+    
     func directToSafePlace()  {
 //        let source = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
 //        let destination = CLLocationCoordinate2D(latitude: safePlaces.latitude!,longitude:  safePlaces.longitude!)
