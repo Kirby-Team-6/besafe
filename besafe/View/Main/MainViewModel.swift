@@ -28,7 +28,7 @@ class MainViewModel: ObservableObject {
     @Published var coverScreen = CoverScreen.initial
     
     private var listSafePlaces: [PlaceModel] = []
-    private var selectedSafePlace: PlaceModel?
+    var selectedSafePlace: PlaceModel?
     private var loadData = false
     
     func getSafePlace() {
@@ -92,6 +92,24 @@ class MainViewModel: ObservableObject {
         }
     }
     
+    // TODO: Selected top safe place
+//    private func selectTopSafePlace() {
+//        if !safePlaces.isEmpty {
+//            selectedSafePlace = safePlaces.first
+//        }
+//    }
+    func selectTopSafePlace() {
+        // Ensure the list is not empty
+        guard let topSafePlace = listSafePlaces.first else {
+            print("No safe places available.")
+            return
+        }
+        
+        // Set the selectedSafePlace to the top place
+        selectedSafePlace = topSafePlace
+    }
+
+    
     func reroute() {
         if let selectedPlace = selectedSafePlace {
             // Exclude the current selected place for 12 hours
@@ -111,7 +129,6 @@ class MainViewModel: ObservableObject {
             navigateToSafePlace(safePlaces: sortedPlaces, latitude: location.latitude, longitude: location.longitude)
         }
     }
-
     
     func shouldExcludePlace(_ place: PlaceModel) -> Bool {
 //        if let excludedPlace = excludedPlace, let exclusionTimestamp = exclusionTimestamp {
