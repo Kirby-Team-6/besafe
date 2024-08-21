@@ -30,6 +30,30 @@ struct MainView: View {
                 }
                 DirectionView(position: $position)
             }
+            
+            if showInitialView {
+                EmergencyPageView(onTap: {
+                    viewmodel.coverScreen = CoverScreen.direction
+                }, showFulscreen: $showInitialView)
+                .frame(maxWidth: .infinity)
+                .background(BackgroundBlurView())
+                .ignoresSafeArea(.all, edges: .all)
+                .animation(.default, value: showInitialView)
+                .onAppear {
+                    self.loadMap = true
+                }
+            }
+            
+            if showCompleteDirection {
+                ComplateDirectionView(onReroute: {
+                    viewmodel.reroute()
+                    viewmodel.coverScreen = CoverScreen.direction
+                }, onDone: {
+                    viewmodel.coverScreen = CoverScreen.initial
+                })
+                    .background(BackgroundBlurView())
+                    .ignoresSafeArea(.all, edges: .all)
+            }
         }
         .onReceive(viewmodel.$coverScreen){ v in
             self.showInitialView = false
@@ -44,24 +68,6 @@ struct MainView: View {
                 self.showInitialView = true
             case .none:
                 ""
-            }
-        }
-        .fullScreenCover(isPresented: $showCompleteDirection) {
-            ComplateDirectionView(onReroute: {}, onDone: {
-                viewmodel.coverScreen = CoverScreen.initial
-            })
-                .background(BackgroundBlurView())
-                .ignoresSafeArea(.all, edges: .all)
-        }
-        .fullScreenCover(isPresented: $showInitialView) {
-            EmergencyPageView(onTap: {
-                viewmodel.coverScreen = CoverScreen.direction
-            }, showFulscreen: $showInitialView)
-            .frame(maxWidth: .infinity)
-            .background(BackgroundBlurView())
-            .ignoresSafeArea(.all, edges: .all)
-            .onAppear {
-                self.loadMap = true
             }
         }
         .environmentObject(viewmodel)

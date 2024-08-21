@@ -136,7 +136,7 @@ struct EmergencyPageView: View {
                 
                 // Set Emergency Contact Button
                 Button(action: {
-                    self.showFulscreen = false
+//                    self.showFulscreen = false
                     router.push(.emergencycontactsview)
                 }) {
                     Text("Set emergency contact")

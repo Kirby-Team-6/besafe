@@ -71,6 +71,7 @@ class MainViewModel: ObservableObject {
     }
     
     func navigateToSafePlace(safePlaces: [PlaceModel], latitude: Double, longitude: Double) {
+        self.selectedSafePlace = safePlaces.first
         guard let safePlaces = safePlaces.first?.location else {
             return
         }
@@ -95,8 +96,7 @@ class MainViewModel: ObservableObject {
     func reroute() {
         if let selectedPlace = selectedSafePlace {
             // Exclude the current selected place for 12 hours
-//            excludedPlace = selectedPlace
-//            exclusionTimestamp = Date()
+            swiftDataSource.addExcludePlace(ExcludePlaceModel(id: selectedPlace.id, timeStamp: Date()))
             
             guard let location = CLLocationManager().location?.coordinate else {
                 return
