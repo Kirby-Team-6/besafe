@@ -92,6 +92,8 @@
 		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
 		FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
 		FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
+		FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
+		FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
@@ -256,6 +258,7 @@
 		FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludePlaceModel.swift; sourceTree = "<group>"; };
+		FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MockLocation.gpx; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED112C73C25700996946 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -628,6 +631,7 @@
 				AC9BA3D02C744E37000021E3 /* Variables.swift */,
 				ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */,
 				ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */,
+				FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -908,6 +912,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */,
+				FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
@@ -932,6 +937,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
 			);

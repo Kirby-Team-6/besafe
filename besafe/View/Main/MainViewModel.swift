@@ -86,8 +86,9 @@ class MainViewModel: ObservableObject {
             guard let route = response?.routes.first else {
                 return
             }
-        
+            
             self.route = route
+            CLLocationManager().startUpdatingLocation()
         }
     }
     

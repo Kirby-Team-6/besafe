@@ -40,7 +40,7 @@ struct FooterDirectionView: View {
             Button(action: {
                 withAnimation {
                     viewmodel.route = nil
-                    viewmodel.coverScreen = CoverScreen.complete
+                    viewmodel.coverScreen = CoverScreen.initial
                     CLLocationManager().stopUpdatingLocation()
                 }
             }, label: {
