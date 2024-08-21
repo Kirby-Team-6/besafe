@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  besafe
-//
-//  Created by Rifat Khadafy on 20/08/24.
-//
-
 import SwiftUI
 import CoreLocation
 import MapKit
@@ -16,11 +9,12 @@ struct MainView: View {
     @State private var showInitialView = true
     @State private var showCompleteDirection = false
     @State private var loadMap = false
+//    @State private var showOnboarding = true // Tambahkan state ini
     
     var body: some View {
         ZStack {
             if loadMap {
-                Map(position: $position){
+                Map(position: $position) {
                     UserAnnotation()
                     if viewmodel.route != nil {
                         let strokeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
@@ -31,7 +25,7 @@ struct MainView: View {
                 DirectionView(position: $position)
             }
         }
-        .onReceive(viewmodel.$coverScreen){ v in
+        .onReceive(viewmodel.$coverScreen) { v in
             self.showInitialView = false
             self.showCompleteDirection = false
             
@@ -46,12 +40,18 @@ struct MainView: View {
                 ""
             }
         }
+        // TODO: modality onboarding -> tapi kalau kayak gini -> page emergency nya juga jadi modality bukan fullscreen cover -> atau panggil modality nya di page emergency page view aja?
+//        .sheet(isPresented: $showOnboarding) {
+//                    OnboardingView()
+//                        .background(BackgroundBlurView())
+//                        .ignoresSafeArea(.all, edges: .all)
+//        }
         .fullScreenCover(isPresented: $showCompleteDirection) {
             ComplateDirectionView(onReroute: {}, onDone: {
                 viewmodel.coverScreen = CoverScreen.initial
             })
-                .background(BackgroundBlurView())
-                .ignoresSafeArea(.all, edges: .all)
+            .background(BackgroundBlurView())
+            .ignoresSafeArea(.all, edges: .all)
         }
         .fullScreenCover(isPresented: $showInitialView) {
             EmergencyPageView(onTap: {
