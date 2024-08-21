@@ -34,8 +34,8 @@ class MapPointViewModel: ObservableObject {
       }
    }
    
-   func update(point: MapPoint, name: String, lat: Double, long: Double){
-      dataSource.updateMapPoint(point: point, name: name, lat: lat, long: long)
+   func update(point: MapPoint, name: String, lat: Double, long: Double, index: Int){
+      dataSource.updateMapPoint(point: point, name: name, lat: lat, long: long, index: index)
       
       self.mapPoint = self.dataSource.fetchMapPoints()
       

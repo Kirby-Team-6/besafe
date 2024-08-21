@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-   @Published var path: [Screen] = [Screen.homeview]
-   @Published var rootView: Screen = Screen.homeview
+   @Published var path: [Screen] = [Screen.watchTest]
+   @Published var rootView: Screen = Screen.watchTest
    @Published var sheet: Sheet?
    @Published var fullScreenCover: FullScreenCover?
    
@@ -73,7 +73,10 @@ class Router: ObservableObject {
       case .direction:
          DirectionView()
             .navigationBarBackButtonHidden(true)
-            .environmentObject(DI.shared.directionViewmodel())
+//            .environmentObject(DI.shared.directionViewmodel())
+      case .watchTest:
+         WatchTestView()
+            .navigationBarBackButtonHidden(true)
       }
    }
    

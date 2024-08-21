@@ -23,7 +23,6 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
-		AC2C96372C739A4700AF65AE /* WatchToiOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C96362C739A4700AF65AE /* WatchToiOSConnector.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
 		AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
@@ -36,12 +35,25 @@
 		AC7E58812C741A0600E591A1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58802C741A0600E591A1 /* Screen.swift */; };
 		AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58822C741A2600E591A1 /* Sheet.swift */; };
 		AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */; };
+		AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
+		AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
+		AC9BA3D42C7472F2000021E3 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D32C7472F2000021E3 /* WatchConnectivity.swift */; };
+		AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */; };
+		AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
+		AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */; };
+		AC9BA3E82C74DEB0000021E3 /* MapPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */; };
+		AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */; };
 		ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */; };
 		ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
+		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
+		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
+		ACF3E0FC2C758C7900A99AD7 /* WatchTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0FB2C758C7900A99AD7 /* WatchTestView.swift */; };
+		ACF3E0FE2C758F3700A99AD7 /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */; };
+		ACF3E0FF2C7590A000A99AD7 /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -184,11 +196,19 @@
 		AC7E58802C741A0600E591A1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		AC7E58822C741A2600E591A1 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenCover.swift; sourceTree = "<group>"; };
+		AC9BA3D02C744E37000021E3 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		AC9BA3D32C7472F2000021E3 /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
+		AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AC9BA3EA2C756601000021E3 /* besafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = besafe.entitlements; sourceTree = "<group>"; };
+		AC9BA3EB2C756614000021E3 /* besafe Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "besafe Watch App.entitlements"; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewModel.swift; sourceTree = "<group>"; };
 		ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocationNameView.swift; sourceTree = "<group>"; };
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
+		ACF3E0FB2C758C7900A99AD7 /* WatchTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTestView.swift; sourceTree = "<group>"; };
+		ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSession.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,11 +360,20 @@
 		AC7E58872C741A8A00E591A1 /* Separated */ = {
 			isa = PBXGroup;
 			children = (
+				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
 				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
 				ACE50A792C73053D007CA42D /* LocationDetailView.swift */,
 				AC7E58782C74180100E591A1 /* MapOverlayView.swift */,
 			);
 			path = Separated;
+			sourceTree = "<group>";
+		};
+		AC9BA3D52C747FA8000021E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		ACE50A7B2C730636007CA42D /* ViewModel */ = {
@@ -372,7 +401,6 @@
 			children = (
 				FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */,
 				ACE50A772C73051E007CA42D /* ModalityTitleView.swift */,
-				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
 				AC395CF92C743309003626BF /* MarkerIconView.swift */,
 				AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */,
 			);
@@ -413,6 +441,7 @@
 		FB6263FD2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3EA2C756601000021E3 /* besafe.entitlements */,
 				AC464E5A2C73A1DE0027AB69 /* Info.plist */,
 				AC7E587A2C74191500E591A1 /* Enum */,
 				ACE50A7B2C730636007CA42D /* ViewModel */,
@@ -422,6 +451,7 @@
 				FB62645A2C6C22AD00CC2597 /* Data */,
 				FB6264022C6C22A000CC2597 /* Assets.xcassets */,
 				FB6264042C6C22A000CC2597 /* Preview Content */,
+				AC9BA3D32C7472F2000021E3 /* WatchConnectivity.swift */,
 			);
 			path = besafe;
 			sourceTree = "<group>";
@@ -454,6 +484,7 @@
 		FB6264252C6C22A000CC2597 /* besafe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3EB2C756614000021E3 /* besafe Watch App.entitlements */,
 				AC2C96362C739A4700AF65AE /* WatchToiOSConnector.swift */,
 				FB6264752C6C4BB700CC2597 /* View */,
 				FB6264742C6C4BAE00CC2597 /* App */,
@@ -501,6 +532,7 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3D52C747FA8000021E3 /* Onboarding */,
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
@@ -584,6 +616,10 @@
 				FBC3ED172C73C28000996946 /* Model */,
 				FBC3ED122C73C25700996946 /* Manager */,
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
+				AC9BA3D02C744E37000021E3 /* Variables.swift */,
+				ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */,
+				ACF3E0FB2C758C7900A99AD7 /* WatchTestView.swift */,
+				ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -888,6 +924,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF3E0FC2C758C7900A99AD7 /* WatchTestView.swift in Sources */,
 				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
@@ -895,6 +932,7 @@
 				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
 				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
+				AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */,
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FBC3ED1D2C73C29D00996946 /* PlaceModel.swift in Sources */,
@@ -908,6 +946,8 @@
 				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
+				ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
+				AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
@@ -917,6 +957,7 @@
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
+				AC9BA3D42C7472F2000021E3 /* WatchConnectivity.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
@@ -929,6 +970,7 @@
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
+				ACF3E0FE2C758F3700A99AD7 /* WatchSession.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
 			);
@@ -955,18 +997,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */,
 				FBC3ED192C73C28000996946 /* Direction.swift in Sources */,
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
+				AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */,
+				ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
+				ACF3E0FF2C7590A000A99AD7 /* WatchSession.swift in Sources */,
 				FBC3ED1B2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
+				AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */,
 				AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */,
-				AC2C96372C739A4700AF65AE /* WatchToiOSConnector.swift in Sources */,
 				AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */,
+				AC9BA3E82C74DEB0000021E3 /* MapPointViewModel.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1031,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1061,7 +1109,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1205,6 +1253,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "besafe Watch App/besafe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
@@ -1237,6 +1286,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "besafe Watch App/besafe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
@@ -1270,6 +1320,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = besafe/besafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
@@ -1306,6 +1357,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = besafe/besafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";

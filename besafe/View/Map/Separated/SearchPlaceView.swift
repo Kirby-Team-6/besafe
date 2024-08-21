@@ -7,7 +7,7 @@ struct SearchPlaceView: View {
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
    @Binding var addingPoint: Bool
-   @EnvironmentObject var watchConnect: WatchConnector
+//   @EnvironmentObject var watchConnect: WatchConnector
    
    var body: some View {
       ZStack{
@@ -16,11 +16,11 @@ struct SearchPlaceView: View {
             ModalityTitleView(cancelString: "Cancel", title: "New preferred custom", confirmString: "Submit") {
                
             } submitFunc: {
-               if watchConnect.session.isReachable{
-                  searchText = "Done"
-               }else{
-                  searchText = "Nope"
-               }
+//               if watchConnect.session.isReachable{
+//                  searchText = "Done"
+//               }else{
+//                  searchText = "Nope"
+//               }
             }
 
             // Search Bar
