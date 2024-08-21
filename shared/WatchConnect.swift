@@ -48,8 +48,10 @@ class WatchConnect: ObservableObject {
       }
    }
    
-   func ubah(){
-      text2 = "Testinggggg"
+   func ubah(_ text1: String, _ text2: String){
+      self.text1 = text1
+      self.text2 = text2
+      
       session.sendMessage(["text1": text1, "text2": text2], replyHandler: nil) { error in
          print(error.localizedDescription)
       }

@@ -5,6 +5,7 @@ import SwiftData
 
 struct HomeView: View {
    @EnvironmentObject var pointViewModel: MapPointViewModel
+   @EnvironmentObject var watchConnect: WatchConnect
    
    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
    @State private var showingSearchPlaceView = false

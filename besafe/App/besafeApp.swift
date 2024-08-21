@@ -12,7 +12,7 @@ struct besafeApp: App {
    @StateObject var router = Router()
    @StateObject var pointViewModel = MapPointViewModel(dataSource: .shared)
    @StateObject var directionViewModel = DirectionViewmodel()
-//   @StateObject var watchConnect = WatchConnector()
+   @StateObject var watchConnect = WatchConnect()
    var body: some Scene {
       WindowGroup {
          NavigationStack(path: $router.path) {
@@ -30,7 +30,7 @@ struct besafeApp: App {
          .environmentObject(router)
          .environmentObject(pointViewModel)
          .environmentObject(directionViewModel)
-//         .environmentObject(watchConnect)
+         .environmentObject(watchConnect)
       }
    }
 }

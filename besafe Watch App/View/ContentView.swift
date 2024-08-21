@@ -26,20 +26,6 @@ struct ContentView: View {
          VStack {
             Text(connect.text1)
             Text(connect.text2)
-            
-            HStack {
-               Button {
-                  connect.increment()
-               } label: {
-                  Text("Testing 1")
-               }
-               
-               Button {
-                  connect.decrement()
-               } label: {
-                  Text("Testing 1")
-               }
-            }
          }
          .frame(maxHeight: .infinity, alignment: .bottom)
       }

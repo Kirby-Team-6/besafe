@@ -9,8 +9,11 @@ import SwiftUI
 
 struct LocationDetailView: View {
    @Binding var name: String
+   
    @Environment(\.dismiss) var dismiss
    @EnvironmentObject var pointViewModel: MapPointViewModel
+   @EnvironmentObject var watchConnect: WatchConnect
+   
    var mapPoint: MapPoint
    
    @State var selectedIconID: UUID?
@@ -33,6 +36,9 @@ struct LocationDetailView: View {
          }, submitFunc: {
             //TODO: Updateny belom optimal
             pointViewModel.update(point: mapPoint, name: name, lat: mapPoint.latitude, long: mapPoint.longitude, index: mapPoint.markerIndex)
+            
+            watchConnect.ubah(mapPoint.name, String(mapPoint.latitude))
+            
             dismiss()
          })
          
