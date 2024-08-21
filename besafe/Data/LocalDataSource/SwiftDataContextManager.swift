@@ -17,8 +17,12 @@ class SwiftDataService {
    
    @MainActor
    init() {
-       self.container = try! ModelContainer(for: EmergencyContact.self, MapPoint.self, ExcludePlaceModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
-      self.context = container.mainContext
+      do{
+         self.container = try ModelContainer(for: EmergencyContact.self, MapPoint.self, ExcludePlaceModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+         self.context = container.mainContext
+      }catch{
+         fatalError(error.localizedDescription)
+      }
    }
    
    func fetchEmergencyContacts() -> [EmergencyContact] {
@@ -83,11 +87,12 @@ class SwiftDataService {
       
    }
    
-   func updateMapPoint(point: MapPoint, name: String, lat: Double, long: Double){
+   func updateMapPoint(point: MapPoint, name: String, lat: Double, long: Double, index: Int){
       do{
          point.name = name
          point.latitude = lat
          point.longitude = long
+         point.markerIndex = index
          
          try context.save()
       }catch{

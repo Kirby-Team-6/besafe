@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct besafe_Watch_AppApp: App {
     @StateObject var router = Router()
+   @StateObject var pointViewModel = MapPointViewModel(dataSource: .shared)
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path) {
@@ -19,6 +20,7 @@ struct besafe_Watch_AppApp: App {
                     }
             }
             .environmentObject(router)
+            .environmentObject(pointViewModel)
         }
     }
 }

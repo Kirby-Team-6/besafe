@@ -11,6 +11,7 @@ import SwiftUI
 struct besafeApp: App {
    @StateObject var router = Router()
    @StateObject var pointViewModel = MapPointViewModel(dataSource: .shared)
+   @StateObject var watchConnect = WatchConnect()
 //   @StateObject var watchConnect = WatchConnector()
     @State var initialize = false
     
@@ -41,7 +42,7 @@ struct besafeApp: App {
 
           .environmentObject(router)
          .environmentObject(pointViewModel)
-//         .environmentObject(watchConnect)
+         .environmentObject(watchConnect)
       }
    }
 }

@@ -17,12 +17,20 @@ struct MapOverlayView: View {
    
    var reader: MapProxy
    
+   @FocusState private var isFocused: Bool
+   
    var body: some View {
       GeometryReader { geometry in
          VStack {
             if addingPoint {
                VStack {
                   CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, addingPoint: $addingPoint, reader: reader)
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           customSafePlaceHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
+                        }
+                     }
                }
                .frame(maxWidth: .infinity)
                .frame(height: customSafePlaceHeight)
@@ -31,10 +39,16 @@ struct MapOverlayView: View {
             } else {
                VStack {
                   SearchPlaceView(addingPoint: $addingPoint)
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           customSafePlaceHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
+                        }
+                     }
                }
                .frame(maxWidth: .infinity)
-               .frame(height: overlayHeight)
-               .offset(y: geometry.size.height - overlayHeight)
+               .frame(height: customSafePlaceHeight)
+               .offset(y: geometry.size.height - customSafePlaceHeight)
                .gesture(
                   DragGesture()
                      .onChanged { value in
