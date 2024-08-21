@@ -3,6 +3,7 @@ import Contacts
 import ContactsUI
 import SwiftData
 
+// ViewModel tidak perlu tahu soal contactToAdd dan activeAlert
 class EmergencyContactsViewModel: NSObject, ObservableObject, CNContactPickerDelegate {
     @Published var selectedContacts: [EmergencyContact] = []
     private let contactStore = CNContactStore()
@@ -19,7 +20,7 @@ class EmergencyContactsViewModel: NSObject, ObservableObject, CNContactPickerDel
     func showContactPicker() {
         let picker = CNContactPickerViewController()
         picker.delegate = self
-        picker.predicateForEnablingContact = NSPredicate(format: "phoneNumbers.@count > 0") // Show only contacts with phone numbers
+        picker.predicateForEnablingContact = NSPredicate(format: "phoneNumbers.@count > 0")
         picker.displayedPropertyKeys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
 
         if let rootVC = UIApplication.shared.windows.first?.rootViewController {
@@ -33,8 +34,9 @@ class EmergencyContactsViewModel: NSObject, ObservableObject, CNContactPickerDel
             if let phoneNumber = contact.phoneNumbers.first?.value.stringValue {
                 let newContact = EmergencyContact(name: fullName, phoneNumber: phoneNumber)
 
-                dataService.addEmergencyContact(contact: newContact)
-                selectedContacts.append(newContact)
+                // Simpan kontak ke variabel sementara di View
+                (picker.presentingViewController as? EmergencyContactsView)?.contactToAdd = newContact
+                (picker.presentingViewController as? EmergencyContactsView)?.activeAlert = .addConfirmation
             }
         }
     }
@@ -46,5 +48,10 @@ class EmergencyContactsViewModel: NSObject, ObservableObject, CNContactPickerDel
     func deleteContact(contact: EmergencyContact) {
         dataService.deleteEmergencyContact(contact: contact)
         selectedContacts.removeAll { $0.id == contact.id }
+    }
+
+    func addContact(contact: EmergencyContact) {
+        dataService.addEmergencyContact(contact: contact)
+        selectedContacts.append(contact)
     }
 }
