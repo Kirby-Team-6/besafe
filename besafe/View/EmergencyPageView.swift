@@ -5,6 +5,7 @@ struct EmergencyPageView: View {
     let onTap: () -> Void
     
     @EnvironmentObject private var viewmodel: MainViewModel
+    @StateObject private var mapPointViewModel = MapPointViewModel(dataSource: SwiftDataService())
     @EnvironmentObject private var router: Router
     @Binding var showFulscreen: Bool
     @State private var isPressed = false
@@ -131,7 +132,7 @@ struct EmergencyPageView: View {
                                     }
                                     .scaleEffect(buttonScale)
                                     .onLongPressGesture(minimumDuration: 2.0, maximumDistance: .infinity, pressing: { pressing in
-                                        viewmodel.getSafePlace()
+                                        viewmodel.getSafePlace(mapPointViewModel: mapPointViewModel)
                                         if pressing {
                                             startCountdown()
                                             withAnimation(.easeIn(duration: 2.0)) {
@@ -215,19 +216,27 @@ struct EmergencyPageView: View {
     func triggerHapticFeedback() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
         
-        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
-        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1.0)
+        var events = [CHHapticEvent]()
         
-        let start = CHHapticEvent(eventType: .hapticContinuous, parameters: [sharpness, intensity], relativeTime: 0, duration: 2.0)
+        for i in 0..<10 {
+            let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 10.0)
+            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 10.0)
+            
+            let startTime = Double(i) * 0.15
+            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: startTime)
+            
+            events.append(event)
+        }
         
         do {
-            let pattern = try CHHapticPattern(events: [start], parameters: [])
+            let pattern = try CHHapticPattern(events: events, parameters: [])
             let player = try engine?.makePlayer(with: pattern)
             try player?.start(atTime: 0)
         } catch {
             print("Failed to play haptic: \(error.localizedDescription)")
         }
     }
+
     
     func startCountdown() {
         isCountingDown = true

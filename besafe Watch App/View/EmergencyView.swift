@@ -1,12 +1,14 @@
 import SwiftUI
+import WatchKit
 
 struct EmergencyButtonView: View {
-//    @EnvironmentObject private var viewmodel: MainViewModel
+    //    @EnvironmentObject private var viewmodel: MainViewModel
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var countdown = 3
     @State private var isCountingDown = false
     @State private var timer: Timer?
+    @State private var hapticTimer: Timer?
     @State private var isNavigating = false
     
     var body: some View {
@@ -21,7 +23,7 @@ struct EmergencyButtonView: View {
                             .padding(.bottom, 5)
                         
                         //TODO: ganti jadi selected safe place name -> ini kayaknya harus dari watch connectivity
-//                        Text(viewmodel.selectedSafePlace?.displayName?.text ?? "Unknown Place")
+                        //                        Text(viewmodel.selectedSafePlace?.displayName?.text ?? "Unknown Place")
                         Text("Sky House BSD Apartment")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
@@ -77,12 +79,14 @@ struct EmergencyButtonView: View {
                     .scaleEffect(buttonScale)
                     .onLongPressGesture(minimumDuration: 1.5, pressing: { pressing in
                         if pressing {
+                            startHapticFeedback()
                             startCountdown()
                             withAnimation(.easeIn(duration: 1.5)) {
                                 buttonScale = 1.2
                                 isPressed = true
                             }
                         } else {
+                            stopHapticFeedback()
                             resetButton()
                             stopCountdown()
                         }
@@ -99,6 +103,17 @@ struct EmergencyButtonView: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
+    }
+    
+    func startHapticFeedback() {
+        hapticTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+            WKInterfaceDevice.current().play(.start)
+        }
+    }
+    
+    func stopHapticFeedback() {
+        hapticTimer?.invalidate()
+        hapticTimer = nil
     }
     
     func startCountdown() {
@@ -137,6 +152,6 @@ struct EmergencyButtonView: View {
 struct EmergencyButtonView_Previews: PreviewProvider {
     static var previews: some View {
         EmergencyButtonView()
-//            .environmentObject(MainViewModel(remoteDataSource: RemoteDataSource(), swiftDataSource: SwiftDataService()))
+        //            .environmentObject(MainViewModel(remoteDataSource: RemoteDataSource(), swiftDataSource: SwiftDataService()))
     }
 }
