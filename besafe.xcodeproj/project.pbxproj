@@ -24,6 +24,7 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996A22C75E0190076CD3A /* EmergencyView.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
 		AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
@@ -195,6 +196,7 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		40E996A22C75E0190076CD3A /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
 		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
 		AC395CFD2C743925003626BF /* MarkerIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIcon.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */,
 				FB6264282C6C22A000CC2597 /* ContentView.swift */,
 				FBACF0C32C752C7C00C3E522 /* CompleteView.swift */,
+				40E996A22C75E0190076CD3A /* EmergencyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1063,6 +1066,7 @@
 				FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
 				FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
+				40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */,
 				AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */,
 				AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */,
 				AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */,
