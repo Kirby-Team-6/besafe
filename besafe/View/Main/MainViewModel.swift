@@ -17,13 +17,18 @@ enum CoverScreen {
 
 class MainViewModel: ObservableObject {
     private let remoteDataSource: RemoteDataSource
-    init(remoteDataSource: RemoteDataSource) {
+    private let swiftDataSource: SwiftDataService
+
+    init(remoteDataSource: RemoteDataSource, swiftDataSource: SwiftDataService) {
         self.remoteDataSource = remoteDataSource
+        self.swiftDataSource = swiftDataSource
     }
     
     @Published var route: MKRoute?
     @Published var coverScreen = CoverScreen.initial
-    @Published var listSafePlaces: [PlaceModel] = []
+    
+    private var listSafePlaces: [PlaceModel] = []
+    private var selectedSafePlace: PlaceModel?
     private var loadData = false
     
     func getSafePlace() {
@@ -45,7 +50,11 @@ class MainViewModel: ObservableObject {
                 let data = SafePlaceUtils.sortSafePlaces(success, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
                 DispatchQueue.main.async {
                     self.listSafePlaces = data
-                    print(data.count)
+                    data.forEach{ v in
+                        let distance =  SafePlaceUtils.calculateDistance(from: CLLocation(latitude: location.latitude, longitude: location.longitude), to: v)
+
+                        print("\(v.displayName?.text ?? "") | \(v.primaryType) | \(distance)")
+                    }
                     self.loadData = false
                 }
                 navigateToSafePlace(safePlaces: data, latitude: location.latitude, longitude: location.longitude)
@@ -54,6 +63,11 @@ class MainViewModel: ObservableObject {
                 self.loadData = false
             }
         }
+    }
+    
+    func stopDirection()  {
+        self.route = nil
+        self.selectedSafePlace = nil
     }
     
     func navigateToSafePlace(safePlaces: [PlaceModel], latitude: Double, longitude: Double) {
@@ -75,6 +89,44 @@ class MainViewModel: ObservableObject {
         
             self.route = route
         }
+    }
+    
+    func reroute() {
+        if let selectedPlace = selectedSafePlace {
+            // Exclude the current selected place for 12 hours
+//            excludedPlace = selectedPlace
+//            exclusionTimestamp = Date()
+            
+            guard let location = CLLocationManager().location?.coordinate else {
+                return
+            }
+            
+            // Reload safe places, excluding the selected place
+            let filteredPlaces = listSafePlaces.filter { $0.id != selectedPlace.id }
+            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            listSafePlaces = sortedPlaces
+            
+            
+            navigateToSafePlace(safePlaces: sortedPlaces, latitude: location.latitude, longitude: location.longitude)
+        }
+    }
+
+    
+    func shouldExcludePlace(_ place: PlaceModel) -> Bool {
+//        if let excludedPlace = excludedPlace, let exclusionTimestamp = exclusionTimestamp {
+//            let timeInterval = Date().timeIntervalSince(exclusionTimestamp)
+//            let twelveHours: TimeInterval = 12 * 60 * 60
+//            
+//            // Check if the exclusion period (12 hours) has passed
+//            if timeInterval < twelveHours {
+//                return place.name == excludedPlace.name
+//            } else {
+//                // Reset exclusion after 12 hours
+//                self.excludedPlace = nil
+//                self.exclusionTimestamp = nil
+//            }
+//        }
+        return false
     }
     
 }

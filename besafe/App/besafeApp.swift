@@ -12,21 +12,34 @@ struct besafeApp: App {
    @StateObject var router = Router()
    @StateObject var pointViewModel = MapPointViewModel(dataSource: .shared)
 //   @StateObject var watchConnect = WatchConnector()
+    @State var initialize = false
+    
    var body: some Scene {
       WindowGroup {
-         NavigationStack(path: $router.path) {
-            EmptyView()
-               .navigationDestination(for: Screen.self) { screen in
-                  router.build(screen)
-               }
-               .sheet(item: $router.sheet) { sheet in
-                  //                        router.build(sheet)
-               }
-               .fullScreenCover(item: $router.fullScreenCover) { fullScreenCover in
-                  //                        appCoordinator.build(fullScreenCover)
-               }
-         }
-         .environmentObject(router)
+          Group {
+              if (initialize){
+                  NavigationStack(path: $router.path) {
+                     EmptyView()
+                        .navigationDestination(for: Screen.self) { screen in
+                           router.build(screen)
+                        }
+                        .sheet(item: $router.sheet) { sheet in
+                           //                        router.build(sheet)
+                        }
+                        .fullScreenCover(item: $router.fullScreenCover) { fullScreenCover in
+                           //                        appCoordinator.build(fullScreenCover)
+                        }
+                  }
+              } else {
+                  EmptyView()
+              }
+          }   
+          .task {
+              await DI.shared.initialize()
+              self.initialize = true
+          }
+
+          .environmentObject(router)
          .environmentObject(pointViewModel)
 //         .environmentObject(watchConnect)
       }

@@ -10,14 +10,14 @@ import SwiftData
 
 class SwiftDataService {
    private let container: ModelContainer
-   private let context: ModelContext
+    let context: ModelContext
    
    @MainActor
    static let shared = SwiftDataService()
    
    @MainActor
    init() {
-      self.container = try! ModelContainer(for: EmergencyContact.self, MapPoint.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
+       self.container = try! ModelContainer(for: EmergencyContact.self, MapPoint.self, ExcludePlaceModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
       self.context = container.mainContext
    }
    
@@ -28,6 +28,24 @@ class SwiftDataService {
          fatalError(error.localizedDescription)
       }
    }
+    
+    func addExcludePlace(_ place: ExcludePlaceModel) {
+        context.insert(place)
+        do {
+            try context.save()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    func getExcludePlaces() -> [ExcludePlaceModel] {
+        do {
+            return try context.fetch(FetchDescriptor<ExcludePlaceModel>())
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+
    
    func addEmergencyContact(contact: EmergencyContact) {
       context.insert(contact)

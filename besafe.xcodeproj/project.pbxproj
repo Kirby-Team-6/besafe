@@ -63,7 +63,6 @@
 		FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */; };
 		FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */; };
 		FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */; };
-		FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264792C6C917C00CC2597 /* LocalDataSource.swift */; };
 		FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
 		FB6264802C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264812C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
@@ -80,6 +79,7 @@
 		FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */; };
 		FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */; };
 		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
+		FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
@@ -224,7 +224,6 @@
 		FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Viewmodel.swift; sourceTree = "<group>"; };
 		FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContextManager.swift; sourceTree = "<group>"; };
-		FB6264792C6C917C00CC2597 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FB62647F2C6C968800CC2597 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FB6264822C6C976B00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -238,6 +237,7 @@
 		FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludePlaceModel.swift; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED112C73C25700996946 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -572,7 +572,6 @@
 			isa = PBXGroup;
 			children = (
 				FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */,
-				FB6264792C6C917C00CC2597 /* LocalDataSource.swift */,
 			);
 			path = LocalDataSource;
 			sourceTree = "<group>";
@@ -585,6 +584,7 @@
 				40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */,
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
 				AC395CFD2C743925003626BF /* MarkerIcon.swift */,
+				FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -964,6 +964,7 @@
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
 				FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */,
+				FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
@@ -978,7 +979,6 @@
 				FBACF0B52C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
 				ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
-				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
