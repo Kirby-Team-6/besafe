@@ -12,6 +12,8 @@ struct CustomLocationNameView: View {
    @Binding var searchText: String
    @Binding var onTapAdd: Bool
    @Binding var enumOverlay: Overlay
+   @Binding var showTemporaryMarker: Bool
+   @Binding var addingPoint: Bool
    @State var selectedIconID: UUID? = nil
    @State var imgName = "heart.fill"
    @State var color = Color.customRed
@@ -35,6 +37,8 @@ struct CustomLocationNameView: View {
             ModalityTitleView(cancelString: "Cancel", title: "New preferred place", confirmString: "Submit") {
                withAnimation(.easeInOut){
                   onTapAdd = false
+                  addingPoint = false
+                  showTemporaryMarker = false
                   enumOverlay = .searchPlace
                }
             } submitFunc: {
@@ -45,6 +49,7 @@ struct CustomLocationNameView: View {
                
                withAnimation(.easeInOut) {
                   onTapAdd = true
+                  addingPoint = false
                   enumOverlay = .customNewPlace
                }
             }

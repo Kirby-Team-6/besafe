@@ -17,6 +17,7 @@ struct MapOverlayView: View {
    @Binding var position: MapCameraPosition
    @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
    @Binding var showTemporaryMarker: Bool
+   @Binding var addingPoint: Bool
    @StateObject var safePlaceVM = SafePlacesViewModel()
    
    var reader: MapProxy
@@ -29,7 +30,7 @@ struct MapOverlayView: View {
             VStack{
                switch enumOverlay {
                case .searchPlace:
-                  SearchPlaceView(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker)
+                  SearchPlaceView(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint)
                      .transition(.move(edge: .bottom))
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
@@ -48,7 +49,7 @@ struct MapOverlayView: View {
                         }
                      }
                case .addPlace:
-                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, enumOverlay: $enumOverlay, reader: reader)
+                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, enumOverlay: $enumOverlay, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint, reader: reader)
                      .transition(.move(edge: .bottom))
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
