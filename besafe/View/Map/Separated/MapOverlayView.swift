@@ -9,10 +9,9 @@ import SwiftUI
 import MapKit
 
 struct MapOverlayView: View {
-   @Binding var addingPoint: Bool
+   @Binding var enumOverlay: Overlay
    @Binding var onTapAdd: Bool
    @Binding var searchText: String
-   @Binding var customSafePlaceHeight: CGFloat
    @Binding var overlayHeight: CGFloat
    @StateObject var safePlaceVM = SafePlacesViewModel()
    
@@ -23,9 +22,30 @@ struct MapOverlayView: View {
    var body: some View {
       GeometryReader { geometry in
          VStack {
-            if addingPoint {
-               VStack {
-                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, addingPoint: $addingPoint, reader: reader)
+            VStack{
+               switch enumOverlay {
+               case .searchPlace:
+                  SearchPlaceView(enumOverlay: $enumOverlay)
+                     .transition(.move(edge: .bottom))
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
+                        }
+                     }
+                  
+               case .customNewPlace:
+                  ListCustomPlaces(enumOverlay: $enumOverlay)
+                     .transition(.move(edge: .bottom))
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
+                        }
+                     }
+               case .addPlace:
+                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, enumOverlay: $enumOverlay, reader: reader)
+                     .transition(.move(edge: .bottom))
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
                         withAnimation {
@@ -33,43 +53,21 @@ struct MapOverlayView: View {
                         }
                      }
                }
-               .frame(maxWidth: .infinity)
-               .frame(height: overlayHeight)
-               .offset(y: geometry.size.height - overlayHeight)
-               .gesture(
-                  DragGesture()
-                     .onChanged { value in
-                        withAnimation{
-                           safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
-                        }
-                     }
-               )
-               .transition(.move(edge: .bottom))
-            } else {
-               VStack {
-                  SearchPlaceView(addingPoint: $addingPoint)
-                     .focused($isFocused)
-                     .onChange(of: isFocused) { oldValue, newValue in
-                        withAnimation {
-                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
-                        }
-                     }
-               }
-               .frame(maxWidth: .infinity)
-               .frame(height: overlayHeight)
-               .offset(y: geometry.size.height - overlayHeight)
-               .gesture(
-                  DragGesture()
-                     .onChanged { value in
-                        withAnimation{
-                           safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
-                        }
-                     }
-               )
-               .transition(.move(edge: .bottom))
             }
+            .frame(maxWidth: .infinity)
+            .frame(height: overlayHeight)
+            .offset(y: geometry.size.height - overlayHeight)
+            .gesture(
+               DragGesture()
+                  .onChanged { value in
+                     withAnimation{
+                        safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
+                     }
+                  }
+            )
          }
       }
       .ignoresSafeArea()
    }
+   
 }

@@ -1,6 +1,7 @@
 import Foundation
 import CoreLocation
 import SwiftUI
+import MapKit
 
 class SafePlacesViewModel: ObservableObject {
    @Published var safePlaces: [SafePlace] = []

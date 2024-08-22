@@ -37,6 +37,9 @@
 		AC7E58812C741A0600E591A1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58802C741A0600E591A1 /* Screen.swift */; };
 		AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58822C741A2600E591A1 /* Sheet.swift */; };
 		AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */; };
+		AC8E96062C76D60C00AA7569 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96052C76D60C00AA7569 /* Overlay.swift */; };
+		AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */; };
+		AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96092C76E13100AA7569 /* ListPlacesView.swift */; };
 		AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
 		AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
 		AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */; };
@@ -211,6 +214,9 @@
 		AC7E58802C741A0600E591A1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		AC7E58822C741A2600E591A1 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenCover.swift; sourceTree = "<group>"; };
+		AC8E96052C76D60C00AA7569 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomPlaces.swift; sourceTree = "<group>"; };
+		AC8E96092C76E13100AA7569 /* ListPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesView.swift; sourceTree = "<group>"; };
 		AC9BA3D02C744E37000021E3 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AC9BA3EA2C756601000021E3 /* besafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = besafe.entitlements; sourceTree = "<group>"; };
@@ -364,6 +370,7 @@
 				AC7E58802C741A0600E591A1 /* Screen.swift */,
 				AC7E58822C741A2600E591A1 /* Sheet.swift */,
 				AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */,
+				AC8E96052C76D60C00AA7569 /* Overlay.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -426,6 +433,7 @@
 				AC395CF92C743309003626BF /* MarkerIconView.swift */,
 				AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */,
 				FBACF0AF2C74DB6C00C3E522 /* BackgroundBlur.swift */,
+				AC8E96092C76E13100AA7569 /* ListPlacesView.swift */,
 			);
 			path = "Custom Shared Components";
 			sourceTree = "<group>";
@@ -562,6 +570,7 @@
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
+				AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1007,6 +1016,7 @@
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				AC7E58792C74180100E591A1 /* MapOverlayView.swift in Sources */,
+				AC8E96062C76D60C00AA7569 /* Overlay.swift in Sources */,
 				AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
@@ -1016,11 +1026,13 @@
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
+				AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */,
 				ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */,
 				ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */,
+				AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
 				404346AD2C745390004ED850 /* EmergencyPageView.swift in Sources */,

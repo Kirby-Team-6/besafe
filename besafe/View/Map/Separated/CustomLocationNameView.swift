@@ -11,7 +11,7 @@ import MapKit
 struct CustomLocationNameView: View {
    @Binding var searchText: String
    @Binding var onTapAdd: Bool
-   @Binding var addingPoint: Bool
+   @Binding var enumOverlay: Overlay
    @State var selectedIconID: UUID? = nil
    @State var imgName = "heart.fill"
    @State var color = Color.customRed
@@ -35,7 +35,7 @@ struct CustomLocationNameView: View {
             ModalityTitleView(cancelString: "Cancel", title: "New preferred place", confirmString: "Submit") {
                withAnimation(.easeInOut){
                   onTapAdd = false
-                  addingPoint = false
+                  enumOverlay = .searchPlace
                }
             } submitFunc: {
                let location = reader.convert(CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY), from: .global)
@@ -45,7 +45,7 @@ struct CustomLocationNameView: View {
                
                withAnimation(.easeInOut) {
                   onTapAdd = true
-                  addingPoint = false
+                  enumOverlay = .customNewPlace
                }
             }
             .padding(.top, 8)
@@ -82,12 +82,10 @@ struct CustomLocationNameView: View {
          }
          .padding(.horizontal)
       }
-      //      .frame(height: UIScreen.main.bounds.height * 0.3)
       .onAppear(perform: {
          selectedIconID = Variables.icons.first { $0.img == "heart.fill" }?.id
       })
       .clipShape(RoundedRectangle(cornerRadius: 25))
-      .offset(y: addingPoint ? 0 : UIScreen.main.bounds.height)
       .shadow(radius: 16, y: 4)
    }
 }
