@@ -569,7 +569,6 @@
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
-				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -661,6 +660,7 @@
 		FBACF0AA2C7481F800C3E522 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
 				FBACF0AB2C74820300C3E522 /* MainView.swift */,
 				FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */,
 			);

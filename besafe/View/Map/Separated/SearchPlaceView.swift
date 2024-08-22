@@ -9,6 +9,7 @@ struct SearchPlaceView: View {
    @Binding var overlayHeight: CGFloat
    @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
    @Binding var showTemporaryMarker: Bool
+   @Binding var addingPoint: Bool
    @State private var searchText: String = ""
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
@@ -52,6 +53,7 @@ struct SearchPlaceView: View {
                // TODO: navigate ke page add custom pinpoint
                withAnimation{
                   enumOverlay = .addPlace
+                  addingPoint = true
                }
             }) {
                HStack {
@@ -77,7 +79,7 @@ struct SearchPlaceView: View {
                            withAnimation{
                               temporaryMarkerCoordinate = item.placemark.coordinate
                               showTemporaryMarker = true
-                              enumOverlay = .customNewPlace
+                              enumOverlay = .addPlace
                               // Update the map position to focus on the selected coordinate
                               position = .camera(MapCamera(centerCoordinate: item.placemark.coordinate, distance: 1000))
                               overlayHeight = UIScreen.main.bounds.height * 0.3
@@ -86,7 +88,7 @@ struct SearchPlaceView: View {
                   }
                }
                .listStyle(PlainListStyle())
-               .clipShape(RoundedRectangle(cornerRadius: 25))
+               .clipShape(RoundedRectangle(cornerRadius: 12))
             }else{
                HStack{
                   Text("Suggestions")
@@ -104,7 +106,7 @@ struct SearchPlaceView: View {
                            withAnimation{
                               temporaryMarkerCoordinate = item.coordinate
                               showTemporaryMarker = true
-                              enumOverlay = .customNewPlace
+                              enumOverlay = .addPlace
                               // Update the map position to focus on the selected coordinate
                               position = .camera(MapCamera(centerCoordinate: item.coordinate, distance: 1000))
                               overlayHeight = UIScreen.main.bounds.height * 0.3
@@ -113,7 +115,7 @@ struct SearchPlaceView: View {
                   }
                }
                .listStyle(PlainListStyle())
-               .clipShape(RoundedRectangle(cornerRadius: 25))
+               .clipShape(RoundedRectangle(cornerRadius: 12))
             }
             
             Spacer()

@@ -60,21 +60,13 @@ struct HomeView: View {
                ), mapPoint: mapSelection!)
                .presentationDetents([.medium])
             })
-            .sheet(isPresented: $showTemporaryMarker, onDismiss: {
-               temporaryMarkerCoordinate = nil
-            }, content: {
-               VStack{
-                  
-               }
-               .presentationDetents([.height(overlayHeight)])
-            })
             .overlay(alignment: .bottom) {
-               MapOverlayView(enumOverlay: $enumOverlay, onTapAdd: $onTapAdd, searchText: $searchText, overlayHeight: $overlayHeight, position: $position, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, reader: reader)
+               MapOverlayView(enumOverlay: $enumOverlay, onTapAdd: $onTapAdd, searchText: $searchText, overlayHeight: $overlayHeight, position: $position, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint, reader: reader)
                
             }
          }
          
-         if enumOverlay == .addPlace {
+         if addingPoint {
             Image(.customPinpoint)
                .foregroundColor(.red)
                .font(.title)
