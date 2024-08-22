@@ -18,13 +18,13 @@ struct ModalityTitleView: View {
    
    var body: some View {
       HStack{
-         Button("Cancel") {
+         Button(cancelString) {
             cancelFunc()
          }
          
          Spacer()
          
-         Text("New Preferred Place")
+         Text(title)
             .frame(maxWidth: .infinity, alignment: .center)
             .font(.headline)
          
@@ -33,7 +33,7 @@ struct ModalityTitleView: View {
          Button(action: {
             submitFunc()
          }, label: {
-            Text("Submit")
+            Text(confirmString)
                .fontWeight(.semibold)
          })
       }
