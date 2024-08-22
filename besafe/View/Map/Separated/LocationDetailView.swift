@@ -31,13 +31,10 @@ struct LocationDetailView: View {
    var body: some View {
       VStack {
          ModalityTitleView(cancelString: "Delete", title: "Custom Place", confirmString: "Submit", cancelFunc: {
-            pointViewModel.delete(point: mapPoint)
+//            pointViewModel.delete(point: mapPoint)
             dismiss()
          }, submitFunc: {
-            //TODO: Updateny belom optimal
             pointViewModel.update(point: mapPoint, name: name, lat: mapPoint.latitude, long: mapPoint.longitude, index: mapPoint.markerIndex)
-            
-//            watchConnect.ubah(mapPoint.name, String(mapPoint.latitude))
             
             dismiss()
          })
@@ -70,6 +67,29 @@ struct LocationDetailView: View {
          })
          .padding()
          .background(.customWhite)
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         
+         Button(action: {
+            // Handle map selection action
+            // TODO: navigate ke page add custom pinpoint
+            withAnimation{
+               dismiss()
+               pointViewModel.delete(point: mapPoint)
+            }
+         }) {
+            HStack {
+               Image(systemName: "trash")
+                  .font(.system(size: 20))
+                  .foregroundColor(.red)
+               Text("Delete")
+                  .font(.system(size: 16))
+                  .foregroundColor(.red)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .background(.customWhite)
+         }
          .clipShape(RoundedRectangle(cornerRadius: 12))
          
          Spacer()

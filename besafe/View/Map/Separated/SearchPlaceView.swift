@@ -1,14 +1,19 @@
 import SwiftUI
 import MapKit
+import CoreLocation
 
 struct SearchPlaceView: View {
    @Environment(\.dismiss) private var dismiss
    @Binding var enumOverlay: Overlay
+   @Binding var position: MapCameraPosition
+   @Binding var overlayHeight: CGFloat
+   @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @Binding var showTemporaryMarker: Bool
    @State private var searchText: String = ""
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
-//   @EnvironmentObject var watchConnect: WatchConnect
-    @EnvironmentObject var router: Router
+   //   @EnvironmentObject var watchConnect: WatchConnect
+   @EnvironmentObject var router: Router
    @EnvironmentObject var mapPointVM: MapPointViewModel
    @EnvironmentObject var nearbyVM: SearchNearby
    
@@ -31,7 +36,7 @@ struct SearchPlaceView: View {
                
                Spacer()
             }
-
+            
             // Search Bar
             TextField("Search Maps", text: $searchText)
                .padding()
@@ -68,9 +73,20 @@ struct SearchPlaceView: View {
                List {
                   ForEach(searchResults, id: \.self) { item in
                      ListPlacesView(name: item.name ?? "", title: item.placemark.title ?? "")
+                        .onTapGesture {
+                           withAnimation{
+                              temporaryMarkerCoordinate = item.placemark.coordinate
+                              showTemporaryMarker = true
+                              enumOverlay = .customNewPlace
+                              // Update the map position to focus on the selected coordinate
+                              position = .camera(MapCamera(centerCoordinate: item.placemark.coordinate, distance: 1000))
+                              overlayHeight = UIScreen.main.bounds.height * 0.3
+                           }
+                        }
                   }
                }
                .listStyle(PlainListStyle())
+               .clipShape(RoundedRectangle(cornerRadius: 25))
             }else{
                HStack{
                   Text("Suggestions")
@@ -84,9 +100,20 @@ struct SearchPlaceView: View {
                List{
                   ForEach(nearbyVM.nearbyPlaces){ item in
                      ListPlacesView(name: item.name, title: item.address)
+                        .onTapGesture {
+                           withAnimation{
+                              temporaryMarkerCoordinate = item.coordinate
+                              showTemporaryMarker = true
+                              enumOverlay = .customNewPlace
+                              // Update the map position to focus on the selected coordinate
+                              position = .camera(MapCamera(centerCoordinate: item.coordinate, distance: 1000))
+                              overlayHeight = UIScreen.main.bounds.height * 0.3
+                           }
+                        }
                   }
                }
                .listStyle(PlainListStyle())
+               .clipShape(RoundedRectangle(cornerRadius: 25))
             }
             
             Spacer()

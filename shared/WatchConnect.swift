@@ -59,31 +59,6 @@ class WatchConnect: NSObject, WCSessionDelegate, ObservableObject {
       // Protocol comformance only
       // Not needed for this demo
    }
-   //
-   //   func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-   //      DispatchQueue.main.async {
-   //         if let name = message["name"] as? String {
-   //            self.nameSubject.send(name)
-   //            print(name)
-   //         } else {
-   //            print("There was an error (name)")
-   //         }
-   //
-   //         if let long = message["long"] as? Double {
-   //            self.longSubject.send(long)
-   //            print(long)
-   //         } else {
-   //            print("There was an error (longitude)")
-   //         }
-   //
-   //         if let lat = message["lat"] as? Double {
-   //            self.latSubject.send(lat)
-   //            print(lat)
-   //         } else {
-   //            print("There was an error (latitude)")
-   //         }
-   //      }
-   //   }
    
    // iOS Protocol comformance
    // Not needed for this demo otherwise

@@ -7,12 +7,16 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
 
 struct MapOverlayView: View {
    @Binding var enumOverlay: Overlay
    @Binding var onTapAdd: Bool
    @Binding var searchText: String
    @Binding var overlayHeight: CGFloat
+   @Binding var position: MapCameraPosition
+   @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @Binding var showTemporaryMarker: Bool
    @StateObject var safePlaceVM = SafePlacesViewModel()
    
    var reader: MapProxy
@@ -25,7 +29,7 @@ struct MapOverlayView: View {
             VStack{
                switch enumOverlay {
                case .searchPlace:
-                  SearchPlaceView(enumOverlay: $enumOverlay)
+                  SearchPlaceView(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker)
                      .transition(.move(edge: .bottom))
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
@@ -35,7 +39,7 @@ struct MapOverlayView: View {
                      }
                   
                case .customNewPlace:
-                  ListCustomPlaces(enumOverlay: $enumOverlay)
+                  ListCustomPlaces(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight)
                      .transition(.move(edge: .bottom))
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in

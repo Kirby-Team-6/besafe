@@ -16,6 +16,10 @@ struct HomeView: View {
    @State var mapSelection: MapPoint?
    @State private var overlayHeight: CGFloat = UIScreen.main.bounds.height * 0.3
    @State var enumOverlay: Overlay = .customNewPlace
+   @State var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @State var showTemporaryMarker = false
+   
+   @FocusState private var isFocused: Bool
    
    var body: some View {
       ZStack {
@@ -28,6 +32,11 @@ struct HomeView: View {
                   
                   Marker(marker.name, systemImage: icon.img, coordinate: marker.coordinate)
                      .tint(icon.color)
+               }
+               
+               if let coordinate = temporaryMarkerCoordinate, showTemporaryMarker {
+                  Marker("Selected Place", systemImage: "mappin", coordinate: coordinate)
+                     .tint(.red)
                }
             }
             .onChange(of: mapSelection) { oldValue, newValue in
@@ -51,8 +60,17 @@ struct HomeView: View {
                ), mapPoint: mapSelection!)
                .presentationDetents([.medium])
             })
+            .sheet(isPresented: $showTemporaryMarker, onDismiss: {
+               temporaryMarkerCoordinate = nil
+            }, content: {
+               VStack{
+                  
+               }
+               .presentationDetents([.height(overlayHeight)])
+            })
             .overlay(alignment: .bottom) {
-               MapOverlayView(enumOverlay: $enumOverlay, onTapAdd: $onTapAdd, searchText: $searchText, overlayHeight: $overlayHeight, reader:reader)
+               MapOverlayView(enumOverlay: $enumOverlay, onTapAdd: $onTapAdd, searchText: $searchText, overlayHeight: $overlayHeight, position: $position, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, reader: reader)
+               
             }
          }
          

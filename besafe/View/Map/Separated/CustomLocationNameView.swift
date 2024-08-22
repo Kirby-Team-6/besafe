@@ -87,5 +87,6 @@ struct CustomLocationNameView: View {
       })
       .clipShape(RoundedRectangle(cornerRadius: 25))
       .shadow(radius: 16, y: 4)
+      .frame(maxHeight: .infinity)
    }
 }

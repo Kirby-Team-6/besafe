@@ -10,18 +10,20 @@ import MapKit
 
 struct ListCustomPlaces: View {
    @Binding var enumOverlay: Overlay
+   @Binding var position: MapCameraPosition
+   @Binding var overlayHeight: CGFloat
    @State private var searchText: String = ""
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
    @EnvironmentObject var mapPointVM: MapPointViewModel
-    @EnvironmentObject var router: Router
+   @EnvironmentObject var router: Router
    
    var body: some View {
       ZStack{
          Color.neutral.ignoresSafeArea()
          VStack(spacing: 16) {
             ModalityTitleView(cancelString: "Cancel", title: "Custom safe place", confirmString: "+ new") {
-                router.pop()
+               router.pop()
             } submitFunc: {
                withAnimation{
                   enumOverlay = .searchPlace
@@ -36,7 +38,7 @@ struct ListCustomPlaces: View {
                
                Spacer()
             }
-               
+            
             if !mapPointVM.mapPoint.isEmpty{
                List {
                   ForEach(mapPointVM.mapPoint) { place in
@@ -45,6 +47,13 @@ struct ListCustomPlaces: View {
                         
                         Text(place.name)
                            .font(.headline)
+                     }
+                     .onTapGesture {
+                        withAnimation{
+                           // Update the map position to focus on the selected coordinate
+                           position = .camera(MapCamera(centerCoordinate: place.coordinate, distance: 1000))
+                           overlayHeight = UIScreen.main.bounds.height * 0.3
+                        }
                      }
                   }
                }

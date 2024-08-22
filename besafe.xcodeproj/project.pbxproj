@@ -40,6 +40,7 @@
 		AC8E96062C76D60C00AA7569 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96052C76D60C00AA7569 /* Overlay.swift */; };
 		AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */; };
 		AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96092C76E13100AA7569 /* ListPlacesView.swift */; };
+		AC8E960C2C772ECE00AA7569 /* CustomLabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */; };
 		AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
 		AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
 		AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */; };
@@ -55,8 +56,6 @@
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
 		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
-		ACF3E0FE2C758F3700A99AD7 /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */; };
-		ACF3E0FF2C7590A000A99AD7 /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -217,6 +216,7 @@
 		AC8E96052C76D60C00AA7569 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
 		AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomPlaces.swift; sourceTree = "<group>"; };
 		AC8E96092C76E13100AA7569 /* ListPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesView.swift; sourceTree = "<group>"; };
+		AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelController.swift; sourceTree = "<group>"; };
 		AC9BA3D02C744E37000021E3 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AC9BA3EA2C756601000021E3 /* besafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = besafe.entitlements; sourceTree = "<group>"; };
@@ -227,7 +227,6 @@
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
-		ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSession.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +388,7 @@
 		AC7E58872C741A8A00E591A1 /* Separated */ = {
 			isa = PBXGroup;
 			children = (
+				AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */,
 				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
 				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
 				ACE50A792C73053D007CA42D /* LocationDetailView.swift */,
@@ -570,7 +570,6 @@
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
-				AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +590,7 @@
 				FB6264692C6C39E700CC2597 /* Page1.storyboard */,
 				FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */,
 				FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */,
+				AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */,
 			);
 			path = Page1;
 			sourceTree = "<group>";
@@ -645,7 +645,6 @@
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
 				AC9BA3D02C744E37000021E3 /* Variables.swift */,
 				ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */,
-				ACF3E0FD2C758F3700A99AD7 /* WatchSession.swift */,
 				FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */,
 			);
 			path = shared;
@@ -1027,6 +1026,7 @@
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
 				AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */,
+				AC8E960C2C772ECE00AA7569 /* CustomLabelController.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */,
@@ -1042,7 +1042,6 @@
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
-				ACF3E0FE2C758F3700A99AD7 /* WatchSession.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
 			);
@@ -1084,7 +1083,6 @@
 				ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
-				ACF3E0FF2C7590A000A99AD7 /* WatchSession.swift in Sources */,
 				FBC3ED1B2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
 				FBACF0CF2C769B1E00C3E522 /* RouteModel.swift in Sources */,
