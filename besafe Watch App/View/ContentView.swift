@@ -105,10 +105,10 @@ struct ContentView: View {
                            .font(.system(size: 18))
                            .fontWeight(.bold)
                            .foregroundColor(.white)
-                       Text("\(getTime()?.type ?? TimeFormatedType.days)")
-                           .font(.system(size: 12))
-                           .fontWeight(.medium)
-                           .foregroundColor(.gray)
+//                       Text("\(getTime()?.type ?? TimeFormatedType.days)")
+//                           .font(.system(size: 12))
+//                           .fontWeight(.medium)
+//                           .foregroundColor(.gray)
                    }
                    Spacer()
                    VStack(alignment: .center) {
