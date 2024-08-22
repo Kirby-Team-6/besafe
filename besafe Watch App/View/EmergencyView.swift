@@ -9,12 +9,15 @@ struct EmergencyButtonView: View {
     @State private var isCountingDown = false
     @State private var timer: Timer?
     @State private var hapticTimer: Timer?
+    @State private var isLoading = false
     @State private var isNavigating = false
+    @StateObject var watchConnect = WatchConnect.shared
     
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                if isNavigating {
+                if watchConnect.routeModel != nil && isNavigating {
                     VStack {
                         Text("Navigating to")
                             .font(.system(size: 18))
@@ -22,9 +25,7 @@ struct EmergencyButtonView: View {
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 5)
                         
-                        //TODO: ganti jadi selected safe place name -> ini kayaknya harus dari watch connectivity
-                        //                        Text(viewmodel.selectedSafePlace?.displayName?.text ?? "Unknown Place")
-                        Text("Sky House BSD Apartment")
+                        Text(watchConnect.routeModel!.placeDirectionName)
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
@@ -53,7 +54,6 @@ struct EmergencyButtonView: View {
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 4.5)
                     
-                    // MARK: Scalable Button
                     ZStack {
                         Circle()
                             .fill(Color.blue)
@@ -91,17 +91,54 @@ struct EmergencyButtonView: View {
                             stopCountdown()
                         }
                     }, perform: {
-                        // TODO: after isNavigating true -> kayak di iOS ada async after 2 sec -> terus onTap() -> pas gabungin
-                        isNavigating = true
-                        print("Navigation Started")
-                        router.push(Screen.home)
+                        isLoading = true
+                        Task {
+                            // Get list Save Place
+                            guard let location = CLLocationManager().location else {
+                                isLoading = false
+                                return
+                            }
+//                            let selectedSafePlace
+                            watchConnect.session.sendMessage([
+                                "actionId": 0,
+                                "latitude": location.coordinate.latitude,
+                                "longitude": location.coordinate.longitude
+                            ], replyHandler: nil){ error in
+                                print(error.localizedDescription)
+                            }
 
+                        }
                     })
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 1.5)
                 }
             }
-            .onAppear {
-                // TODO: Add haptics (optional)
+        }
+        .fullScreenCover(isPresented: $isLoading) {
+            VStack{
+                Spacer()
+                Text("Hang on while we're getting directions")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(3)
+                    .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.96).opacity(0.6))
+                    .multilineTextAlignment(.center)
+                    .font(.body)
+                    .fontWeight(.regular)
+                ProgressView()
+                    .frame(height: 30)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity)
+            .ignoresSafeArea(.all, edges: .all)
+        }
+        .onReceive(watchConnect.$routeModel) { v in
+            if v != nil {
+                isLoading = false
+                isNavigating = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    CLLocationManager().startUpdatingLocation()
+                    router.push(Screen.home)
+                    isNavigating = false
+                }
             }
         }
         .edgesIgnoringSafeArea(.all)
@@ -129,9 +166,6 @@ struct EmergencyButtonView: View {
                 timer.invalidate()
                 isCountingDown = false
                 resetButton()
-                // Perform navigation action here
-                isNavigating = true
-                print("Navigation Started")
             }
         }
     }

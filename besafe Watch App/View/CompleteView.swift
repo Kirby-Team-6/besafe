@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CompleteView: View {
+    let onRerouteTap: () -> Void
+    let onDoneTap: () -> Void
+    
     var body: some View {
         VStack {
             Text("You have arrived at\nthe safe place")
@@ -19,7 +22,7 @@ struct CompleteView: View {
                 .padding(.bottom, 8)
                 
             Button(action: {
-                
+                onRerouteTap()
             }, label: {
                 Text("Reroute")
             })
@@ -28,7 +31,7 @@ struct CompleteView: View {
 
             .padding(.bottom, 4)
             Button(action: {
-                
+                onDoneTap()
             }, label: {
                 Text("Done")
             })
@@ -43,6 +46,4 @@ struct CompleteView: View {
     }
 }
 
-#Preview {
-    CompleteView()
-}
+

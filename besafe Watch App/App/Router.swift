@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.home]
-    @Published var rootView: Screen = Screen.home
+    @Published var path: [Screen] = [Screen.emergencyview]
+    @Published var rootView: Screen = Screen.emergencyview
     
     
     // MARK: - Navigation Functions
@@ -42,8 +42,6 @@ class Router: ObservableObject {
         switch screen {
         case .home:
             ContentView().navigationBarBackButtonHidden(true)
-        case .onBoarding:
-            OnboardingView().navigationBarBackButtonHidden(true)
         case .emergencyview:
             EmergencyButtonView().navigationBarBackButtonHidden(true)
         }
@@ -52,7 +50,7 @@ class Router: ObservableObject {
 }
 
 enum Screen: Identifiable, Hashable {
-    case home, onBoarding, emergencyview
+    case home, emergencyview
     
     var id: Self { return self }
 }

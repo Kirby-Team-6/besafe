@@ -20,6 +20,9 @@ struct MainView: View {
                     if viewmodel.route != nil {
                         MapPolyline(viewmodel.route!)
                             .stroke(Color.blue, style: strokeStyle)
+                        if let lastStep = viewmodel.route?.steps.last {
+                            Marker("Direction", coordinate: CLLocationCoordinate2D(latitude: lastStep.polyline.coordinate.latitude, longitude:  lastStep.polyline.coordinate.latitude))
+                        }
                     }
                 }
                 DirectionView(position: $position)

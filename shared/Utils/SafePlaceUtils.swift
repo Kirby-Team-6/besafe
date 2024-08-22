@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 import CoreLocation
 
 class SafePlaceUtils {
@@ -108,5 +109,42 @@ class SafePlaceUtils {
         return userLocation.distance(from: placeLocation)
     }
     
+    #if os(iOS)
+    static func directionAppleWatch(from: CLLocation, to: CLLocation, completion: @escaping (RouteModel)->Void)  {
+        let source = from.coordinate
+        let destination = to.coordinate
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: source))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
+        request.transportType = .walking
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            guard let route = response?.routes.first else {
+                return
+            }
+            
+            let routeModel = RouteModel(
+                distance: route.distance,
+                placeDirectionName: "Test", time: route.expectedTravelTime,
+                steps: route.steps.map{
+                    return StepsRoute(instruction: $0.instructions, latitude: $0.polyline.coordinate.latitude, longitude: $0.polyline.coordinate.longitude)
+                },
+                polyLine: convertPolylineToCoordinates(polyline: route.polyline).map {
+                    return RoutePolyline($0.latitude, $0.longitude)
+                }
+            )
+            
+            completion(routeModel)
+        }
+    }
+    static func convertPolylineToCoordinates(polyline: MKPolyline) -> [CLLocationCoordinate2D] {
+        let pointCount = polyline.pointCount
+        var coordinates = [CLLocationCoordinate2D](repeating: kCLLocationCoordinate2DInvalid, count: pointCount)
+        polyline.getCoordinates(&coordinates, range: NSRange(location: 0, length: pointCount))
+        return coordinates
+    }
+    #endif
     
+        
 }
