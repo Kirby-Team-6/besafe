@@ -37,7 +37,7 @@ struct LocationDetailView: View {
             //TODO: Updateny belom optimal
             pointViewModel.update(point: mapPoint, name: name, lat: mapPoint.latitude, long: mapPoint.longitude, index: mapPoint.markerIndex)
             
-            watchConnect.ubah(mapPoint.name, String(mapPoint.latitude))
+//            watchConnect.ubah(mapPoint.name, String(mapPoint.latitude))
             
             dismiss()
          })

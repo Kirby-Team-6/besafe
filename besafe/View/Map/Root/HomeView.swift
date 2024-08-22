@@ -37,9 +37,6 @@ struct HomeView: View {
             .onAppear {
                CLLocationManager().requestWhenInUseAuthorization()
             }
-            .overlay(alignment: .bottom) {
-               MapOverlayView(addingPoint: $addingPoint, onTapAdd: $onTapAdd, searchText: $searchText, customSafePlaceHeight: $customSafePlaceHeight, overlayHeight: $overlayHeight, reader:reader)
-            }
             .sheet(isPresented: $showingLocationDetail, onDismiss: {
                withAnimation{
                   mapSelection = nil
@@ -55,6 +52,9 @@ struct HomeView: View {
                ), mapPoint: mapSelection!)
                .presentationDetents([.medium])
             })
+            .overlay(alignment: .bottom) {
+               MapOverlayView(addingPoint: $addingPoint, onTapAdd: $onTapAdd, searchText: $searchText, customSafePlaceHeight: $customSafePlaceHeight, overlayHeight: $overlayHeight, reader:reader)
+            }
          }
          
          if addingPoint {

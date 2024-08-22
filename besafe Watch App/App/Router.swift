@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var path: [Screen] = [Screen.emergencyview]
-    @Published var rootView: Screen = Screen.emergencyview
+    @Published var path: [Screen] = [Screen.home]
+    @Published var rootView: Screen = Screen.home
     
     
     // MARK: - Navigation Functions
