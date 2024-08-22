@@ -24,6 +24,8 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
+		40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
 		40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996A22C75E0190076CD3A /* EmergencyView.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
@@ -56,6 +58,7 @@
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
 		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
+		FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -90,7 +93,6 @@
 		FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */; };
 		FBACF0B82C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
 		FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
-		FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */; };
 		FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */; };
 		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
 		FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
@@ -202,6 +204,7 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceListView.swift; sourceTree = "<group>"; };
 		40E996A22C75E0190076CD3A /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
 		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
@@ -263,7 +266,6 @@
 		FBACF0B12C74F16500C3E522 /* ComplateDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplateDirectionView.swift; sourceTree = "<group>"; };
 		FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceUtils.swift; sourceTree = "<group>"; };
 		FBACF0B72C750B2300C3E522 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
-		FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludePlaceModel.swift; sourceTree = "<group>"; };
@@ -607,7 +609,6 @@
 		FB6264752C6C4BB700CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FBACF0BD2C752A5100C3E522 /* OnboardingView.swift */,
 				FB6264282C6C22A000CC2597 /* ContentView.swift */,
 				FBACF0C32C752C7C00C3E522 /* CompleteView.swift */,
 				40E996A22C75E0190076CD3A /* EmergencyView.swift */,
@@ -671,6 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */,
+				40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */,
 				FBACF0B72C750B2300C3E522 /* ViewState.swift */,
 			);
 			path = Utils;
@@ -991,6 +993,7 @@
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
+				40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
 				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
 				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
@@ -1075,8 +1078,8 @@
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
 				FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */,
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
-				FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
 				AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
 				AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */,
@@ -1089,6 +1092,7 @@
 				FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
 				40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */,
+				FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */,
 				AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */,
 				AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */,
 				AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */,
@@ -1476,7 +1480,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1497,7 +1501,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
