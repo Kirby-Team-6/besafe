@@ -16,6 +16,8 @@ enum Screen: Identifiable, Hashable {
    case emergencycontactsview
    case direction
     case emergencypageview
+   case testsocket
+   case sendMessage
    
    var id: Self { return self }
 }

@@ -43,6 +43,13 @@
 		ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
 		E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */; };
+		E45CFFE52C7489C300F5BFC3 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E45CFFE42C7489C300F5BFC3 /* SocketIO */; };
+		E45CFFE92C74909700F5BFC3 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFE82C74909700F5BFC3 /* SocketService.swift */; };
+		E45CFFED2C758B5900F5BFC3 /* SocketIOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFEC2C758B5900F5BFC3 /* SocketIOViewModel.swift */; };
+		E45CFFEF2C75957800F5BFC3 /* TestSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFEE2C75957800F5BFC3 /* TestSocketView.swift */; };
+		E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */; };
+		E45CFFF32C75D73A00F5BFC3 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */; };
+		E45CFFF62C75DA3700F5BFC3 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -191,6 +198,12 @@
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUUID.swift; sourceTree = "<group>"; };
+		E45CFFE82C74909700F5BFC3 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		E45CFFEC2C758B5900F5BFC3 /* SocketIOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOViewModel.swift; sourceTree = "<group>"; };
+		E45CFFEE2C75957800F5BFC3 /* TestSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSocketView.swift; sourceTree = "<group>"; };
+		E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessViewModel.swift; sourceTree = "<group>"; };
+		E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC464E5D2C73A1EB0027AB69 /* WatchConnectivity.framework in Frameworks */,
+				E45CFFE52C7489C300F5BFC3 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +370,8 @@
 				40B72FDD2C71EDC600145D66 /* EmergencyContactsViewModel.swift */,
 				40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */,
 				ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */,
+				E45CFFEC2C758B5900F5BFC3 /* SocketIOViewModel.swift */,
+				E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,8 +400,17 @@
 		E45CFFD12C72E9D000F5BFC3 /* RealtimeDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E45CFFE82C74909700F5BFC3 /* SocketService.swift */,
 			);
 			path = RealtimeDataSource;
+			sourceTree = "<group>";
+		};
+		E45CFFF42C75DA2400F5BFC3 /* SendMessage */ = {
+			isa = PBXGroup;
+			children = (
+				E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */,
+			);
+			path = SendMessage;
 			sourceTree = "<group>";
 		};
 		FB6263F22C6C229E00CC2597 = {
@@ -510,12 +535,14 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E45CFFF42C75DA2400F5BFC3 /* SendMessage */,
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
 				FB6264682C6C39E700CC2597 /* Page2 */,
 				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
+				E45CFFEE2C75957800F5BFC3 /* TestSocketView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,6 +611,7 @@
 				40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */,
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
 				AC395CFD2C743925003626BF /* MarkerIcon.swift */,
+				E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -670,6 +698,9 @@
 				FB6264242C6C22A000CC2597 /* PBXTargetDependency */,
 			);
 			name = besafe;
+			packageProductDependencies = (
+				E45CFFE42C7489C300F5BFC3 /* SocketIO */,
+			);
 			productName = besafe;
 			productReference = FB6263FB2C6C229E00CC2597 /* besafe.app */;
 			productType = "com.apple.product-type.application";
@@ -811,6 +842,9 @@
 				Base,
 			);
 			mainGroup = FB6263F22C6C229E00CC2597;
+			packageReferences = (
+				E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = FB6263FC2C6C229E00CC2597 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -900,9 +934,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
+				E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
+				E45CFFE92C74909700F5BFC3 /* SocketService.swift in Sources */,
 				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
 				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
@@ -917,6 +953,7 @@
 				FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */,
 				40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */,
 				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
+				E45CFFEF2C75957800F5BFC3 /* TestSocketView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
@@ -941,9 +978,12 @@
 				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
+				E45CFFF32C75D73A00F5BFC3 /* MessageModel.swift in Sources */,
 				E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
+				E45CFFF62C75DA3700F5BFC3 /* SendMessageView.swift in Sources */,
+				E45CFFED2C758B5900F5BFC3 /* SocketIOViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,7 +1083,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1073,7 +1113,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1220,7 +1260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1252,7 +1292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1285,7 +1325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = besafe/Info.plist;
@@ -1321,7 +1361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = besafe/Info.plist;
@@ -1356,7 +1396,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1377,7 +1417,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1398,7 +1438,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1418,7 +1458,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1440,7 +1480,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
@@ -1461,7 +1501,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
@@ -1482,7 +1522,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
@@ -1502,7 +1542,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
@@ -1593,6 +1633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E45CFFE42C7489C300F5BFC3 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB6263F32C6C229E00CC2597 /* Project object */;
 }
