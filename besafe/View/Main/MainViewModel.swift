@@ -26,16 +26,22 @@ class MainViewModel: ObservableObject {
     
     @Published var route: MKRoute?
     @Published var coverScreen = CoverScreen.initial
+    @Published var mapPoints: [MapPoint] = []
     
     private var listSafePlaces: [PlaceModel] = []
-    private var selectedSafePlace: PlaceModel?
+    var selectedSafePlace: PlaceModel?
     private var loadData = false
     
-    func getSafePlace() {
-        if loadData == true && !listSafePlaces.isEmpty {
+    func loadCustomPlaces(mapPointViewModel: MapPointViewModel) {
+            self.mapPoints = mapPointViewModel.mapPoint
+        }
+    
+    func getSafePlace(mapPointViewModel: MapPointViewModel) {
+        if loadData == true && !listSafePlaces.isEmpty  {
             return
         }
         Task {
+            self.loadCustomPlaces(mapPointViewModel: mapPointViewModel)
             self.loadData = true
             guard let location = CLLocationManager().location?.coordinate else {
                 return
@@ -47,7 +53,7 @@ class MainViewModel: ObservableObject {
             
             switch result {
             case .success(let success):
-                let data = SafePlaceUtils.sortSafePlaces(success, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+                let data = SafePlaceUtils.sortSafePlaces(success, customPlaces: mapPoints, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
                 DispatchQueue.main.async {
                     self.listSafePlaces = data
                     data.forEach{ v in
@@ -93,6 +99,24 @@ class MainViewModel: ObservableObject {
         }
     }
     
+    // TODO: Selected top safe place
+//    private func selectTopSafePlace() {
+//        if !safePlaces.isEmpty {
+//            selectedSafePlace = safePlaces.first
+//        }
+//    }
+    func selectTopSafePlace() {
+        // Ensure the list is not empty
+        guard let topSafePlace = listSafePlaces.first else {
+            print("No safe places available.")
+            return
+        }
+        
+        // Set the selectedSafePlace to the top place
+        selectedSafePlace = topSafePlace
+    }
+
+    
     func reroute() {
         if let selectedPlace = selectedSafePlace {
             // Exclude the current selected place for 12 hours
@@ -104,14 +128,13 @@ class MainViewModel: ObservableObject {
             
             // Reload safe places, excluding the selected place
             let filteredPlaces = listSafePlaces.filter { $0.id != selectedPlace.id }
-            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, customPlaces: mapPoints, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
             listSafePlaces = sortedPlaces
             
             
             navigateToSafePlace(safePlaces: sortedPlaces, latitude: location.latitude, longitude: location.longitude)
         }
     }
-
     
     func shouldExcludePlace(_ place: PlaceModel) -> Bool {
 //        if let excludedPlace = excludedPlace, let exclusionTimestamp = exclusionTimestamp {

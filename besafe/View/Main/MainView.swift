@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  besafe
-//
-//  Created by Rifat Khadafy on 20/08/24.
-//
-
 import SwiftUI
 import CoreLocation
 import MapKit
@@ -21,7 +14,7 @@ struct MainView: View {
     var body: some View {
         ZStack {
             if loadMap {
-                Map(position: $position){
+                Map(position: $position) {
                     UserAnnotation()
                     if viewmodel.route != nil {
                         MapPolyline(viewmodel.route!)
@@ -55,7 +48,7 @@ struct MainView: View {
                     .ignoresSafeArea(.all, edges: .all)
             }
         }
-        .onReceive(viewmodel.$coverScreen){ v in
+        .onReceive(viewmodel.$coverScreen) { v in
             self.showInitialView = false
             self.showCompleteDirection = false
             
@@ -70,6 +63,11 @@ struct MainView: View {
                 ""
             }
         }
+               .sheet(isPresented: $showOnboarding) {
+                   OnboardingView()
+                       .background(BackgroundBlurView())
+                       .ignoresSafeArea(.all, edges: .all)
+       }
         .environmentObject(viewmodel)
     }
 }
