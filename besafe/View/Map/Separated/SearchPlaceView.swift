@@ -13,7 +13,7 @@ struct SearchPlaceView: View {
       ZStack{
          Color.neutral.ignoresSafeArea()
          VStack(spacing: 16) {
-            ModalityTitleView(cancelString: "Cancel", title: "New preferred custom", confirmString: "Submit") {
+            ModalityTitleView(cancelString: "Cancel", title: "Custom Safe Place", confirmString: "Submit") {
                
             } submitFunc: {
 //               watchConnect.increment()

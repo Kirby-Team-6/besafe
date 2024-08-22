@@ -14,6 +14,7 @@ struct MapOverlayView: View {
    @Binding var searchText: String
    @Binding var customSafePlaceHeight: CGFloat
    @Binding var overlayHeight: CGFloat
+   @StateObject var safePlaceVM = SafePlacesViewModel()
    
    var reader: MapProxy
    
@@ -28,13 +29,21 @@ struct MapOverlayView: View {
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
                         withAnimation {
-                           customSafePlaceHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
                         }
                      }
                }
                .frame(maxWidth: .infinity)
-               .frame(height: customSafePlaceHeight)
-               .offset(y: geometry.size.height - customSafePlaceHeight)
+               .frame(height: overlayHeight)
+               .offset(y: geometry.size.height - overlayHeight)
+               .gesture(
+                  DragGesture()
+                     .onChanged { value in
+                        withAnimation{
+                           safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
+                        }
+                     }
+               )
                .transition(.move(edge: .bottom))
             } else {
                VStack {
@@ -42,25 +51,18 @@ struct MapOverlayView: View {
                      .focused($isFocused)
                      .onChange(of: isFocused) { oldValue, newValue in
                         withAnimation {
-                           customSafePlaceHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
                         }
                      }
                }
                .frame(maxWidth: .infinity)
-               .frame(height: customSafePlaceHeight)
-               .offset(y: geometry.size.height - customSafePlaceHeight)
+               .frame(height: overlayHeight)
+               .offset(y: geometry.size.height - overlayHeight)
                .gesture(
                   DragGesture()
                      .onChanged { value in
-                        if value.translation.height < 0 {
-                           let newHeight = min(geometry.size.height, geometry.size.height * 0.6)
-                           withAnimation {
-                              overlayHeight = newHeight
-                           }
-                        } else {
-                           withAnimation {
-                              overlayHeight = UIScreen.main.bounds.height * 0.3
-                           }
+                        withAnimation{
+                           safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
                         }
                      }
                )
