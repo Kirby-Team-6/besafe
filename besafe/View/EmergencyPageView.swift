@@ -157,7 +157,6 @@ struct EmergencyPageView: View {
                     VStack(spacing: 15) {
                         // Set Emergency Contact Button
                         Button(action: {
-                            self.showFulscreen = false
                             router.push(.emergencycontactsview)
                         }) {
                             Text("Set emergency contact")
@@ -172,7 +171,6 @@ struct EmergencyPageView: View {
                         
                         // Custom Safe Place Button
                         Button(action: {
-                            self.showFulscreen = false
                             router.push(.homeview)
                         }) {
                             HStack(spacing: 8) {

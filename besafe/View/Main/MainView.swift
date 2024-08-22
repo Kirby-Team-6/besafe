@@ -9,6 +9,7 @@ struct MainView: View {
     @State private var showInitialView = true
     @State private var showCompleteDirection = false
     @State private var loadMap = false
+    @State private var showOnboarding = false
     private let strokeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
     
     var body: some View {
@@ -63,11 +64,20 @@ struct MainView: View {
                 ""
             }
         }
-               .sheet(isPresented: $showOnboarding) {
-                   OnboardingView()
-                       .background(BackgroundBlurView())
-                       .ignoresSafeArea(.all, edges: .all)
-       }
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView()
+                .background(BackgroundBlurView())
+                .ignoresSafeArea(.all, edges: .all)
+        }
+        .onAppear {
+            let defaults = UserDefaults.standard
+            let isAlreadyShowOnBoarding = defaults.bool(forKey: "isAlreadyShowOnBoarding")
+            if (isAlreadyShowOnBoarding == false){
+                self.showOnboarding = true
+                defaults.setValue(true, forKey: "isAlreadyShowOnBoarding")
+            }
+            
+        }
         .environmentObject(viewmodel)
     }
 }

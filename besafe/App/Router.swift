@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-   @Published var path: [Screen] = [Screen.onboarding]
-   @Published var rootView: Screen = Screen.onboarding
+   @Published var path: [Screen] = [Screen.main]
+   @Published var rootView: Screen = Screen.main
    @Published var sheet: Sheet?
    @Published var fullScreenCover: FullScreenCover?
    
@@ -70,8 +70,6 @@ class Router: ObservableObject {
             EmergencyContactsView()
         case .main:
             MainView().navigationBarBackButtonHidden(true)
-        case .onboarding:
-            OnboardingView()
         }
     }
    
