@@ -14,13 +14,14 @@ struct ListCustomPlaces: View {
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
    @EnvironmentObject var mapPointVM: MapPointViewModel
+    @EnvironmentObject var router: Router
    
    var body: some View {
       ZStack{
          Color.neutral.ignoresSafeArea()
          VStack(spacing: 16) {
             ModalityTitleView(cancelString: "Cancel", title: "Custom safe place", confirmString: "+ new") {
-               
+                router.pop()
             } submitFunc: {
                withAnimation{
                   enumOverlay = .searchPlace
