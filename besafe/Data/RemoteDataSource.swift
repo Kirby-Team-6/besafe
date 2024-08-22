@@ -14,7 +14,7 @@ protocol RemoteDataSource {
 class RemoteDataSourceImpl: RemoteDataSource {
     func getNearbyPlaces( latitude: Double, longitude: Double) async -> Result<[PlaceModel], Error> {
         do {
-            let baseUrl = if false {
+            let baseUrl = if true {
                 "https://places.googleapis.com"
             } else {
                 "https://a287ae43-2c35-45ae-aa01-39781319dc3a.mock.pstmn.io"
@@ -52,9 +52,18 @@ class RemoteDataSourceImpl: RemoteDataSource {
             
             let (data, response) = try await URLSession.shared.data(for: request)
             
+            #if DEBUG
+            logRequest(request)
+            #endif
+            
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                 throw URLError(.badServerResponse)
             }
+            
+            #if DEBUG
+            logResponse(httpResponse, data: data)
+            #endif
+            
             
             
             if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
@@ -72,6 +81,28 @@ class RemoteDataSourceImpl: RemoteDataSource {
             
         } catch {
             return .failure(error)
+        }
+    }
+    
+    private func logRequest(_ request: URLRequest) {
+        print("Request URL: \(request.url?.absoluteString ?? "No URL")")
+        print("Request Method: \(request.httpMethod ?? "No HTTP method")")
+        if let headers = request.allHTTPHeaderFields {
+            print("Request Headers: \(headers)")
+        }
+        if let body = request.httpBody, let bodyString = String(data: body, encoding: .utf8) {
+            print("Request Body: \(bodyString)")
+        }
+    }
+
+    private func logResponse(_ response: HTTPURLResponse, data: Data) {
+        print("Response URL: \(response.url?.absoluteString ?? "No URL")")
+        print("Response Status Code: \(response.statusCode)")
+        if let headers = response.allHeaderFields as? [String: Any] {
+            print("Response Headers: \(headers)")
+        }
+        if let body = String(data: data, encoding: .utf8) {
+            print("Response Body: \(body)")
         }
     }
     

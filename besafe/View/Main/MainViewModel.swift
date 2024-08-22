@@ -32,7 +32,7 @@ class MainViewModel: ObservableObject {
     private var loadData = false
     
     func getSafePlace() {
-        if loadData == true {
+        if loadData == true && !listSafePlaces.isEmpty {
             return
         }
         Task {
