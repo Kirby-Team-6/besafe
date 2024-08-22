@@ -1,10 +1,3 @@
-//
-//  SafePlaceUtils.swift
-//  besafe
-//
-//  Created by Rifat Khadafy on 20/08/24.
-//
-
 import Foundation
 import CoreLocation
 
@@ -28,88 +21,65 @@ class SafePlaceUtils {
         "synagogue": 13
     ]
     
-    
-//    static func sortSafePlaces(_ places: [PlaceModel], from userLocation: CLLocation) -> [PlaceModel] {
-//        return places.sorted { (place1, place2) -> Bool in
-//            let distance1 = calculateDistance(from: userLocation, to: place1)
-//            let distance2 = calculateDistance(from: userLocation, to: place2)
-//            
-//            let distanceDifference = abs(distance1 - distance2)
-//            let distanceTolerance: Double = 10.0
-//            
-//            if distanceDifference <= distanceTolerance {
-//                let priority1 = priorityOrder[place1.primaryType] ?? Int.max
-//                let priority2 = priorityOrder[place2.primaryType] ?? Int.max
-//                if priority1 != priority2 {
-//                    return priority1 < priority2
-//                } else {
-//                    return place1.id < place2.id
-//                }
-//            } else {
-//                // If distances are not within tolerance, sort by distance
-//                return distance1 < distance2
-//            }
-//            
-//        }
-//    }
-    
-    //TODO: Check logic kalau ada custom place & open now
     static func sortSafePlaces(_ places: [PlaceModel], customPlaces: [MapPoint], from userLocation: CLLocation) -> [PlaceModel] {
-            // Filter out places that are not open now
-            let openPlaces = places.filter { $0.currentOpeningHours?.openNow == true }
+        // Filter places to only include those that are open
+        let openPlaces = places.filter { $0.currentOpeningHours?.openNow == true }
+        
+        var combinedPlaces = openPlaces
+        
+        // Add custom places (assume custom places are always open)
+        for customPlace in customPlaces {
+            let placeModel = PlaceModel(
+                id: UUID().uuidString,
+                location: Location(latitude: customPlace.coordinate.latitude, longitude: customPlace.coordinate.longitude),
+                currentOpeningHours: CurrentOpeningHours(openNow: true),
+                primaryType: "custom",
+                displayName: DisplayName(text: customPlace.name, languageCode: nil),
+                shortFormattedAddress: nil
+            )
+            combinedPlaces.append(placeModel)
+        }
+        
+        print("Combined Places Count: \(combinedPlaces.count)")
+        
+        return combinedPlaces.sorted { (place1, place2) -> Bool in
+            let distance1 = calculateDistance(from: userLocation, to: place1)
+            let distance2 = calculateDistance(from: userLocation, to: place2)
             
-            // Convert custom places to PlaceModel and combine with the existing places
-            var combinedPlaces = openPlaces
+            print("Comparing \(place1.displayName?.text ?? "Unknown") and \(place2.displayName?.text ?? "Unknown")")
+            print("Distance1: \(distance1), Distance2: \(distance2)")
             
-            for customPlace in customPlaces {
-                let placeModel = PlaceModel(
-                    id: UUID().uuidString,
-                    location: Location(latitude: customPlace.coordinate.latitude, longitude: customPlace.coordinate.longitude),
-                    currentOpeningHours: nil,
-                    primaryType: "custom",
-                    displayName: DisplayName(text: customPlace.name, languageCode: nil),
-                    shortFormattedAddress: nil
-                )
-
-                combinedPlaces.append(placeModel)
-            }
+            let distanceDifference = abs(distance1 - distance2)
+            let distanceTolerance: Double = 10.0
             
-            // Sort the combined list
-            return combinedPlaces.sorted { (place1, place2) -> Bool in
-                let distance1 = calculateDistance(from: userLocation, to: place1)
-                let distance2 = calculateDistance(from: userLocation, to: place2)
-                
-                let distanceDifference = abs(distance1 - distance2)
-                let distanceTolerance: Double = 10.0
-                
-                if distanceDifference <= distanceTolerance {
-                    // Prioritize custom places first when distances are similar
-                    if place1.primaryType == "custom" && place2.primaryType != "custom" {
-                        return true
-                    } else if place1.primaryType != "custom" && place2.primaryType == "custom" {
-                        return false
-                    }
-                    
-                    // If both or neither are custom, sort by priority
-                    let priority1 = priorityOrder[place1.primaryType] ?? Int.max
-                    let priority2 = priorityOrder[place2.primaryType] ?? Int.max
-                    if priority1 != priority2 {
-                        return priority1 < priority2
-                    } else {
-                        return place1.id < place2.id
-                    }
-                } else {
-                    // Sort by distance when not within the tolerance
-                    return distance1 < distance2
+            if distanceDifference <= distanceTolerance {
+                if place1.primaryType == "custom" && place2.primaryType != "custom" {
+//                    print("\(place1.displayName?.text ?? "Unknown") is a custom place and has priority over \(place2.displayName?.text ?? "Unknown")")
+                    return true
+                } else if place1.primaryType != "custom" && place2.primaryType == "custom" {
+//                    print("\(place2.displayName?.text ?? "Unknown") is a custom place and has priority over \(place1.displayName?.text ?? "Unknown")")
+                    return false
                 }
+                
+                let priority1 = priorityOrder[place1.primaryType] ?? Int.max
+                let priority2 = priorityOrder[place2.primaryType] ?? Int.max
+                if priority1 != priority2 {
+//                    print("\(place1.displayName?.text ?? "Unknown") has priority \(priority1) vs \(priority2) for \(place2.displayName?.text ?? "Unknown")")
+                    return priority1 < priority2
+                } else {
+//                    print("Both have same priority, comparing by ID")
+                    return place1.id < place2.id
+                }
+            } else {
+//                print("Distances are not within tolerance, sorting by distance")
+                return distance1 < distance2
             }
         }
-
-    
-    static func calculateDistance(from userLocation: CLLocation, to place: PlaceModel) -> Double {
-        let placeLocation = CLLocation(latitude: place.location!.latitude!, longitude: place.location!.longitude!)
-        return userLocation.distance(from: placeLocation)
     }
     
-    
+    static func calculateDistance(from userLocation: CLLocation, to place: PlaceModel) -> Double {
+        guard let location = place.location else { return Double.greatestFiniteMagnitude }
+        let placeLocation = CLLocation(latitude: location.latitude!, longitude: location.longitude!)
+        return userLocation.distance(from: placeLocation)
+    }
 }

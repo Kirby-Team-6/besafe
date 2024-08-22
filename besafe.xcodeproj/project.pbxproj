@@ -24,6 +24,8 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
+		40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
 		40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996A22C75E0190076CD3A /* EmergencyView.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
@@ -200,6 +202,7 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceListView.swift; sourceTree = "<group>"; };
 		40E996A22C75E0190076CD3A /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
 		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
@@ -663,6 +666,7 @@
 			isa = PBXGroup;
 			children = (
 				FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */,
+				40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */,
 				FBACF0B72C750B2300C3E522 /* ViewState.swift */,
 			);
 			path = Utils;
@@ -983,6 +987,7 @@
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
+				40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
 				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
 				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
@@ -1066,6 +1071,7 @@
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
 				FBACF0BF2C752A5100C3E522 /* OnboardingView.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
 				AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
 				AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */,
@@ -1466,7 +1472,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1487,7 +1493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68FP6TZ275;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
