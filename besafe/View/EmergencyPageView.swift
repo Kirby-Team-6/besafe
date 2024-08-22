@@ -148,7 +148,7 @@ struct EmergencyPageView: View {
                                     })
                                     .padding()
                                 }
-                                .frame(width: geometry.size.width, height: 275 * buttonScale + 30)
+                                .frame(width: geometry.size.width, height: 275 * buttonScale)
                             }
                         }
                     }
@@ -159,10 +159,11 @@ struct EmergencyPageView: View {
                         Button(action: {
                             router.push(.emergencycontactsview)
                         }) {
-                            Text("Set emergency contact")
+                            Text("Emergency contact")
                                 .font(.system(size: 17))
                                 .foregroundColor(.white)
                                 .padding()
+                                .padding(.horizontal, 12)
                                 .background(Color.red)
                                 .cornerRadius(100)
                         }
@@ -180,13 +181,13 @@ struct EmergencyPageView: View {
                                 Text("Custom safe place")
                                     .font(.system(size: 17))
                             }
-                            .padding()
-                            .padding(.horizontal, 6)
+                            .padding(15)
+                            .padding(.horizontal, 5)
                             .foregroundColor(.white)
                             .background(Color.gray)
                             .cornerRadius(100)
                         }
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 50)
                         .opacity(isCountingDown ? 0 : 1)
                         .disabled(isCountingDown)
                     }
