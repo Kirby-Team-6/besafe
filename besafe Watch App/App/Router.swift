@@ -45,7 +45,7 @@ class Router: ObservableObject {
         case .onBoarding:
             OnboardingView().navigationBarBackButtonHidden(true)
         case .emergencyview:
-            EmergencyButtonView()
+            EmergencyButtonView().navigationBarBackButtonHidden(true)
         }
         
     }

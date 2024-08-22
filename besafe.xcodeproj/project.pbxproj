@@ -95,6 +95,8 @@
 		FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
 		FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
 		FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
+		FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */; };
+		FBACF0CF2C769B1E00C3E522 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
@@ -261,6 +263,7 @@
 		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludePlaceModel.swift; sourceTree = "<group>"; };
 		FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MockLocation.gpx; sourceTree = "<group>"; };
+		FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED112C73C25700996946 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -706,6 +709,7 @@
 				FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */,
 				FBC3ED152C73C28000996946 /* Direction.swift */,
 				FBC3ED162C73C28000996946 /* TimeFormated.swift */,
+				FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1014,6 +1018,7 @@
 				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
+				FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */,
 				ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */,
 				ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
@@ -1070,6 +1075,7 @@
 				ACF3E0FF2C7590A000A99AD7 /* WatchSession.swift in Sources */,
 				FBC3ED1B2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
+				FBACF0CF2C769B1E00C3E522 /* RouteModel.swift in Sources */,
 				FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
 				40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */,

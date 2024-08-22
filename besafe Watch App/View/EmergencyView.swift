@@ -2,19 +2,19 @@ import SwiftUI
 //import CoreHaptics
 
 struct EmergencyButtonView: View {
+    @EnvironmentObject var router: Router
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack() {
             
             Text("Long press the button\nto start the navigation")
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 .multilineTextAlignment(.center)
-                .font(.system(size: 18))
+                .font(.system(size: 16))
                 .fontWeight(.medium)
-                .padding(.bottom, 6)
                 .padding(.top, 5)
             
             // MARK: Scalable Button
@@ -53,8 +53,10 @@ struct EmergencyButtonView: View {
             }, perform: {
                 // TODO: Action on long press complete
                 print("Navigation Started")
+                router.push(Screen.home)
+                
             })
-            .padding(.bottom, 30)
+            
 
         }
         .onAppear {

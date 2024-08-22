@@ -16,6 +16,7 @@ struct MainView: View {
     @State private var showInitialView = true
     @State private var showCompleteDirection = false
     @State private var loadMap = false
+    private let strokeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
     
     var body: some View {
         ZStack {
@@ -23,7 +24,6 @@ struct MainView: View {
                 Map(position: $position){
                     UserAnnotation()
                     if viewmodel.route != nil {
-                        let strokeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
                         MapPolyline(viewmodel.route!)
                             .stroke(Color.blue, style: strokeStyle)
                     }
