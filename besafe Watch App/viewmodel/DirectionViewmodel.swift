@@ -37,10 +37,12 @@ class DirectionViewmodel: ObservableObject {
             latitude: location.latitude,
             longitude: location.longitude
         )
+        var safePlace: PlaceModel?
         
         switch result {
         case .success(let success):
             let data = SafePlaceUtils.sortSafePlaces(success, customPlaces: [], from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            safePlace = data.first
             DispatchQueue.main.async {
                 self.listSafePlaces = data
                 data.forEach{ v in
@@ -49,12 +51,13 @@ class DirectionViewmodel: ObservableObject {
                     print("\(v.displayName?.text ?? "") | \(v.primaryType) | \(distance)")
                 }
                 self.loadData = false
+                
             }
         case .failure(let failure):
             print(failure)
             self.loadData = false
         }
-        return selectedSafePlace
+        return safePlace
     }
     
     func stopDirection()  {

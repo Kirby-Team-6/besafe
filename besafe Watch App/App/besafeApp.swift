@@ -21,6 +21,7 @@ struct besafe_Watch_AppApp: App {
                }
          }
          .environmentObject(router)
+         .environmentObject(directionViewmodel)
          .environmentObject(pointViewModel)
       }
    }

@@ -51,11 +51,13 @@ class WatchConnect: NSObject, WCSessionDelegate, ObservableObject {
        if let actionId = message["actionId"] as? Int{
            print("Action Id: \(actionId)")
            if actionId == 0 {
-               let latitude = message["latitude"] as! Double
-               let longitude = message["longitude"] as! Double
+               let latitude = message["userLatitude"] as! Double
+               let longitude = message["userLongitude"] as! Double
+               let destinationLat = message["destinationLatitude"] as! Double
+               let destinationLong = message["destinationLongitude"] as! Double
                SafePlaceUtils.directionAppleWatch(
                 from: CLLocation(latitude: latitude, longitude: longitude),
-                to: CLLocation(latitude: 37.784894701877505, longitude: -122.40939728849357)){ route in
+                to: CLLocation(latitude: destinationLat, longitude: destinationLong)){ route in
                    session.sendMessage(["route": route.encodeToJSONString()!], replyHandler: nil)
                }
            }

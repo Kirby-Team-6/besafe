@@ -3,6 +3,7 @@ import WatchKit
 
 struct EmergencyButtonView: View {
     @EnvironmentObject var router: Router
+    @EnvironmentObject var viewModel: DirectionViewmodel
     @State private var isPressed = false
     @State private var buttonScale: CGFloat = 1.0
     @State private var countdown = 3
@@ -98,13 +99,17 @@ struct EmergencyButtonView: View {
                                 isLoading = false
                                 return
                             }
-//                            let selectedSafePlace
-                            watchConnect.session.sendMessage([
-                                "actionId": 0,
-                                "latitude": location.coordinate.latitude,
-                                "longitude": location.coordinate.longitude
-                            ], replyHandler: nil){ error in
-                                print(error.localizedDescription)
+                            if let selectedSafePlace = await viewModel.getSafePlace(){
+                            isLoading = false
+                                watchConnect.session.sendMessage([
+                                    "actionId": 0,
+                                    "userLatitude": location.coordinate.latitude,
+                                    "userLongitude": location.coordinate.longitude,
+                                    "destinationLatitude": selectedSafePlace.location?.latitude ?? 0.0,
+                                    "destinationLongitude": selectedSafePlace.location?.longitude ?? 0.0,
+                                ], replyHandler: nil){ error in
+                                    print(error.localizedDescription)
+                                }
                             }
 
                         }
@@ -127,6 +132,7 @@ struct EmergencyButtonView: View {
                     .frame(height: 30)
                 Spacer()
             }
+            .toolbar(.hidden)
             .frame(maxWidth: .infinity)
             .ignoresSafeArea(.all, edges: .all)
         }

@@ -177,7 +177,7 @@ struct ContentView: View {
     
     func getInstruction(for location: CLLocation) {
         // Define a threshold distance to determine if you are close enough to proceed to the next location
-        let thresholdDistance: CLLocationDistance = 10.0 // meters
+        let thresholdDistance: CLLocationDistance = 15.0 // meters
         
         // Get the current step location
         let currentStep = watchConnect.routeModel!.steps[currentStepIndex]
