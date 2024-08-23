@@ -30,4 +30,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         self.status = manager.authorizationStatus
     }
+    
+    func stopUpdatingLocation() {
+        self.locationManager.stopUpdatingLocation()
+    }
 }

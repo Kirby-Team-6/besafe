@@ -59,6 +59,17 @@
 		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
+		E455F3CB2C770E320019F9C8 /* SocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CA2C770E320019F9C8 /* SocketHelper.swift */; };
+		E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */; };
+		E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */; };
+		E45CFFE52C7489C300F5BFC3 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E45CFFE42C7489C300F5BFC3 /* SocketIO */; };
+		E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */; };
+		E45CFFF32C75D73A00F5BFC3 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */; };
+		E45CFFF62C75DA3700F5BFC3 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */; };
+		E45CFFF82C76D7BF00F5BFC3 /* SocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF72C76D7BF00F5BFC3 /* SocketHandler.swift */; };
+		E45CFFFA2C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF92C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift */; };
+		E45CFFFC2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFFB2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift */; };
+		E45CFFFE2C76DA6D00F5BFC3 /* SocketConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFFD2C76DA6D00F5BFC3 /* SocketConnectionView.swift */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -230,6 +241,16 @@
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
+		E455F3CA2C770E320019F9C8 /* SocketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHelper.swift; sourceTree = "<group>"; };
+		E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessWatchViewModel.swift; sourceTree = "<group>"; };
+		E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUUID.swift; sourceTree = "<group>"; };
+		E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessViewModel.swift; sourceTree = "<group>"; };
+		E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
+		E45CFFF72C76D7BF00F5BFC3 /* SocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHandler.swift; sourceTree = "<group>"; };
+		E45CFFF92C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketSendLocationViewModel.swift; sourceTree = "<group>"; };
+		E45CFFFB2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTrackingViewModel.swift; sourceTree = "<group>"; };
+		E45CFFFD2C76DA6D00F5BFC3 /* SocketConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnectionView.swift; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -296,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC464E5D2C73A1EB0027AB69 /* WatchConnectivity.framework in Frameworks */,
+				E45CFFE52C7489C300F5BFC3 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +436,10 @@
 				40B72FDD2C71EDC600145D66 /* EmergencyContactsViewModel.swift */,
 				40B72FCA2C6D0E2D00145D66 /* SafePlaceViewModel.swift */,
 				ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */,
+				E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */,
+				E45CFFF92C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift */,
+				E45CFFFB2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift */,
+				E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -438,6 +464,24 @@
 				AC8E96092C76E13100AA7569 /* ListPlacesView.swift */,
 			);
 			path = "Custom Shared Components";
+			sourceTree = "<group>";
+		};
+		E45CFFD12C72E9D000F5BFC3 /* RealtimeDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E45CFFF72C76D7BF00F5BFC3 /* SocketHandler.swift */,
+				E455F3CA2C770E320019F9C8 /* SocketHelper.swift */,
+			);
+			path = RealtimeDataSource;
+			sourceTree = "<group>";
+		};
+		E45CFFF42C75DA2400F5BFC3 /* SendMessage */ = {
+			isa = PBXGroup;
+			children = (
+				E45CFFF52C75DA3700F5BFC3 /* SendMessageView.swift */,
+				E45CFFFD2C76DA6D00F5BFC3 /* SocketConnectionView.swift */,
+			);
+			path = SendMessage;
 			sourceTree = "<group>";
 		};
 		FB6263F22C6C229E00CC2597 = {
@@ -554,6 +598,7 @@
 		FB62645A2C6C22AD00CC2597 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E45CFFD12C72E9D000F5BFC3 /* RealtimeDataSource */,
 				40B72FCD2C6D0ED300145D66 /* GoogleMapsData.json */,
 				FB6264762C6C913500CC2597 /* LocalDataSource */,
 				FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */,
@@ -567,6 +612,7 @@
 				AC9BA3D52C747FA8000021E3 /* Onboarding */,
 				FBACF0AA2C7481F800C3E522 /* Main */,
 				FBACF0A52C74482600C3E522 /* TemporaryInitial */,
+				E45CFFF42C75DA2400F5BFC3 /* SendMessage */,
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
@@ -632,6 +678,7 @@
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
 				AC395CFD2C743925003626BF /* MarkerIcon.swift */,
 				FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */,
+				E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -646,6 +693,7 @@
 				AC9BA3D02C744E37000021E3 /* Variables.swift */,
 				ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */,
 				FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */,
+				E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -759,6 +807,9 @@
 				FB6264242C6C22A000CC2597 /* PBXTargetDependency */,
 			);
 			name = besafe;
+			packageProductDependencies = (
+				E45CFFE42C7489C300F5BFC3 /* SocketIO */,
+			);
 			productName = besafe;
 			productReference = FB6263FB2C6C229E00CC2597 /* besafe.app */;
 			productType = "com.apple.product-type.application";
@@ -900,6 +951,9 @@
 				Base,
 			);
 			mainGroup = FB6263F22C6C229E00CC2597;
+			packageReferences = (
+				E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = FB6263FC2C6C229E00CC2597 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -990,6 +1044,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */,
+				E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */,
+				E45CFFFA2C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
@@ -1014,6 +1070,7 @@
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
 				ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
 				AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */,
+				E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
@@ -1022,9 +1079,11 @@
 				AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
+				E45CFFFE2C76DA6D00F5BFC3 /* SocketConnectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
 				FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */,
 				FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */,
+				E45CFFF82C76D7BF00F5BFC3 /* SocketHandler.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
 				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
@@ -1038,6 +1097,7 @@
 				AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
+				E45CFFFC2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift in Sources */,
 				404346AD2C745390004ED850 /* EmergencyPageView.swift in Sources */,
 				FBACF0B82C750B2300C3E522 /* ViewState.swift in Sources */,
 				FBACF0B52C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
@@ -1045,8 +1105,12 @@
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
+				E45CFFF32C75D73A00F5BFC3 /* MessageModel.swift in Sources */,
+				E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */,
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
+				E45CFFF62C75DA3700F5BFC3 /* SendMessageView.swift in Sources */,
+				E455F3CB2C770E320019F9C8 /* SocketHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,7 +1225,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1191,7 +1255,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6Y742356Q3;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComplicationWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ComplicationWidget;
@@ -1478,7 +1542,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -1499,7 +1563,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -1520,7 +1584,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1540,7 +1604,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1562,7 +1626,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
@@ -1583,7 +1647,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppTests";
@@ -1604,7 +1668,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
@@ -1624,7 +1688,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68FP6TZ275;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirby.besafe-Watch-AppUITests";
@@ -1715,6 +1779,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E45CFFE42C7489C300F5BFC3 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E45CFFE12C74896E00F5BFC3 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB6263F32C6C229E00CC2597 /* Project object */;
 }

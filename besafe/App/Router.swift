@@ -70,7 +70,11 @@ class Router: ObservableObject {
             EmergencyContactsView()
         case .main:
             MainView().navigationBarBackButtonHidden(true)
-        }
+        case .sendMessage:
+          SendMessageView()
+      case .testSocket:
+          SocketConnectionView()
+      }
     }
    
    //    @ViewBuilder
