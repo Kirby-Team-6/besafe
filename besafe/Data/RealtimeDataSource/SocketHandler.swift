@@ -20,7 +20,7 @@ class SocketHandler {
         sessionId = generateSessionID()
         
         // Initialize the Socket.IO client
-        manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!, config: [.log(true), .compress])
+        manager = SocketManager(socketURL: URL(string: "https://ebony-overjoyed-queen.glitch.me/")!, config: [.log(true), .compress])
         socket = manager?.defaultSocket
 
         // Register session ID with the server

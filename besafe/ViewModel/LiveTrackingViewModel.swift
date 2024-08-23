@@ -6,27 +6,34 @@
 //
 
 import Foundation
-import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class LiveTrackingViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+    private let locationManager = CLLocationManager()
+    var onLocationUpdate: ((CLLocationCoordinate2D) -> Void)?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Connect to Socket.io server
-        SocketHandler.shared.connect()
-
-        // Start updating location
-        SocketSendLocationViewModel.shared.startUpdatingLocation()
+    override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    func startUpdatingLocation() {
+        locationManager.startUpdatingLocation()
+    }
 
-        // Stop location updates when the view disappears
-        SocketSendLocationViewModel.shared.stopUpdatingLocation()
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
+    }
 
-        // Disconnect from Socket.io server
-        SocketHandler.shared.disconnect()
+    // Delegate method that gets called when the location updates
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        onLocationUpdate?(location.coordinate)  // Trigger callback with new location
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to get user's location: \(error.localizedDescription)")
     }
 }

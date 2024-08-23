@@ -42,6 +42,8 @@
 		ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */; };
 		ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
+		E455F3CB2C770E320019F9C8 /* SocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CA2C770E320019F9C8 /* SocketHelper.swift */; };
+		E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */; };
 		E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */; };
 		E45CFFE52C7489C300F5BFC3 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E45CFFE42C7489C300F5BFC3 /* SocketIO */; };
 		E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */; };
@@ -198,6 +200,8 @@
 		ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocationNameView.swift; sourceTree = "<group>"; };
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		E455F3CA2C770E320019F9C8 /* SocketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHelper.swift; sourceTree = "<group>"; };
+		E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessWatchViewModel.swift; sourceTree = "<group>"; };
 		E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUUID.swift; sourceTree = "<group>"; };
 		E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessViewModel.swift; sourceTree = "<group>"; };
 		E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 				E45CFFF02C75B1DA00F5BFC3 /* SendIMessViewModel.swift */,
 				E45CFFF92C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift */,
 				E45CFFFB2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift */,
+				E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				E45CFFF72C76D7BF00F5BFC3 /* SocketHandler.swift */,
+				E455F3CA2C770E320019F9C8 /* SocketHelper.swift */,
 			);
 			path = RealtimeDataSource;
 			sourceTree = "<group>";
@@ -958,6 +964,7 @@
 				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
+				E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
@@ -988,6 +995,7 @@
 				FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */,
 				40B72FD42C6DA51000145D66 /* NearbyPlacesView.swift in Sources */,
 				E45CFFF62C75DA3700F5BFC3 /* SendMessageView.swift in Sources */,
+				E455F3CB2C770E320019F9C8 /* SocketHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
