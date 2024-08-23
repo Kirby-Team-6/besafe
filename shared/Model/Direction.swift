@@ -13,6 +13,7 @@ enum Direction {
     case bearLeft
     case bearRight
     case straight
+    case stairs
     case done
     case none
     
@@ -31,7 +32,9 @@ enum Direction {
             return Direction.done
         } else if value.lowercased().contains("arrive") {
            return Direction.done
-        } else {
+        } else if value.lowercased().contains("stair") {
+            return Direction.stairs
+         } else {
             return Direction.none
         }
     }
@@ -52,6 +55,8 @@ enum Direction {
             return "direction-done"
         case .none:
             return nil
+        case .stairs:
+            return "stairs"
         }
     }
 }

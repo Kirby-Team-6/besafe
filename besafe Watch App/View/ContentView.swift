@@ -90,7 +90,7 @@ struct ContentView: View {
                             .font(.system(size: 18))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                        Text("\(getTime()?.type ?? TimeFormatedType.days)")
+                        Text("\(getTime()?.type.stringValue ?? TimeFormatedType.days.stringValue)")
                             .font(.system(size: 12))
                             .fontWeight(.medium)
                             .foregroundColor(.gray)

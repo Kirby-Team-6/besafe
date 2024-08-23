@@ -80,6 +80,7 @@ struct OnboardingView: View {
         }
         .ignoresSafeArea()
         .interactiveDismissDisabled()
+        .background(.white)
     }
 }
 
