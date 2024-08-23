@@ -17,7 +17,9 @@ struct ContentView: View {
     @State private var showControlDirection = true
     private let strokeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
     @State private var currentStepIndex: Int = 1
+    @EnvironmentObject var viewModel: DirectionViewmodel
     @State private var distancePerStep = 0
+    @State var isLoading = false
     @StateObject var watchConnect = WatchConnect.shared
     
     var body: some View {
@@ -135,7 +137,29 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: $showCompleteView){
             CompleteView(onRerouteTap: {
-                
+                isLoading = true
+                showCompleteView = false
+                Task {
+                    // Get list Save Place
+                    guard let location = CLLocationManager().location else {
+                        isLoading = false
+                        return
+                    }
+                    if let selectedSafePlace = viewModel.reroute(){
+                    isLoading = false
+                        watchConnect.session.sendMessage([
+                            "actionId": 0,
+                            "userLatitude": location.coordinate.latitude,
+                            "userLongitude": location.coordinate.longitude,
+                            "destinationLatitude": selectedSafePlace.location?.latitude ?? 0.0,
+                            "destinationLongitude": selectedSafePlace.location?.longitude ?? 0.0,
+                        ], replyHandler: nil){ error in
+                            print(error.localizedDescription)
+                        }
+                    }
+
+                }
+
             }, onDoneTap: {
                 router.pop()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1){
@@ -143,6 +167,34 @@ struct ContentView: View {
                 }
             })
         }
+        .onReceive(watchConnect.$routeModel) { v in
+            if v != nil {
+                isLoading = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    CLLocationManager().startUpdatingLocation()
+                }
+            }
+        }
+
+        .fullScreenCover(isPresented: $isLoading) {
+            VStack{
+                Spacer()
+                Text("Hang on while we're getting directions")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(3)
+                    .foregroundColor(Color(red: 0.92, green: 0.92, blue: 0.96).opacity(0.6))
+                    .multilineTextAlignment(.center)
+                    .font(.body)
+                    .fontWeight(.regular)
+                ProgressView()
+                    .frame(height: 30)
+                Spacer()
+            }
+            .toolbar(.hidden)
+            .frame(maxWidth: .infinity)
+            .ignoresSafeArea(.all, edges: .all)
+        }
+
         .onReceive(locationManager.$location) { location in
             if let location = location?.coordinate {
                 getInstruction(for: CLLocation(latitude: location.latitude, longitude: location.longitude))

@@ -22,24 +22,14 @@ class SafePlaceUtils {
         "synagogue": 13
     ]
     
-    static func sortSafePlaces(_ places: [PlaceModel], customPlaces: [MapPoint], from userLocation: CLLocation) -> [PlaceModel] {
+    static func sortSafePlaces(_ places: [PlaceModel], from userLocation: CLLocation) -> [PlaceModel] {
         // Filter places to only include those that are open
         let openPlaces = places.filter { $0.currentOpeningHours?.openNow == true }
         
         var combinedPlaces = openPlaces
         
         // Add custom places (assume custom places are always open)
-        for customPlace in customPlaces {
-            let placeModel = PlaceModel(
-                id: UUID().uuidString,
-                location: Location(latitude: customPlace.coordinate.latitude, longitude: customPlace.coordinate.longitude),
-                currentOpeningHours: CurrentOpeningHours(openNow: true),
-                primaryType: "custom",
-                displayName: DisplayName(text: customPlace.name, languageCode: nil),
-                shortFormattedAddress: nil
-            )
-            combinedPlaces.append(placeModel)
-        }
+        
         
         print("Combined Places Count: \(combinedPlaces.count)")
         
@@ -47,8 +37,8 @@ class SafePlaceUtils {
             let distance1 = calculateDistance(from: userLocation, to: place1)
             let distance2 = calculateDistance(from: userLocation, to: place2)
             
-            print("Comparing \(place1.displayName?.text ?? "Unknown") and \(place2.displayName?.text ?? "Unknown")")
-            print("Distance1: \(distance1), Distance2: \(distance2)")
+//            print("Comparing \(place1.displayName?.text ?? "Unknown") and \(place2.displayName?.text ?? "Unknown")")
+//            print("Distance1: \(distance1), Distance2: \(distance2)")
             
             let distanceDifference = abs(distance1 - distance2)
             let distanceTolerance: Double = 10.0

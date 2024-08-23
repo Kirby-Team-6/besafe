@@ -17,6 +17,8 @@ class DI {
     
     func initialize() async {
         swiftDataSource = await SwiftDataService.shared
+        let watchConnect = await WatchConnect.shared
+//        await watchConnect.initialize(swiftDataSource: swiftDataSource!)
     }
     
     func page1Viewmodel() -> Page1Viewmodel {

@@ -47,6 +47,9 @@ struct MainView: View {
                     viewmodel.coverScreen = CoverScreen.direction
                 }, onDone: {
                     viewmodel.coverScreen = CoverScreen.initial
+                    viewmodel.route = nil
+                    viewmodel.selectedSafePlace = nil
+                    viewmodel.listSafePlaces = []
                 })
                     .background(BackgroundBlurView())
                     .ignoresSafeArea(.all, edges: .all)

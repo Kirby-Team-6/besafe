@@ -40,7 +40,7 @@ struct SafePlaceListView: View {
             let dummyPlaces = DummyData.createDummyPlaces()
             let dummyCustomPlaces = DummyData.createDummyCustomPlaces()
             
-            sortedPlaces = SafePlaceUtils.sortSafePlaces(dummyPlaces, customPlaces: dummyCustomPlaces, from: userLocation)
+            sortedPlaces = SafePlaceUtils.sortSafePlaces(dummyPlaces, from: userLocation)
         }
     }
     

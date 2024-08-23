@@ -20,6 +20,9 @@ struct besafe_Watch_AppApp: App {
                   router.build(screen)
                }
          }
+         .onAppear {
+             CLLocationManager().requestWhenInUseAuthorization()
+         }
          .environmentObject(router)
          .environmentObject(directionViewmodel)
          .environmentObject(pointViewModel)

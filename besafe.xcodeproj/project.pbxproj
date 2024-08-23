@@ -59,6 +59,8 @@
 		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
 		FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
+		FB1E82702C77A41F00B89D94 /* SavePlace.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */; };
+		FB1E82712C77A41F00B89D94 /* SavePlace.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -230,6 +232,7 @@
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
+		FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SavePlace.gpx; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -440,6 +443,14 @@
 			path = "Custom Shared Components";
 			sourceTree = "<group>";
 		};
+		FB1E826E2C77A3E400B89D94 /* MockLocation */ = {
+			isa = PBXGroup;
+			children = (
+				FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */,
+			);
+			path = MockLocation;
+			sourceTree = "<group>";
+		};
 		FB6263F22C6C229E00CC2597 = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +650,7 @@
 		FB62647E2C6C966800CC2597 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				FB1E826E2C77A3E400B89D94 /* MockLocation */,
 				FBACF0B32C74F9C600C3E522 /* Utils */,
 				FBC3ED172C73C28000996946 /* Model */,
 				FBC3ED122C73C25700996946 /* Manager */,
@@ -929,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */,
+				FB1E82702C77A41F00B89D94 /* SavePlace.gpx in Resources */,
 				FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
@@ -957,6 +970,7 @@
 				FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
+				FB1E82712C77A41F00B89D94 /* SavePlace.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

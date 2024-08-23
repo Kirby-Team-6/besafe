@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreHaptics
+import CoreLocation
 
 struct EmergencyPageView: View {
    let onTap: () -> Void
@@ -15,6 +16,7 @@ struct EmergencyPageView: View {
    @State private var isNavigating = false
    @State private var timer: Timer?
    @State private var isShowingInfo = false
+    @State var showAlert = false
    
    var body: some View {
       ZStack {
@@ -197,8 +199,14 @@ struct EmergencyPageView: View {
             
          }
       }
+      .alert(isPresented: $showAlert) {
+          Alert(title: Text("Location Error"),
+                message: Text("Could not find User location."),
+                dismissButton: .default(Text("OK")))
+      }
       .onAppear {
          prepareHaptics()
+          CLLocationManager().requestWhenInUseAuthorization()
       }
       .sheet(isPresented: $isShowingInfo, onDismiss: {
          isShowingInfo = false
@@ -273,6 +281,11 @@ struct EmergencyPageView: View {
    }
    
    func showNavigationMessage() {
+       let location = CLLocationManager().location
+       if location == nil {
+           self.showAlert = true
+           return
+       }
       isNavigating = true
       DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
          onTap()

@@ -29,6 +29,8 @@ enum Direction {
             return Direction.straight
         } else if value.lowercased().contains("the destination is on") {
             return Direction.done
+        } else if value.lowercased().contains("arrive") {
+           return Direction.done
         } else {
             return Direction.none
         }

@@ -61,10 +61,13 @@ struct DirectionView: View {
             }
         }
         .onChange(of: selection){  old, newValue in
-            let data = viewmodel.route!.steps[newValue]
-            position = .camera(.init(centerCoordinate: data.polyline.coordinate, distance: 700))
+            if let data = viewmodel.route?.steps[newValue]{
+                position = .camera(.init(centerCoordinate: data.polyline.coordinate, distance: 700))
+            }
         }
         .onReceive(viewmodel.$route) { v in
+            tabViewCount = 0
+            selection = 0
             if (v != nil){
                 tabViewCount = v!.steps.count
             }

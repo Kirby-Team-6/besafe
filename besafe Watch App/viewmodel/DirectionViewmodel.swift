@@ -17,6 +17,7 @@ class DirectionViewmodel: ObservableObject {
     
     
     private var listSafePlaces: [PlaceModel] = []
+    var customSafePlace: [PlaceModel] = []
     var selectedSafePlace: PlaceModel?
     private var loadData = false
     
@@ -41,7 +42,11 @@ class DirectionViewmodel: ObservableObject {
         
         switch result {
         case .success(let success):
-            let data = SafePlaceUtils.sortSafePlaces(success, customPlaces: [], from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            var mutableData = success
+            customSafePlace.forEach{
+                mutableData.append($0)
+            }
+            let data = SafePlaceUtils.sortSafePlaces(mutableData, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
             safePlace = data.first
             DispatchQueue.main.async {
                 self.listSafePlaces = data
@@ -57,6 +62,7 @@ class DirectionViewmodel: ObservableObject {
             print(failure)
             self.loadData = false
         }
+        selectedSafePlace = safePlace
         return safePlace
     }
     
@@ -90,21 +96,21 @@ class DirectionViewmodel: ObservableObject {
     }
 
     
-    func reroute() {
+    func reroute() -> PlaceModel? {
         if let selectedPlace = selectedSafePlace {
             // Exclude the current selected place for 12 hours
   
             guard let location = CLLocationManager().location?.coordinate else {
-                return
+                return nil
             }
             
             // Reload safe places, excluding the selected place
             let filteredPlaces = listSafePlaces.filter { $0.id != selectedPlace.id }
-            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, customPlaces: [], from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            let sortedPlaces = SafePlaceUtils.sortSafePlaces(filteredPlaces, from: CLLocation(latitude: location.latitude, longitude: location.longitude))
             listSafePlaces = sortedPlaces
-            
-            
-            navigateToSafePlace(safePlaces: sortedPlaces, latitude: location.latitude, longitude: location.longitude)
+            selectedSafePlace = listSafePlaces.first
+            return selectedSafePlace
         }
+        return nil
     }
 }

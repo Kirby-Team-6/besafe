@@ -137,7 +137,7 @@ struct EmergencyButtonView: View {
             .ignoresSafeArea(.all, edges: .all)
         }
         .onReceive(watchConnect.$routeModel) { v in
-            if v != nil {
+            if v != nil && router.path.last == .emergencyview{
                 isLoading = false
                 isNavigating = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -145,6 +145,23 @@ struct EmergencyButtonView: View {
                     router.push(Screen.home)
                     isNavigating = false
                 }
+            }
+        }
+        .onReceive(watchConnect.$placeModel) { v in
+            print("onchange \(v.count)")
+            viewModel.customSafePlace = v
+        }
+        .onReceive(watchConnect.$statusMessage) { v in
+            print(v)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                watchConnect.session.sendMessage([
+                    "actionId": 1,
+                ], replyHandler: nil){ error in
+                    print(error.localizedDescription)
+                }
+                print("send session")
             }
         }
         .edgesIgnoringSafeArea(.all)
