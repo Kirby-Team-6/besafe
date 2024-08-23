@@ -36,6 +36,9 @@ struct besafeApp: App {
                EmptyView()
             }
          }
+         .onAppear{
+             UserDefaults.standard.setValue(false, forKey: "isAlreadyShowOnBoarding")
+         }
          .task {
             await DI.shared.initialize()
             self.initialize = true

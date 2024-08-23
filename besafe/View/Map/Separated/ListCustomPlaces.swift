@@ -62,6 +62,7 @@ struct ListCustomPlaces: View {
                
             }
          }
+         .frame(maxHeight: .infinity, alignment: .top)
          .padding()
       }
       .clipShape(RoundedRectangle(cornerRadius: 25))

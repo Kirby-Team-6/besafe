@@ -19,109 +19,110 @@ struct SearchPlaceView: View {
    @EnvironmentObject var nearbyVM: SearchNearby
    
    var body: some View {
-      ZStack{
-         Color.neutral.ignoresSafeArea()
-         VStack(spacing: 16) {
-            HStack{
-               Button("Cancel") {
-                  withAnimation{
-                     enumOverlay = .customNewPlace
-                  }
+       NavigationView{
+           ZStack{
+              Color.neutral.ignoresSafeArea()
+              VStack(spacing: 8) {
+                 
+                 // Search Bar
+                 TextField("Search Maps", text: $searchText)
+                    .padding()
+                    .background(.customWhite)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .onChange(of: searchText) {
+                       searchPlaces()
+                    }
+                 
+                 // Choose on Map Button
+                 Button(action: {
+                    // Handle map selection action
+                    // TODO: navigate ke page add custom pinpoint
+                    withAnimation{
+                       enumOverlay = .addPlace
+                       addingPoint = true
+                    }
+                 }) {
+                    HStack {
+                       Image(systemName: "mappin")
+                          .font(.system(size: 20))
+                          .foregroundColor(.blue)
+                       Text("Choose on Map")
+                          .font(.system(size: 16))
+                          .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .background(.customWhite)
+                 }
+                 .clipShape(RoundedRectangle(cornerRadius: 12))
+                 .padding(.bottom, 8)
+                 
+                 if isSearching {
+                    List {
+                       ForEach(searchResults, id: \.self) { item in
+                          ListPlacesView(name: item.name ?? "", title: item.placemark.title ?? "")
+                             .onTapGesture {
+                                withAnimation{
+                                   temporaryMarkerCoordinate = item.placemark.coordinate
+                                   showTemporaryMarker = true
+                                   enumOverlay = .addPlace
+                                   // Update the map position to focus on the selected coordinate
+                                   position = .camera(MapCamera(centerCoordinate: item.placemark.coordinate, distance: 1000))
+                                   overlayHeight = UIScreen.main.bounds.height * 0.3
+                                }
+                             }
+                       }
+                    }
+                    .listStyle(PlainListStyle())
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                 }else{
+                    HStack{
+                       Text("Suggestions")
+                          .font(.subheadline)
+                          .fontWeight(.semibold)
+                          .opacity(0.5)
+                       
+                       Spacer()
+                    }
+                    
+                    List{
+                       ForEach(nearbyVM.nearbyPlaces){ item in
+                          ListPlacesView(name: item.name, title: item.address)
+                             .onTapGesture {
+                                withAnimation{
+                                   temporaryMarkerCoordinate = item.coordinate
+                                   showTemporaryMarker = true
+                                   enumOverlay = .addPlace
+                                   // Update the map position to focus on the selected coordinate
+                                   position = .camera(MapCamera(centerCoordinate: item.coordinate, distance: 1000))
+                                   overlayHeight = UIScreen.main.bounds.height * 0.3
+                                }
+                             }
+                       }
+                    }
+                    .listStyle(PlainListStyle())
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                 }
+                 
+                 Spacer()
+              }
+              .padding(.horizontal)
+           }
+           .navigationTitle("Add Custom Safe Place")
+           .navigationBarTitleDisplayMode(.inline)
+           .toolbar {
+               ToolbarItem(placement: .cancellationAction) {
+                   Button {
+                       withAnimation{
+                          enumOverlay = .customNewPlace
+                       }
+                   } label: {
+                       Text("Cancel")
+                   }
                }
-               
-               Spacer()
-               
-               Text("New Preferred Place")
-                  .frame(maxWidth: .infinity, alignment: .center)
-                  .font(.headline)
-               
-               Spacer()
-            }
-            
-            // Search Bar
-            TextField("Search Maps", text: $searchText)
-               .padding()
-               .background(.customWhite)
-               .clipShape(RoundedRectangle(cornerRadius: 12))
-               .onChange(of: searchText) {
-                  searchPlaces()
-               }
-            
-            // Choose on Map Button
-            Button(action: {
-               // Handle map selection action
-               // TODO: navigate ke page add custom pinpoint
-               withAnimation{
-                  enumOverlay = .addPlace
-                  addingPoint = true
-               }
-            }) {
-               HStack {
-                  Image(systemName: "mappin.and.ellipse")
-                     .font(.system(size: 20))
-                     .foregroundColor(.blue)
-                  Text("Choose on Map")
-                     .font(.system(size: 16))
-                     .foregroundColor(.blue)
-               }
-               .padding()
-               .frame(maxWidth: .infinity, alignment: .leading)
-               .clipShape(RoundedRectangle(cornerRadius: 12))
-               .background(.customWhite)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            
-            if isSearching {
-               List {
-                  ForEach(searchResults, id: \.self) { item in
-                     ListPlacesView(name: item.name ?? "", title: item.placemark.title ?? "")
-                        .onTapGesture {
-                           withAnimation{
-                              temporaryMarkerCoordinate = item.placemark.coordinate
-                              showTemporaryMarker = true
-                              enumOverlay = .addPlace
-                              // Update the map position to focus on the selected coordinate
-                              position = .camera(MapCamera(centerCoordinate: item.placemark.coordinate, distance: 1000))
-                              overlayHeight = UIScreen.main.bounds.height * 0.3
-                           }
-                        }
-                  }
-               }
-               .listStyle(PlainListStyle())
-               .clipShape(RoundedRectangle(cornerRadius: 12))
-            }else{
-               HStack{
-                  Text("Suggestions")
-                     .font(.subheadline)
-                     .fontWeight(.semibold)
-                     .opacity(0.5)
-                  
-                  Spacer()
-               }
-               
-               List{
-                  ForEach(nearbyVM.nearbyPlaces){ item in
-                     ListPlacesView(name: item.name, title: item.address)
-                        .onTapGesture {
-                           withAnimation{
-                              temporaryMarkerCoordinate = item.coordinate
-                              showTemporaryMarker = true
-                              enumOverlay = .addPlace
-                              // Update the map position to focus on the selected coordinate
-                              position = .camera(MapCamera(centerCoordinate: item.coordinate, distance: 1000))
-                              overlayHeight = UIScreen.main.bounds.height * 0.3
-                           }
-                        }
-                  }
-               }
-               .listStyle(PlainListStyle())
-               .clipShape(RoundedRectangle(cornerRadius: 12))
-            }
-            
-            Spacer()
-         }
-         .padding()
-      }
+           }
+       }
       .clipShape(RoundedRectangle(cornerRadius: 25))
       .shadow(radius: 16, y: 4)
       .onAppear{

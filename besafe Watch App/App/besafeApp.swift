@@ -21,6 +21,7 @@ struct besafe_Watch_AppApp: App {
                }
          }
          .onAppear {
+             
              CLLocationManager().requestWhenInUseAuthorization()
          }
          .environmentObject(router)

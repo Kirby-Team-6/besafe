@@ -55,7 +55,7 @@ struct DirectionView: View {
                 }
                 let lastStep = CLLocation(latitude: lastStep2d.latitude, longitude: lastStep2d.longitude)
                 let distance = lastStep.distance(from: location!)
-                if distance <= 10 {
+                if distance <= 30 {
                     viewmodel.coverScreen = .complete
                 }
             }

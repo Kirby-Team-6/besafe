@@ -83,6 +83,7 @@ struct MainView: View {
                 defaults.setValue(true, forKey: "isAlreadyShowOnBoarding")
             }
             
+            
         }
         .environmentObject(viewmodel)
     }

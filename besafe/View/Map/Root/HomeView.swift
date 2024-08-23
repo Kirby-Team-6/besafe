@@ -67,10 +67,7 @@ struct HomeView: View {
          }
          
          if addingPoint {
-            Image(.customPinpoint)
-               .foregroundColor(.red)
-               .font(.title)
-               .zIndex(0)
+             MarkerIconView(color: .red, img: "heart.fill")
          }
       }
       .ignoresSafeArea()
