@@ -10,7 +10,7 @@ import SwiftUI
 struct HeaderDirectionView: View {
     @Binding var selection: Int
     @Binding var tabViewCount: Int
-    @EnvironmentObject var viewmodel: DirectionViewmodel
+    @EnvironmentObject var viewmodel: MainViewModel
     
     var body: some View {
         VStack{

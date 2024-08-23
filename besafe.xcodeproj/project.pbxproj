@@ -24,6 +24,9 @@
 		40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */; };
 		40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */; };
 		40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */; };
+		40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
+		40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */; };
+		40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E996A22C75E0190076CD3A /* EmergencyView.swift */; };
 		AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CF92C743309003626BF /* MarkerIconView.swift */; };
 		AC395CFC2C743803003626BF /* TextfieldWithMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */; };
 		AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
@@ -36,12 +39,26 @@
 		AC7E58812C741A0600E591A1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58802C741A0600E591A1 /* Screen.swift */; };
 		AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58822C741A2600E591A1 /* Sheet.swift */; };
 		AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */; };
+		AC8E96062C76D60C00AA7569 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96052C76D60C00AA7569 /* Overlay.swift */; };
+		AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */; };
+		AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E96092C76E13100AA7569 /* ListPlacesView.swift */; };
+		AC8E960C2C772ECE00AA7569 /* CustomLabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */; };
+		AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
+		AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC395CFD2C743925003626BF /* MarkerIcon.swift */; };
+		AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */; };
+		AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
+		AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */; };
+		AC9BA3E82C74DEB0000021E3 /* MapPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */; };
+		AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BA3D02C744E37000021E3 /* Variables.swift */; };
 		ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */; };
 		ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */; };
 		ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */; };
 		ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A772C73051E007CA42D /* ModalityTitleView.swift */; };
 		ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE50A792C73053D007CA42D /* LocationDetailView.swift */; };
+		ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
+		ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */; };
+		FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
 		E455F3CB2C770E320019F9C8 /* SocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CA2C770E320019F9C8 /* SocketHelper.swift */; };
 		E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */; };
 		E45CFFDA2C730D5E00F5BFC3 /* GenerateUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */; };
@@ -70,20 +87,33 @@
 		FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62645E2C6C34BE00CC2597 /* Router.swift */; };
 		FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264602C6C35F200CC2597 /* HomeView.swift */; };
 		FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264622C6C360100CC2597 /* DependencyInjection.swift */; };
-		FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264662C6C39E700CC2597 /* Page2.storyboard */; };
-		FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264672C6C39E700CC2597 /* Page2ViewController.swift */; };
 		FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6264692C6C39E700CC2597 /* Page1.storyboard */; };
 		FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */; };
 		FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */; };
 		FB6264782C6C915800CC2597 /* SwiftDataContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */; };
-		FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264792C6C917C00CC2597 /* LocalDataSource.swift */; };
 		FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
 		FB6264802C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264812C6C968800CC2597 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647F2C6C968800CC2597 /* Extension.swift */; };
 		FB6264832C6C976B00CC2597 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6264822C6C976B00CC2597 /* Router.swift */; };
+		FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */; };
+		FBACF0AC2C74820300C3E522 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0AB2C74820300C3E522 /* MainView.swift */; };
+		FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */; };
+		FBACF0B02C74DB6C00C3E522 /* BackgroundBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0AF2C74DB6C00C3E522 /* BackgroundBlur.swift */; };
+		FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B12C74F16500C3E522 /* ComplateDirectionView.swift */; };
+		FBACF0B52C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */; };
+		FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */; };
+		FBACF0B82C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
+		FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0B72C750B2300C3E522 /* ViewState.swift */; };
+		FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */; };
+		FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C32C752C7C00C3E522 /* CompleteView.swift */; };
+		FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
+		FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */; };
+		FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
+		FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */; };
+		FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */; };
+		FBACF0CF2C769B1E00C3E522 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */; };
 		FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */; };
 		FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0B2C73C14A00996946 /* DirectionView.swift */; };
-		FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED0C2C73C14A00996946 /* DirectionViewmodel.swift */; };
 		FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
 		FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED112C73C25700996946 /* LocationManager.swift */; };
 		FBC3ED182C73C28000996946 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3ED152C73C28000996946 /* Direction.swift */; };
@@ -185,6 +215,8 @@
 		40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactsModel.swift; sourceTree = "<group>"; };
 		40B72FE22C720A1C00145D66 /* SearchNearbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewModel.swift; sourceTree = "<group>"; };
 		40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesModel.swift; sourceTree = "<group>"; };
+		40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceListView.swift; sourceTree = "<group>"; };
+		40E996A22C75E0190076CD3A /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		AC395CF92C743309003626BF /* MarkerIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIconView.swift; sourceTree = "<group>"; };
 		AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithMarkerView.swift; sourceTree = "<group>"; };
 		AC395CFD2C743925003626BF /* MarkerIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerIcon.swift; sourceTree = "<group>"; };
@@ -195,11 +227,20 @@
 		AC7E58802C741A0600E591A1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		AC7E58822C741A2600E591A1 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenCover.swift; sourceTree = "<group>"; };
+		AC8E96052C76D60C00AA7569 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomPlaces.swift; sourceTree = "<group>"; };
+		AC8E96092C76E13100AA7569 /* ListPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesView.swift; sourceTree = "<group>"; };
+		AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelController.swift; sourceTree = "<group>"; };
+		AC9BA3D02C744E37000021E3 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AC9BA3EA2C756601000021E3 /* besafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = besafe.entitlements; sourceTree = "<group>"; };
+		AC9BA3EB2C756614000021E3 /* besafe Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "besafe Watch App.entitlements"; sourceTree = "<group>"; };
 		ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		ACE50A732C7303FC007CA42D /* MapPointViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointViewModel.swift; sourceTree = "<group>"; };
 		ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocationNameView.swift; sourceTree = "<group>"; };
 		ACE50A772C73051E007CA42D /* ModalityTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityTitleView.swift; sourceTree = "<group>"; };
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
 		E455F3CA2C770E320019F9C8 /* SocketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHelper.swift; sourceTree = "<group>"; };
 		E455F3CE2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIMessWatchViewModel.swift; sourceTree = "<group>"; };
 		E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUUID.swift; sourceTree = "<group>"; };
@@ -232,19 +273,27 @@
 		FB62645E2C6C34BE00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FB6264602C6C35F200CC2597 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB6264622C6C360100CC2597 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
-		FB6264662C6C39E700CC2597 /* Page2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
-		FB6264672C6C39E700CC2597 /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		FB6264692C6C39E700CC2597 /* Page1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Page1.storyboard; sourceTree = "<group>"; };
 		FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Viewmodel.swift; sourceTree = "<group>"; };
 		FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContextManager.swift; sourceTree = "<group>"; };
-		FB6264792C6C917C00CC2597 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FB62647F2C6C968800CC2597 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FB6264822C6C976B00CC2597 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryInitialViewmodel.swift; sourceTree = "<group>"; };
+		FBACF0AB2C74820300C3E522 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FBACF0AF2C74DB6C00C3E522 /* BackgroundBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBlur.swift; sourceTree = "<group>"; };
+		FBACF0B12C74F16500C3E522 /* ComplateDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplateDirectionView.swift; sourceTree = "<group>"; };
+		FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceUtils.swift; sourceTree = "<group>"; };
+		FBACF0B72C750B2300C3E522 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
+		FBACF0C32C752C7C00C3E522 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludePlaceModel.swift; sourceTree = "<group>"; };
+		FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MockLocation.gpx; sourceTree = "<group>"; };
+		FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		FBC3ED092C73C14A00996946 /* HeaderDirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDirectionView.swift; sourceTree = "<group>"; };
 		FBC3ED0B2C73C14A00996946 /* DirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
-		FBC3ED0C2C73C14A00996946 /* DirectionViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewmodel.swift; sourceTree = "<group>"; };
 		FBC3ED112C73C25700996946 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FBC3ED152C73C28000996946 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		FBC3ED162C73C28000996946 /* TimeFormated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormated.swift; sourceTree = "<group>"; };
@@ -344,6 +393,7 @@
 				AC7E58802C741A0600E591A1 /* Screen.swift */,
 				AC7E58822C741A2600E591A1 /* Sheet.swift */,
 				AC7E58842C741A3D00E591A1 /* FullscreenCover.swift */,
+				AC8E96052C76D60C00AA7569 /* Overlay.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -362,11 +412,21 @@
 		AC7E58872C741A8A00E591A1 /* Separated */ = {
 			isa = PBXGroup;
 			children = (
+				AC8E96072C76DDFF00AA7569 /* ListCustomPlaces.swift */,
+				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
 				40B72FCF2C6D10F300145D66 /* SearchPlaceView.swift */,
 				ACE50A792C73053D007CA42D /* LocationDetailView.swift */,
 				AC7E58782C74180100E591A1 /* MapOverlayView.swift */,
 			);
 			path = Separated;
+			sourceTree = "<group>";
+		};
+		AC9BA3D52C747FA8000021E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AC9BA3D62C747FBD000021E3 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		ACE50A7B2C730636007CA42D /* ViewModel */ = {
@@ -398,9 +458,10 @@
 			children = (
 				FBC3ED1F2C73C2FA00996946 /* PageControlView.swift */,
 				ACE50A772C73051E007CA42D /* ModalityTitleView.swift */,
-				ACE50A752C73050C007CA42D /* CustomLocationNameView.swift */,
 				AC395CF92C743309003626BF /* MarkerIconView.swift */,
 				AC395CFB2C743803003626BF /* TextfieldWithMarkerView.swift */,
+				FBACF0AF2C74DB6C00C3E522 /* BackgroundBlur.swift */,
+				AC8E96092C76E13100AA7569 /* ListPlacesView.swift */,
 			);
 			path = "Custom Shared Components";
 			sourceTree = "<group>";
@@ -457,12 +518,13 @@
 		FB6263FD2C6C229E00CC2597 /* besafe */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3EA2C756601000021E3 /* besafe.entitlements */,
 				AC464E5A2C73A1DE0027AB69 /* Info.plist */,
 				AC7E587A2C74191500E591A1 /* Enum */,
-				ACE50A7B2C730636007CA42D /* ViewModel */,
 				FB62645D2C6C2EF800CC2597 /* App */,
 				FB62647D2C6C93FC00CC2597 /* Model */,
 				FB62645B2C6C22B500CC2597 /* View */,
+				ACE50A7B2C730636007CA42D /* ViewModel */,
 				FB62645A2C6C22AD00CC2597 /* Data */,
 				FB6264022C6C22A000CC2597 /* Assets.xcassets */,
 				FB6264042C6C22A000CC2597 /* Preview Content */,
@@ -498,6 +560,8 @@
 		FB6264252C6C22A000CC2597 /* besafe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3EB2C756614000021E3 /* besafe Watch App.entitlements */,
+				FBACF0C02C752BC700C3E522 /* viewmodel */,
 				FB6264752C6C4BB700CC2597 /* View */,
 				FB6264742C6C4BAE00CC2597 /* App */,
 				FB62642A2C6C22A000CC2597 /* Assets.xcassets */,
@@ -545,13 +609,14 @@
 		FB62645B2C6C22B500CC2597 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BA3D52C747FA8000021E3 /* Onboarding */,
+				FBACF0AA2C7481F800C3E522 /* Main */,
+				FBACF0A52C74482600C3E522 /* TemporaryInitial */,
 				E45CFFF42C75DA2400F5BFC3 /* SendMessage */,
 				FBC3ED0D2C73C14A00996946 /* Direction */,
 				ACE50A7D2C730654007CA42D /* Custom Shared Components */,
 				ACE50A7C2C73064D007CA42D /* Map */,
 				FB62646C2C6C39E700CC2597 /* Page1 */,
-				FB6264682C6C39E700CC2597 /* Page2 */,
-				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,21 +631,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		FB6264682C6C39E700CC2597 /* Page2 */ = {
-			isa = PBXGroup;
-			children = (
-				FB6264662C6C39E700CC2597 /* Page2.storyboard */,
-				FB6264672C6C39E700CC2597 /* Page2ViewController.swift */,
-			);
-			path = Page2;
-			sourceTree = "<group>";
-		};
 		FB62646C2C6C39E700CC2597 /* Page1 */ = {
 			isa = PBXGroup;
 			children = (
 				FB6264692C6C39E700CC2597 /* Page1.storyboard */,
 				FB62646A2C6C39E700CC2597 /* Page1ViewController.swift */,
 				FB62646B2C6C39E700CC2597 /* Page1Viewmodel.swift */,
+				AC8E960B2C772ECE00AA7569 /* CustomLabelController.swift */,
 			);
 			path = Page1;
 			sourceTree = "<group>";
@@ -598,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				FB6264282C6C22A000CC2597 /* ContentView.swift */,
+				FBACF0C32C752C7C00C3E522 /* CompleteView.swift */,
+				40E996A22C75E0190076CD3A /* EmergencyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,7 +665,6 @@
 			isa = PBXGroup;
 			children = (
 				FB6264772C6C915800CC2597 /* SwiftDataContextManager.swift */,
-				FB6264792C6C917C00CC2597 /* LocalDataSource.swift */,
 			);
 			path = LocalDataSource;
 			sourceTree = "<group>";
@@ -614,12 +672,12 @@
 		FB62647D2C6C93FC00CC2597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */,
 				40B72FC82C6D0E0E00145D66 /* SafePlaceModel.swift */,
 				40B72FE42C720A4C00145D66 /* NearbyPlacesModel.swift */,
 				40B72FE02C71F03C00145D66 /* EmergencyContactsModel.swift */,
 				ACBB47552C6CEDA600AAC2AC /* MapPoint.swift */,
 				AC395CFD2C743925003626BF /* MarkerIcon.swift */,
+				FBACF0C52C75931F00C3E522 /* ExcludePlaceModel.swift */,
 				E45CFFF22C75D73A00F5BFC3 /* MessageModel.swift */,
 			);
 			path = Model;
@@ -628,12 +686,52 @@
 		FB62647E2C6C966800CC2597 /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				FBACF0B32C74F9C600C3E522 /* Utils */,
 				FBC3ED172C73C28000996946 /* Model */,
 				FBC3ED122C73C25700996946 /* Manager */,
 				FB62647F2C6C968800CC2597 /* Extension.swift */,
+				AC9BA3D02C744E37000021E3 /* Variables.swift */,
+				ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */,
+				FBACF0C82C75E1A900C3E522 /* MockLocation.gpx */,
 				E45CFFD92C730D5E00F5BFC3 /* GenerateUUID.swift */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		FBACF0A52C74482600C3E522 /* TemporaryInitial */ = {
+			isa = PBXGroup;
+			children = (
+				FBACF0A62C74484200C3E522 /* TemporaryInitialViewmodel.swift */,
+			);
+			path = TemporaryInitial;
+			sourceTree = "<group>";
+		};
+		FBACF0AA2C7481F800C3E522 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				404346AC2C745390004ED850 /* EmergencyPageView.swift */,
+				FBACF0AB2C74820300C3E522 /* MainView.swift */,
+				FBACF0AD2C74824D00C3E522 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FBACF0B32C74F9C600C3E522 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBACF0B42C74F9E300C3E522 /* SafePlaceUtils.swift */,
+				40BAE2582C772F47002F9A4A /* SafePlaceListView.swift */,
+				FBACF0B72C750B2300C3E522 /* ViewState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FBACF0C02C752BC700C3E522 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBACF0C12C752BD900C3E522 /* DirectionViewmodel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		FBC3ED0A2C73C14A00996946 /* Component */ = {
@@ -650,7 +748,7 @@
 			children = (
 				FBC3ED0A2C73C14A00996946 /* Component */,
 				FBC3ED0B2C73C14A00996946 /* DirectionView.swift */,
-				FBC3ED0C2C73C14A00996946 /* DirectionViewmodel.swift */,
+				FBACF0B12C74F16500C3E522 /* ComplateDirectionView.swift */,
 			);
 			path = Direction;
 			sourceTree = "<group>";
@@ -666,8 +764,10 @@
 		FBC3ED172C73C28000996946 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBC3ED1C2C73C29D00996946 /* PlaceModel.swift */,
 				FBC3ED152C73C28000996946 /* Direction.swift */,
 				FBC3ED162C73C28000996946 /* TimeFormated.swift */,
+				FBACF0CD2C769B1E00C3E522 /* RouteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -883,10 +983,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */,
+				FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
-				FB62646D2C6C39E700CC2597 /* Page2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +1008,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */,
 				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
 			);
@@ -942,15 +1043,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB62646E2C6C39E700CC2597 /* Page2ViewController.swift in Sources */,
+				FBACF0AE2C74824D00C3E522 /* MainViewModel.swift in Sources */,
 				E45CFFF12C75B1DA00F5BFC3 /* SendIMessViewModel.swift in Sources */,
 				E45CFFFA2C76D97B00F5BFC3 /* SocketSendLocationViewModel.swift in Sources */,
 				FB6264612C6C35F200CC2597 /* HomeView.swift in Sources */,
 				FBC3ED132C73C25700996946 /* LocationManager.swift in Sources */,
 				FBC3ED0F2C73C14A00996946 /* DirectionView.swift in Sources */,
+				40BAE2592C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
 				AC7E58852C741A3D00E591A1 /* FullscreenCover.swift in Sources */,
 				AC7E58832C741A2600E591A1 /* Sheet.swift in Sources */,
 				40B72FCB2C6D0E2D00145D66 /* SafePlaceViewModel.swift in Sources */,
+				AC9BA3D12C744E37000021E3 /* Variables.swift in Sources */,
 				FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */,
 				FB6264702C6C39E700CC2597 /* Page1ViewController.swift in Sources */,
 				FBC3ED1D2C73C29D00996946 /* PlaceModel.swift in Sources */,
@@ -959,35 +1062,47 @@
 				40B72FC92C6D0E0E00145D66 /* SafePlaceModel.swift in Sources */,
 				FBC3ED202C73C2FA00996946 /* PageControlView.swift in Sources */,
 				FBC3ED182C73C28000996946 /* Direction.swift in Sources */,
-				FBC3ED102C73C14A00996946 /* DirectionViewmodel.swift in Sources */,
 				40B72FD02C6D10F300145D66 /* SearchPlaceView.swift in Sources */,
 				AC395CFA2C743309003626BF /* MarkerIconView.swift in Sources */,
+				FBACF0AC2C74820300C3E522 /* MainView.swift in Sources */,
 				40B72FE32C720A1C00145D66 /* SearchNearbyViewModel.swift in Sources */,
+				FBACF0B02C74DB6C00C3E522 /* BackgroundBlur.swift in Sources */,
 				40B72FDC2C71EC2F00145D66 /* EmergencyContactsView.swift in Sources */,
+				ACF3E0F92C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
+				AC9BA3D72C747FBD000021E3 /* OnboardingView.swift in Sources */,
 				E455F3CF2C782FDD0019F9C8 /* SendIMessWatchViewModel.swift in Sources */,
 				FBC3ED0E2C73C14A00996946 /* HeaderDirectionView.swift in Sources */,
 				FBC3ED1A2C73C28000996946 /* TimeFormated.swift in Sources */,
 				FB6264802C6C968800CC2597 /* Extension.swift in Sources */,
 				AC7E58792C74180100E591A1 /* MapOverlayView.swift in Sources */,
+				AC8E96062C76D60C00AA7569 /* Overlay.swift in Sources */,
 				AC395CFE2C743925003626BF /* MarkerIcon.swift in Sources */,
 				ACE50A7A2C73053D007CA42D /* LocationDetailView.swift in Sources */,
 				FBC3ED222C73C56000996946 /* FooterDirectionView.swift in Sources */,
 				E45CFFFE2C76DA6D00F5BFC3 /* SocketConnectionView.swift in Sources */,
 				40B72FE52C720A4C00145D66 /* NearbyPlacesModel.swift in Sources */,
+				FBACF0A72C74484200C3E522 /* TemporaryInitialViewmodel.swift in Sources */,
+				FBACF0C62C75931F00C3E522 /* ExcludePlaceModel.swift in Sources */,
 				E45CFFF82C76D7BF00F5BFC3 /* SocketHandler.swift in Sources */,
 				40B72FDE2C71EDC600145D66 /* EmergencyContactsViewModel.swift in Sources */,
 				40B72FC72C6D0D8B00145D66 /* SafePlaceView.swift in Sources */,
+				FBACF0B22C74F16500C3E522 /* ComplateDirectionView.swift in Sources */,
+				AC8E960A2C76E13100AA7569 /* ListPlacesView.swift in Sources */,
+				AC8E960C2C772ECE00AA7569 /* CustomLabelController.swift in Sources */,
 				40B72FE12C71F03C00145D66 /* EmergencyContactsModel.swift in Sources */,
 				ACBB47562C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
+				FBACF0CE2C769B1E00C3E522 /* RouteModel.swift in Sources */,
 				ACE50A762C73050C007CA42D /* CustomLocationNameView.swift in Sources */,
 				ACE50A782C73051E007CA42D /* ModalityTitleView.swift in Sources */,
+				AC8E96082C76DDFF00AA7569 /* ListCustomPlaces.swift in Sources */,
 				FB6264632C6C360100CC2597 /* DependencyInjection.swift in Sources */,
 				FB62645F2C6C34BE00CC2597 /* Router.swift in Sources */,
 				E45CFFFC2C76D99C00F5BFC3 /* LiveTrackingViewModel.swift in Sources */,
 				404346AD2C745390004ED850 /* EmergencyPageView.swift in Sources */,
+				FBACF0B82C750B2300C3E522 /* ViewState.swift in Sources */,
+				FBACF0B52C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
 				ACE50A742C7303FC007CA42D /* MapPointViewModel.swift in Sources */,
 				FB62647C2C6C91B400CC2597 /* RemoteDataSource.swift in Sources */,
-				FB62647A2C6C917C00CC2597 /* LocalDataSource.swift in Sources */,
 				AC7E587C2C74192500E591A1 /* PointLogo.swift in Sources */,
 				FB6264712C6C39E700CC2597 /* Page1Viewmodel.swift in Sources */,
 				E45CFFF32C75D73A00F5BFC3 /* MessageModel.swift in Sources */,
@@ -1020,17 +1135,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9BA3D22C7451C4000021E3 /* MarkerIcon.swift in Sources */,
+				FBACF0C22C752BD900C3E522 /* DirectionViewmodel.swift in Sources */,
 				FBC3ED192C73C28000996946 /* Direction.swift in Sources */,
+				FBACF0C42C752C7C00C3E522 /* CompleteView.swift in Sources */,
 				FB6264832C6C976B00CC2597 /* Router.swift in Sources */,
+				FBACF0C72C75AB8100C3E522 /* ExcludePlaceModel.swift in Sources */,
 				AC7E587F2C74196300E591A1 /* SafePlaceModel.swift in Sources */,
 				FB6264812C6C968800CC2597 /* Extension.swift in Sources */,
+				40BAE25A2C772F47002F9A4A /* SafePlaceListView.swift in Sources */,
+				AC9BA3E42C74DDC0000021E3 /* ModalityTitleView.swift in Sources */,
 				FBC3ED142C73C25700996946 /* LocationManager.swift in Sources */,
+				AC9BA3E72C74DE0D000021E3 /* SwiftDataContextManager.swift in Sources */,
+				ACF3E0FA2C7589AD00A99AD7 /* WatchConnect.swift in Sources */,
 				ACBB47572C6CEDA600AAC2AC /* MapPoint.swift in Sources */,
 				FB6264292C6C22A000CC2597 /* ContentView.swift in Sources */,
 				FBC3ED1B2C73C28000996946 /* TimeFormated.swift in Sources */,
+				FBACF0B62C74F9E300C3E522 /* SafePlaceUtils.swift in Sources */,
+				FBACF0CF2C769B1E00C3E522 /* RouteModel.swift in Sources */,
+				FBACF0B92C750B2300C3E522 /* ViewState.swift in Sources */,
 				FBC3ED1E2C73C29D00996946 /* PlaceModel.swift in Sources */,
+				40E996A32C75E0190076CD3A /* EmergencyView.swift in Sources */,
+				FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */,
+				AC9BA3E92C74DF03000021E3 /* Variables.swift in Sources */,
 				AC7E587E2C74195900E591A1 /* NearbyPlacesModel.swift in Sources */,
 				AC7E587D2C74193700E591A1 /* EmergencyContactsModel.swift in Sources */,
+				AC9BA3E82C74DEB0000021E3 /* MapPointViewModel.swift in Sources */,
 				FB6264272C6C22A000CC2597 /* besafeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1269,10 +1399,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "besafe Watch App/besafe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1301,10 +1432,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "besafe Watch App/besafe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = besafe;
@@ -1334,10 +1466,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = besafe/besafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = besafe/Info.plist;
@@ -1370,10 +1503,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = besafe/besafe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"besafe/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = besafe/Info.plist;
@@ -1410,7 +1544,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1431,7 +1565,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirby.besafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

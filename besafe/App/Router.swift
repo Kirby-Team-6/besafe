@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class Router: ObservableObject {
-   @Published var path: [Screen] = [Screen.testSocket]
-   @Published var rootView: Screen = Screen.testSocket
+   @Published var path: [Screen] = [Screen.main]
+   @Published var rootView: Screen = Screen.main
    @Published var sheet: Sheet?
    @Published var fullScreenCover: FullScreenCover?
    
@@ -56,32 +56,26 @@ class Router: ObservableObject {
    
    // MARK: - Presentation Style Providers
    @ViewBuilder
-   func build(_ screen: Screen) -> some View {
-      switch screen {
-      case .page1:
-         Page1().navigationBarBackButtonHidden(true)
-      case .page2:
-         Page2()
-      case .homeview:
-         HomeView().navigationBarBackButtonHidden(true)
-      case .safeplaceview:
-         SafePlaceView()
-      case .nearbyplacesview:
-         NearbyPlacesView()
-      case .emergencycontactsview:
-         EmergencyContactsView()
-      case .direction:
-         DirectionView()
-            .navigationBarBackButtonHidden(true)
-            .environmentObject(DI.shared.directionViewmodel())
-      case .emergencypageview:
-          EmergencyPageView()
-      case .sendMessage:
+    func build(_ screen: Screen) -> some View {
+        switch screen {
+        case .page1:
+            Page1().navigationBarBackButtonHidden(true)
+        case .homeview:
+            HomeView().navigationBarBackButtonHidden(true)
+        case .safeplaceview:
+            SafePlaceView()
+        case .nearbyplacesview:
+            NearbyPlacesView()
+        case .emergencycontactsview:
+            EmergencyContactsView()
+        case .main:
+            MainView().navigationBarBackButtonHidden(true)
+        case .sendMessage:
           SendMessageView()
       case .testSocket:
           SocketConnectionView()
       }
-   }
+    }
    
    //    @ViewBuilder
    //    func build(_ sheet: Sheet) -> some View {

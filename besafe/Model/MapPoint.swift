@@ -10,19 +10,22 @@ import MapKit
 import CoreLocation
 import SwiftData
 
-@Model 
+@Model
 class MapPoint {
-    var name: String
-    var latitude: Double
-    var longitude: Double
-
-    var coordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-    }
-
-    init(name: String, coordinate: CLLocationCoordinate2D) {
-        self.name = name
-        self.latitude = coordinate.latitude
-        self.longitude = coordinate.longitude
-    }
+    //TODO: ini gada id, address ?
+   var name: String
+   var latitude: Double
+   var longitude: Double
+   var markerIndex: Int
+   
+   var coordinate: CLLocationCoordinate2D {
+      CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+   }
+   
+   init(name: String, coordinate: CLLocationCoordinate2D, markerIndex: Int) {
+      self.name = name
+      self.latitude = coordinate.latitude
+      self.longitude = coordinate.longitude
+      self.markerIndex = markerIndex
+   }
 }

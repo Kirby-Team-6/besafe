@@ -7,53 +7,72 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
 
 struct MapOverlayView: View {
-   @Binding var addingPoint: Bool
+   @Binding var enumOverlay: Overlay
    @Binding var onTapAdd: Bool
    @Binding var searchText: String
-   @Binding var customSafePlaceHeight: CGFloat
    @Binding var overlayHeight: CGFloat
+   @Binding var position: MapCameraPosition
+   @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @Binding var showTemporaryMarker: Bool
+   @Binding var addingPoint: Bool
+   @StateObject var safePlaceVM = SafePlacesViewModel()
    
    var reader: MapProxy
+   
+   @FocusState private var isFocused: Bool
    
    var body: some View {
       GeometryReader { geometry in
          VStack {
-            if addingPoint {
-               VStack {
-                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, addingPoint: $addingPoint, reader: reader)
-               }
-               .frame(maxWidth: .infinity)
-               .frame(height: customSafePlaceHeight)
-               .offset(y: geometry.size.height - customSafePlaceHeight)
-               .transition(.move(edge: .bottom))
-            } else {
-               VStack {
-                  SearchPlaceView(addingPoint: $addingPoint)
-               }
-               .frame(maxWidth: .infinity)
-               .frame(height: overlayHeight)
-               .offset(y: geometry.size.height - overlayHeight)
-               .gesture(
-                  DragGesture()
-                     .onChanged { value in
-                        if value.translation.height < 0 {
-                           let newHeight = min(geometry.size.height, geometry.size.height * 0.6)
-                           withAnimation {
-                              overlayHeight = newHeight
-                           }
-                        } else {
-                           withAnimation {
-                              overlayHeight = UIScreen.main.bounds.height * 0.3
-                           }
+            VStack{
+               switch enumOverlay {
+               case .searchPlace:
+                  SearchPlaceView(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint)
+                     .transition(.move(edge: .bottom))
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
                         }
                      }
-               )
-               .transition(.move(edge: .bottom))
+                  
+               case .customNewPlace:
+                  ListCustomPlaces(enumOverlay: $enumOverlay, position: $position, overlayHeight: $overlayHeight)
+                     .transition(.move(edge: .bottom))
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : geometry.size.height * 0.3
+                        }
+                     }
+               case .addPlace:
+                  CustomLocationNameView(searchText: $searchText, onTapAdd: $onTapAdd, enumOverlay: $enumOverlay, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint, reader: reader)
+                     .transition(.move(edge: .bottom))
+                     .focused($isFocused)
+                     .onChange(of: isFocused) { oldValue, newValue in
+                        withAnimation {
+                           overlayHeight = newValue ? geometry.size.height * 0.5 : UIScreen.main.bounds.height * 0.3
+                        }
+                     }
+               }
             }
+            .frame(maxWidth: .infinity)
+            .frame(height: overlayHeight)
+            .offset(y: geometry.size.height - overlayHeight)
+            .gesture(
+               DragGesture()
+                  .onChanged { value in
+                     withAnimation{
+                        safePlaceVM.calculateSafePlaceHeight(valueHeight: value.translation.height, height: geometry.size.height, overlayHeight: &overlayHeight)
+                     }
+                  }
+            )
          }
       }
       .ignoresSafeArea()
    }
+   
 }

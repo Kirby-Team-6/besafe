@@ -5,6 +5,7 @@ import SwiftData
 
 struct HomeView: View {
    @EnvironmentObject var pointViewModel: MapPointViewModel
+   @EnvironmentObject var watchConnect: WatchConnect
    
    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
    @State private var showingSearchPlaceView = false
@@ -14,8 +15,11 @@ struct HomeView: View {
    @State var searchText = ""
    @State var mapSelection: MapPoint?
    @State private var overlayHeight: CGFloat = UIScreen.main.bounds.height * 0.3
+   @State var enumOverlay: Overlay = .customNewPlace
+   @State var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @State var showTemporaryMarker = false
    
-   @State private var customSafePlaceHeight = UIScreen.main.bounds.height * 0.3
+   @FocusState private var isFocused: Bool
    
    var body: some View {
       ZStack {
@@ -24,7 +28,15 @@ struct HomeView: View {
                UserAnnotation()
                
                ForEach(pointViewModel.mapPoint, id: \.self) { marker in
-                  Marker(marker.name, systemImage: "heart.fill", coordinate: marker.coordinate)
+                  let icon = Variables.icons[marker.markerIndex]
+                  
+                  Marker(marker.name, systemImage: icon.img, coordinate: marker.coordinate)
+                     .tint(icon.color)
+               }
+               
+               if let coordinate = temporaryMarkerCoordinate, showTemporaryMarker {
+                  Marker("Selected Place", systemImage: "mappin", coordinate: coordinate)
+                     .tint(.red)
                }
             }
             .onChange(of: mapSelection) { oldValue, newValue in
@@ -32,10 +44,6 @@ struct HomeView: View {
             }
             .onAppear {
                CLLocationManager().requestWhenInUseAuthorization()
-            }
-            .overlay(alignment: .bottom) {
-               // TODO: Semua overlay mending jadiin separated function
-               MapOverlayView(addingPoint: $addingPoint, onTapAdd: $onTapAdd, searchText: $searchText, customSafePlaceHeight: $customSafePlaceHeight, overlayHeight: $overlayHeight, reader:reader)
             }
             .sheet(isPresented: $showingLocationDetail, onDismiss: {
                withAnimation{
@@ -52,20 +60,24 @@ struct HomeView: View {
                ), mapPoint: mapSelection!)
                .presentationDetents([.medium])
             })
+            .overlay(alignment: .bottom) {
+               MapOverlayView(enumOverlay: $enumOverlay, onTapAdd: $onTapAdd, searchText: $searchText, overlayHeight: $overlayHeight, position: $position, temporaryMarkerCoordinate: $temporaryMarkerCoordinate, showTemporaryMarker: $showTemporaryMarker, addingPoint: $addingPoint, reader: reader)
+               
+            }
          }
          
          if addingPoint {
             Image(.customPinpoint)
                .foregroundColor(.red)
                .font(.title)
+               .zIndex(0)
          }
       }
       .ignoresSafeArea()
    }
 }
 
-#Preview {
-   HomeView()
-      .modelContainer(for: MapPoint.self)
-      .environmentObject(MapPointViewModel(dataSource: .shared))
-}
+//#Preview {
+//   HomeView()
+//      .environmentObject(MapPointViewModel(dataSource: .shared))
+//}

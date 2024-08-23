@@ -12,6 +12,19 @@ enum TimeFormatedType {
     case sec
     case min
     case days
+    
+    var stringValue: String {
+        switch self {
+        case .hours:
+            return "hours"
+        case .sec:
+            return "sec"
+        case .min:
+            return "min"
+        case .days:
+            return "days"
+        }
+    }
 }
 
 struct TimeFormated {

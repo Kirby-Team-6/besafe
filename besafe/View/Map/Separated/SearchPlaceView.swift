@@ -1,28 +1,43 @@
 import SwiftUI
 import MapKit
+import CoreLocation
 
 struct SearchPlaceView: View {
    @Environment(\.dismiss) private var dismiss
+   @Binding var enumOverlay: Overlay
+   @Binding var position: MapCameraPosition
+   @Binding var overlayHeight: CGFloat
+   @Binding var temporaryMarkerCoordinate: CLLocationCoordinate2D?
+   @Binding var showTemporaryMarker: Bool
+   @Binding var addingPoint: Bool
    @State private var searchText: String = ""
    @State private var searchResults: [MKMapItem] = []
    @State private var isSearching: Bool = false
-   @Binding var addingPoint: Bool
-//   @EnvironmentObject var watchConnect: WatchConnector
+   //   @EnvironmentObject var watchConnect: WatchConnect
+   @EnvironmentObject var router: Router
+   @EnvironmentObject var mapPointVM: MapPointViewModel
+   @EnvironmentObject var nearbyVM: SearchNearby
    
    var body: some View {
       ZStack{
          Color.neutral.ignoresSafeArea()
          VStack(spacing: 16) {
-            ModalityTitleView(cancelString: "Cancel", title: "New preferred custom", confirmString: "Submit") {
+            HStack{
+               Button("Cancel") {
+                  withAnimation{
+                     enumOverlay = .customNewPlace
+                  }
+               }
                
-            } submitFunc: {
-//               if watchConnect.session.isReachable{
-//                  searchText = "Done"
-//               }else{
-//                  searchText = "Nope"
-//               }
+               Spacer()
+               
+               Text("New Preferred Place")
+                  .frame(maxWidth: .infinity, alignment: .center)
+                  .font(.headline)
+               
+               Spacer()
             }
-
+            
             // Search Bar
             TextField("Search Maps", text: $searchText)
                .padding()
@@ -37,6 +52,7 @@ struct SearchPlaceView: View {
                // Handle map selection action
                // TODO: navigate ke page add custom pinpoint
                withAnimation{
+                  enumOverlay = .addPlace
                   addingPoint = true
                }
             }) {
@@ -55,56 +71,62 @@ struct SearchPlaceView: View {
             }
             .clipShape(RoundedRectangle(cornerRadius: 12))
             
-            // Suggested Places (Search Results)
             if isSearching {
                List {
                   ForEach(searchResults, id: \.self) { item in
-                     HStack {
-                        Image(systemName: "magnifyingglass.circle.fill")
-                           .foregroundColor(.blue)
-                           .font(.system(size: 24))
-                           .frame(width: 32, height: 32)
-                        VStack(alignment: .leading) {
-                           Text(item.name ?? "")
-                              .font(.headline)
-                           Text(item.placemark.title ?? "")
-                              .font(.subheadline)
-                              .foregroundColor(.gray)
+                     ListPlacesView(name: item.name ?? "", title: item.placemark.title ?? "")
+                        .onTapGesture {
+                           withAnimation{
+                              temporaryMarkerCoordinate = item.placemark.coordinate
+                              showTemporaryMarker = true
+                              enumOverlay = .addPlace
+                              // Update the map position to focus on the selected coordinate
+                              position = .camera(MapCamera(centerCoordinate: item.placemark.coordinate, distance: 1000))
+                              overlayHeight = UIScreen.main.bounds.height * 0.3
+                           }
                         }
-                     }
                   }
                }
                .listStyle(PlainListStyle())
-            } else {
-               // Dummy Data (Before Search)
-               //TODO: ganti jadi swift data yang udah disimpen custom safe placenya
-               // Jadi button utk pilih place
-               List {
-                  ForEach(dummyPlaces) { place in
-                     HStack {
-                        Image(systemName: place.icon)
-                           .foregroundColor(.blue)
-                           .font(.system(size: 24))
-                           .frame(width: 32, height: 32)
-                        VStack(alignment: .leading) {
-                           Text(place.name)
-                              .font(.headline)
-                           Text(place.description)
-                              .font(.subheadline)
-                              .foregroundColor(.gray)
+               .clipShape(RoundedRectangle(cornerRadius: 12))
+            }else{
+               HStack{
+                  Text("Suggestions")
+                     .font(.subheadline)
+                     .fontWeight(.semibold)
+                     .opacity(0.5)
+                  
+                  Spacer()
+               }
+               
+               List{
+                  ForEach(nearbyVM.nearbyPlaces){ item in
+                     ListPlacesView(name: item.name, title: item.address)
+                        .onTapGesture {
+                           withAnimation{
+                              temporaryMarkerCoordinate = item.coordinate
+                              showTemporaryMarker = true
+                              enumOverlay = .addPlace
+                              // Update the map position to focus on the selected coordinate
+                              position = .camera(MapCamera(centerCoordinate: item.coordinate, distance: 1000))
+                              overlayHeight = UIScreen.main.bounds.height * 0.3
+                           }
                         }
-                     }
                   }
                }
                .listStyle(PlainListStyle())
+               .clipShape(RoundedRectangle(cornerRadius: 12))
             }
+            
+            Spacer()
          }
          .padding()
       }
-//      .frame(height: UIScreen.main.bounds.height * 0.3)
       .clipShape(RoundedRectangle(cornerRadius: 25))
-      .offset(y: !addingPoint ? 0 : UIScreen.main.bounds.height)
       .shadow(radius: 16, y: 4)
+      .onAppear{
+         nearbyVM.requestLocationPermission()
+      }
    }
    
    private func searchPlaces() {
