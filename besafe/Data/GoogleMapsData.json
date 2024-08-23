@@ -1,0 +1,319 @@
+{
+     "html_attributions": [],
+     "results": [
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.298974100000001,
+                     "lng": 106.669916
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.297589869708499,
+                         "lng": 106.6712639302915
+                     },
+                     "southwest": {
+                         "lat": -6.300287830291504,
+                         "lng": 106.6685659697085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "Eka Hospital",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 720,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/101631461645784023437\">Eka Hospital</a>"
+                     ],
+                     "photo_reference": "AelY_CsHIdpJd63Ce31x9T-YQ40nUM58KkW_597ycyd3XuPcXxato_rFZFRnj8QdmXd7Fezy23tW6h2riQn0oLJ-t6xKE1kvvbYJ6N3QsBkr17g_vZwNM_l7l9KjfzXI5xi-JmHrNwsctZAB2ht0hgsY-STFvorkwXTdWh9P6htKY2WFrlsj",
+                     "width": 720
+                 }
+             ],
+             "place_id": "ChIJr0yhVCn7aS4RA10U-huoGmk",
+             "plus_code": {
+                 "compound_code": "PM29+CX Lengkong Gudang, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58PM29+CX"
+             },
+             "rating": 3.7,
+             "reference": "ChIJr0yhVCn7aS4RA10U-huoGmk",
+             "scope": "GOOGLE",
+             "types": [
+                 "police_station",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 3131,
+             "vicinity": "Central Business District, Jalan Boulevard BSD Timur Lot IX, Lengkong Gudang"
+         },
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.2960459,
+                     "lng": 106.668499
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.294707119708498,
+                         "lng": 106.6698482302915
+                     },
+                     "southwest": {
+                         "lat": -6.297405080291503,
+                         "lng": 106.6671502697085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "Proklamasi BSD Hospital",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 3036,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/111620486618613101564\">Johansen Sidabutar</a>"
+                     ],
+                     "photo_reference": "AelY_CtE272ies4RadeY_hjrWbV8GhMk9kbeS-9b6_44ziqhawM3245BiW2AE0RyzAmQEvJevK8Z-OOB9M4maPR0UB7CNs8lyyO9MOGEpE_-OV_3KLKM7G7b2mKjr2fdAXXYk4DB8zRzceaTd7Gd6MkpSS23Q5vm4-thi06poxUm6DBwSKwq",
+                     "width": 4048
+                 }
+             ],
+             "place_id": "ChIJQbhFGS_7aS4R7OW-pGCO8k0",
+             "plus_code": {
+                 "compound_code": "PM39+H9 Lengkong Gudang, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58PM39+H9"
+             },
+             "rating": 3.9,
+             "reference": "ChIJQbhFGS_7aS4R7OW-pGCO8k0",
+             "scope": "GOOGLE",
+             "types": [
+                 "hospital",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 205,
+             "vicinity": "Jalan Commercial Park Central Business Of District Bsd, Jalan Pahlawan Seribu No.7, Lengkong Gudang"
+         },
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.3030374,
+                     "lng": 106.6797355
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.301696419708497,
+                         "lng": 106.6811721802915
+                     },
+                     "southwest": {
+                         "lat": -6.304394380291502,
+                         "lng": 106.6784742197085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "PERMATA DALIMA HOSPITAL",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 2448,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/105644855384963324499\">Mar joko</a>"
+                     ],
+                     "photo_reference": "AelY_CuOZ_9-_aqon36_eS0rwIfX5qPghGeh-mT9LLBBwsEk5VrZWbr2f7ADBFV-GvsirXLLrPM10dMNRDqT06JWeQXUrbkFhSEBm_mIHG2FVCRKHug7cg5uFLieZfDLR7WhLybqQCsoSgMxXSa2yPA6DEDXnZQPITWmd6fqVxbh3USM3I5p",
+                     "width": 3264
+                 }
+             ],
+             "place_id": "ChIJVSAQ2tT6aS4Rai2jI9Us6ok",
+             "plus_code": {
+                 "compound_code": "MMWH+QV Rawa Buntu, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58MMWH+QV"
+             },
+             "rating": 4.5,
+             "reference": "ChIJVSAQ2tT6aS4Rai2jI9Us6ok",
+             "scope": "GOOGLE",
+             "types": [
+                 "hospital",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 313,
+             "vicinity": "Jalan Rawa Buntu Utara Sektor I.2, Blok UA No.26-27, Rawa Buntu"
+         },
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.294478,
+                     "lng": 106.6843069
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.293192169708497,
+                         "lng": 106.6856642302915
+                     },
+                     "southwest": {
+                         "lat": -6.295890130291502,
+                         "lng": 106.6829662697085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "RS RIS Hospital BSD",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 837,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/100659220261675944892\">RS RIS Hospital BSD</a>"
+                     ],
+                     "photo_reference": "AelY_CuV79GlrMxkBeZ_Qh07U4DqhDLmzMMUUNcOfjRynQFAxuGCdMiqhS4WltwbTUyxmNhudbeHbPXbkMMgIU4XpKPOtiDRzG9B4TGFIpHYqaqLK1ghec2Z_Ph09GG5qKCjL-DW37z4SPcbTcGZinBCb8p_icRTgXpSdr3KiN4uTM-shKlm",
+                     "width": 1165
+                 }
+             ],
+             "place_id": "ChIJa9nP4tr6aS4R0dNhRDs94Js",
+             "plus_code": {
+                 "compound_code": "PM4M+6P East Lengkong Gudang, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58PM4M+6P"
+             },
+             "rating": 3.6,
+             "reference": "ChIJa9nP4tr6aS4R0dNhRDs94Js",
+             "scope": "GOOGLE",
+             "types": [
+                 "university",
+                 "doctor",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 771,
+             "vicinity": "Jalan Lengkong Gudang Timur Raya No.777, BSD CITY"
+         },
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.2989782,
+                     "lng": 106.6699382
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.297591569708498,
+                         "lng": 106.6712860802915
+                     },
+                     "southwest": {
+                         "lat": -6.300289530291503,
+                         "lng": 106.6685881197085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "Rehabilitasi Medik & Fisioterapi",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 678,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/117389923860375674468\">Rehabilitasi Medik &amp; Fisioterapi</a>"
+                     ],
+                     "photo_reference": "AelY_CttUDEzO5Ev8CWs2ziCI-EjyJRxdDfGrnYJMhkUYXfOGuu4DDBhk-jAlYjnDBLUgYoAXIoo_Sb_YcApqlwhqxfBYcL8iIQzvhi7hPiCUdc-O3VbGB7KUsIviFIqSTh5Fe5_irISSnBxKCsQCnFGbs0JeApLesxypxagAV57aPRNldAD",
+                     "width": 687
+                 }
+             ],
+             "place_id": "ChIJqZIpkJP7aS4Ra6QQ6fQw2R8",
+             "plus_code": {
+                 "compound_code": "PM29+CX Lengkong Gudang, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58PM29+CX"
+             },
+             "rating": 5,
+             "reference": "ChIJqZIpkJP7aS4Ra6QQ6fQw2R8",
+             "scope": "GOOGLE",
+             "types": [
+                 "hospital",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 13,
+             "vicinity": "Central Business District, Lot IX Jalan Boulevard BSD Timur, Lengkong Gudang"
+         },
+         {
+             "business_status": "OPERATIONAL",
+             "geometry": {
+                 "location": {
+                     "lat": -6.294478,
+                     "lng": 106.6843069
+                 },
+                 "viewport": {
+                     "northeast": {
+                         "lat": -6.293192169708497,
+                         "lng": 106.6856642302915
+                     },
+                     "southwest": {
+                         "lat": -6.295890130291502,
+                         "lng": 106.6829662697085
+                     }
+                 }
+             },
+             "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/hospital-71.png",
+             "icon_background_color": "#F88181",
+             "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+             "name": "MYcardia Eka Hospital BSD - Pusat Aritmia Jantung, Intervensi dan Vaskular",
+             "opening_hours": {
+                 "open_now": true
+             },
+             "photos": [
+                 {
+                     "height": 332,
+                     "html_attributions": [
+                         "<a href=\"https://maps.google.com/maps/contrib/100704749801699327394\">MYcardia Eka Hospital BSD - Pusat Aritmia Jantung, Intervensi dan Vaskular</a>"
+                     ],
+                     "photo_reference": "AelY_CtZgQiDZIRz3Z4jcQWr5JGdm0djTl9WkoT9qqsFmByz2GrdNiZD5SPhE2X48zofMsdhiqyB7lfb_pQkZ95CSFW_1_dlgJGg0MIKmaMx11G_urnhSgbur9jgkGd9i-E0UcqiEaOUH60AoRHa9sHBxcrdSOVpV5cRRyjVY2hJxUTQERoS",
+                     "width": 332
+                 }
+             ],
+             "place_id": "ChIJS8GZ4_T7aS4RmMaAfqCLOTE",
+             "plus_code": {
+                 "compound_code": "PM29+CX Lengkong Gudang, South Tangerang City, Banten, Indonesia",
+                 "global_code": "6P58PM29+CX"
+             },
+             "rating": 5,
+             "reference": "ChIJS8GZ4_T7aS4RmMaAfqCLOTE",
+             "scope": "GOOGLE",
+             "types": [
+                 "convenience_store",
+                 "health",
+                 "point_of_interest",
+                 "establishment"
+             ],
+             "user_ratings_total": 16,
+             "vicinity": "Central Business District, Jalan Boulevard BSD Timur, Lengkong Gudang"
+         }
+     ],
+     "status": "OK"
+ }

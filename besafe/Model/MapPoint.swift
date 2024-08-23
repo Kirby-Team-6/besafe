@@ -1,0 +1,31 @@
+//
+//  MapPoint.swift
+//  besafe
+//
+//  Created by Paulus Michael on 14/08/24.
+//
+
+import SwiftUI
+import MapKit
+import CoreLocation
+import SwiftData
+
+@Model
+class MapPoint {
+    //TODO: ini gada id, address ?
+   var name: String
+   var latitude: Double
+   var longitude: Double
+   var markerIndex: Int
+   
+   var coordinate: CLLocationCoordinate2D {
+      CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+   }
+   
+   init(name: String, coordinate: CLLocationCoordinate2D, markerIndex: Int) {
+      self.name = name
+      self.latitude = coordinate.latitude
+      self.longitude = coordinate.longitude
+      self.markerIndex = markerIndex
+   }
+}
