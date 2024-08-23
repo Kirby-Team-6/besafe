@@ -61,6 +61,10 @@
 		FB1E826D2C77740000B89D94 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62647B2C6C91B400CC2597 /* RemoteDataSource.swift */; };
 		FB1E82702C77A41F00B89D94 /* SavePlace.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */; };
 		FB1E82712C77A41F00B89D94 /* SavePlace.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */; };
+		FB1E82732C78133A00B89D94 /* bsd+custom+kumulo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E82722C78133A00B89D94 /* bsd+custom+kumulo.gpx */; };
+		FB1E82742C78133A00B89D94 /* bsd+custom+kumulo.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E82722C78133A00B89D94 /* bsd+custom+kumulo.gpx */; };
+		FB1E82762C78150200B89D94 /* gop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E82752C78150200B89D94 /* gop.gpx */; };
+		FB1E82772C78150200B89D94 /* gop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FB1E82752C78150200B89D94 /* gop.gpx */; };
 		FB6263FF2C6C229E00CC2597 /* besafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6263FE2C6C229E00CC2597 /* besafeApp.swift */; };
 		FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264022C6C22A000CC2597 /* Assets.xcassets */; };
 		FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6264052C6C22A000CC2597 /* Preview Assets.xcassets */; };
@@ -233,6 +237,8 @@
 		ACE50A792C73053D007CA42D /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		ACF3E0F82C7589AD00A99AD7 /* WatchConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
 		FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SavePlace.gpx; sourceTree = "<group>"; };
+		FB1E82722C78133A00B89D94 /* bsd+custom+kumulo.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "bsd+custom+kumulo.gpx"; sourceTree = "<group>"; };
+		FB1E82752C78150200B89D94 /* gop.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = gop.gpx; sourceTree = "<group>"; };
 		FB6263FB2C6C229E00CC2597 /* besafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = besafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6263FE2C6C229E00CC2597 /* besafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = besafeApp.swift; sourceTree = "<group>"; };
 		FB6264022C6C22A000CC2597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -447,6 +453,8 @@
 			isa = PBXGroup;
 			children = (
 				FB1E826F2C77A41F00B89D94 /* SavePlace.gpx */,
+				FB1E82722C78133A00B89D94 /* bsd+custom+kumulo.gpx */,
+				FB1E82752C78150200B89D94 /* gop.gpx */,
 			);
 			path = MockLocation;
 			sourceTree = "<group>";
@@ -942,7 +950,9 @@
 			files = (
 				40B72FCE2C6D0ED300145D66 /* GoogleMapsData.json in Resources */,
 				FB1E82702C77A41F00B89D94 /* SavePlace.gpx in Resources */,
+				FB1E82762C78150200B89D94 /* gop.gpx in Resources */,
 				FBACF0C92C75E1A900C3E522 /* MockLocation.gpx in Resources */,
+				FB1E82732C78133A00B89D94 /* bsd+custom+kumulo.gpx in Resources */,
 				FB6264062C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62646F2C6C39E700CC2597 /* Page1.storyboard in Resources */,
 				FB6264032C6C22A000CC2597 /* Assets.xcassets in Resources */,
@@ -967,7 +977,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1E82772C78150200B89D94 /* gop.gpx in Resources */,
 				FBACF0CA2C75E1A900C3E522 /* MockLocation.gpx in Resources */,
+				FB1E82742C78133A00B89D94 /* bsd+custom+kumulo.gpx in Resources */,
 				FB62642E2C6C22A000CC2597 /* Preview Assets.xcassets in Resources */,
 				FB62642B2C6C22A000CC2597 /* Assets.xcassets in Resources */,
 				FB1E82712C77A41F00B89D94 /* SavePlace.gpx in Resources */,

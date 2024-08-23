@@ -53,7 +53,7 @@ class DirectionViewmodel: ObservableObject {
                 data.forEach{ v in
                     let distance =  SafePlaceUtils.calculateDistance(from: CLLocation(latitude: location.latitude, longitude: location.longitude), to: v)
                     
-                    print("\(v.displayName?.text ?? "") | \(v.primaryType) | \(distance)")
+                    print("\(v.displayName?.text ?? "") | \(v.primaryType) | \(distance) | \(v.location?.latitude),\(v.location?.longitude)")
                 }
                 self.loadData = false
                 

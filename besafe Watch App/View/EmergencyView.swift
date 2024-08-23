@@ -26,7 +26,7 @@ struct EmergencyButtonView: View {
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 5)
                         
-                        Text(watchConnect.routeModel!.placeDirectionName)
+                        Text(viewModel.selectedSafePlace?.displayName?.text ?? "")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
