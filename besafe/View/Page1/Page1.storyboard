@@ -2,44 +2,181 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Page1 View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Page1" id="Y6W-OH-hqX" customClass="Page1ViewController" customModule="Kirbygoestohome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page1" id="Y6W-OH-hqX" customClass="Page1ViewController" customModule="besafe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ww-ri-vHz">
-                                <rect key="frame" x="171.66666666666666" y="89" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y34-eu-vfS">
-                                <rect key="frame" x="159" y="140" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buttonClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xIo-18-r32"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yZm-qh-Mfl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="34.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0K-LM-0F4">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHT-FZ-0oe">
+                                        <rect key="frame" x="147.66666666666666" y="0.0" width="97.666666666666657" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-WQ-Qw7">
+                                        <rect key="frame" x="295.33333333333331" y="0.0" width="97.666666666666686" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nHT-Dd-DwF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMv-5h-2EO">
+                                <rect key="frame" x="0.0" y="93.333333333333314" width="393" height="758.66666666666674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri9-lq-O0y">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="758.66666666666663"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="EJd-kX-40v" userLabel="About BeSafe">
+                                                <rect key="frame" x="24" y="24" width="345" height="341.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About BeSafe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiC-NX-1Ps">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-dC-4bz">
+                                                        <rect key="frame" x="0.0" y="39.333333333333371" width="329" height="122"/>
+                                                        <string key="text">BeSafe is available on both iOS and Apple Watch, offering a seamless way to quickly navigate to a safe location when you feel threatened or need to evade a potential stalker. The app guides you to the nearest secure place with just a tap.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-3v-zHP">
+                                                        <rect key="frame" x="0.0" y="180.33333333333337" width="345" height="81.333333333333314"/>
+                                                        <string key="text">For quicker access, we recommend setting BeSafe as a complication on your watch face, ensuring you can swiftly find safety when it matters most.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As you navigate this app will automatically share your live location to your selected emergency contact" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzj-Nu-Mxy">
+                                                        <rect key="frame" x="0.0" y="280.66666666666669" width="323.66666666666669" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="kZl-2c-mr6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zOR-dC-4bz" secondAttribute="trailing" constant="16" id="yYc-NE-RSg"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="qNw-v5-aNw" userLabel="About Safe Place">
+                                                <rect key="frame" x="24" y="389.66666666666669" width="345" height="201.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the safe place" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ8-0f-MzR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="163.33333333333334" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur4-iR-ubD">
+                                                        <rect key="frame" x="0.0" y="39.333333333333343" width="329" height="162.33333333333334"/>
+                                                        <string key="text">We are compiling a list of locations that may have individuals or groups available to assist you. In doing so, we take into account the distance to the location, their hours of operation, and the type of service they offer. The goal is to ensure that you have access to the most reliable and convenient support when you need it.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ur4-iR-ubD" secondAttribute="trailing" constant="16" id="AoX-8P-LwE"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="smL-rF-SeR"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-Vj-0Nz" userLabel="About Live Loc">
+                                                <rect key="frame" x="24" y="615.33333333333326" width="345" height="363"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the live location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-NT-phl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQU-9x-SJz">
+                                                        <rect key="frame" x="0.0" y="39.333333333333371" width="329" height="142.33333333333334"/>
+                                                        <string key="text">As you navigate to safety, this app will automatically share your live location with your chosen emergency contact. This ensures that your friends and family stay informed of your real-time location, providing an added layer of security and peace of mind.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-ik-lQq">
+                                                        <rect key="frame" x="0.0" y="200.66666666666674" width="344.33333333333331" height="162.33333333333337"/>
+                                                        <string key="text">This app utilizes on-device GPS to securely track your location as you navigate to a safe place. This location data will be streamed to a dedicated website, accessible only by your designated emergency contact. Prioritizing your safety and privacy, this information is used solely to keep your friends and family informed and reassured during critical moments.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="MWp-a9-SDA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AQU-9x-SJz" secondAttribute="trailing" constant="16" id="RGY-oc-9Dt"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="neutral"/>
+                                        <constraints>
+                                            <constraint firstItem="EJd-kX-40v" firstAttribute="leading" secondItem="ri9-lq-O0y" secondAttribute="leadingMargin" constant="16" id="2av-MY-2IZ"/>
+                                            <constraint firstItem="qNw-v5-aNw" firstAttribute="top" secondItem="EJd-kX-40v" secondAttribute="bottom" constant="24" id="2w2-OT-LvG"/>
+                                            <constraint firstItem="XF7-Vj-0Nz" firstAttribute="top" secondItem="qNw-v5-aNw" secondAttribute="bottom" constant="24" id="IV5-0r-G67"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qNw-v5-aNw" secondAttribute="trailing" constant="16" id="IYi-3I-IRB"/>
+                                            <constraint firstItem="EJd-kX-40v" firstAttribute="top" secondItem="ri9-lq-O0y" secondAttribute="top" constant="24" id="Li9-Ps-Y70"/>
+                                            <constraint firstItem="qNw-v5-aNw" firstAttribute="leading" secondItem="ri9-lq-O0y" secondAttribute="leadingMargin" constant="16" id="Qxy-ZV-ZCc"/>
+                                            <constraint firstItem="XF7-Vj-0Nz" firstAttribute="leading" secondItem="qNw-v5-aNw" secondAttribute="leading" id="YoY-KQ-V2N"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="EJd-kX-40v" secondAttribute="trailing" constant="16" id="r0t-MO-Ei2"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="XF7-Vj-0Nz" secondAttribute="trailing" constant="16" id="udH-ii-bNb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="top" secondItem="5IF-2P-M6D" secondAttribute="top" id="5U5-wS-aH4"/>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="trailing" secondItem="5IF-2P-M6D" secondAttribute="trailing" id="EBg-F4-prv"/>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="centerX" secondItem="NMv-5h-2EO" secondAttribute="centerX" id="KZ3-Kk-9eW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ri9-lq-O0y" secondAttribute="bottom" id="Krw-J8-fmb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ri9-lq-O0y" secondAttribute="trailing" id="UvQ-N5-pXU"/>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="centerX" secondItem="NMv-5h-2EO" secondAttribute="centerX" id="WW5-W5-lwX"/>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="height" secondItem="NMv-5h-2EO" secondAttribute="height" id="d8U-w4-dwO"/>
+                                    <constraint firstItem="ri9-lq-O0y" firstAttribute="leading" secondItem="5IF-2P-M6D" secondAttribute="leading" id="hi0-eM-aZQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="xTp-Wl-93K"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5IF-2P-M6D"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="neutral"/>
                         <constraints>
-                            <constraint firstItem="y34-eu-vfS" firstAttribute="top" secondItem="3Ww-ri-vHz" secondAttribute="bottom" constant="30" id="6gy-vn-cf1"/>
-                            <constraint firstItem="3Ww-ri-vHz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iaK-Mx-cUV"/>
-                            <constraint firstItem="y34-eu-vfS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="p7F-dV-aa7"/>
-                            <constraint firstItem="3Ww-ri-vHz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="s9C-wB-8xR"/>
+                            <constraint firstItem="NMv-5h-2EO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6rH-8m-UFS"/>
+                            <constraint firstItem="yZm-qh-Mfl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ORd-A3-QzW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yZm-qh-Mfl" secondAttribute="trailing" id="RA6-Ve-fCd"/>
+                            <constraint firstItem="NMv-5h-2EO" firstAttribute="top" secondItem="yZm-qh-Mfl" secondAttribute="bottom" id="f39-ui-Irl"/>
+                            <constraint firstItem="yZm-qh-Mfl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iEt-7A-P55"/>
+                            <constraint firstAttribute="bottom" secondItem="NMv-5h-2EO" secondAttribute="bottom" id="rd6-pA-wox"/>
+                            <constraint firstItem="NMv-5h-2EO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yhd-Ub-OhR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelPlaceholder" destination="z0K-LM-0F4" id="c5o-LA-xGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,8 +184,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="neutral">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

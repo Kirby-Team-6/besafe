@@ -1,36 +1,71 @@
-//
-//  besafeTests.swift
-//  besafeTests
-//
-//  Created by Rifat Khadafy on 14/08/24.
-//
-
 import XCTest
-@testable import besafe
+import CoreLocation
+@testable import besafe // Replace with the name of your main project
 
-final class besafeTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class SafePlaceUtilsTests: XCTestCase {
+    
+//    func testSortSafePlaces_withOpenPlaces() {
+//        // Arrange
+//        let userLocation = CLLocation(latitude: -6.200000, longitude: 106.816666)
+//        let dummyPlaces = [
+//            PlaceModel(id: "1", location: Location(latitude: -6.200000, longitude: 106.816666), currentOpeningHours: CurrentOpeningHours(openNow: true), primaryType: "police", displayName: DisplayName(text: "Police Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+//            PlaceModel(id: "2", location: Location(latitude: -6.214621, longitude: 106.84513), currentOpeningHours: CurrentOpeningHours(openNow: true), primaryType: "fire_station", displayName: DisplayName(text: "Fire Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+//            PlaceModel(id: "3", location: Location(latitude: -6.217, longitude: 106.83), currentOpeningHours: CurrentOpeningHours(openNow: false), primaryType: "hospital", displayName: DisplayName(text: "Hospital", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+//            PlaceModel(id: "4", location: Location(latitude: -6.22, longitude: 106.82), currentOpeningHours: CurrentOpeningHours(openNow: true), primaryType: "hotel", displayName: DisplayName(text: "Hotel", languageCode: "en"), shortFormattedAddress: "Jakarta")
+//        ]
+//        
+//        let dummyCustomPlaces = [
+//            MapPoint(name: "Custom Place 1", coordinate: CLLocationCoordinate2D(latitude: -6.22, longitude: 106.85), markerIndex: 0),
+//            MapPoint(name: "Custom Place 2", coordinate: CLLocationCoordinate2D(latitude: -6.22, longitude: 106.813), markerIndex: 0)
+//        ]
+//        
+//        // Act
+//        let sortedPlaces = SafePlaceUtils.sortSafePlaces(dummyPlaces, customPlaces: dummyCustomPlaces, from: userLocation)
+//        
+//        // Assert
+//        XCTAssertEqual(sortedPlaces.count, 5, "Expected 5 places in the sorted list, including 2 custom places.")
+//        XCTAssertEqual(sortedPlaces.first?.displayName?.text, "Custom Place 1", "Custom places should be prioritized.")
+//        XCTAssertEqual(sortedPlaces.last?.displayName?.text, "Hotel", "The last place should be the hotel.")
+//    }
+    
+    func testSortSafePlaces_withNoOpenPlaces() {
+        // Arrange
+        let userLocation = CLLocation(latitude: -6.200000, longitude: 106.816666)
+        let dummyPlaces = [
+            PlaceModel(id: "1", location: Location(latitude: -6.200000, longitude: 106.816666), currentOpeningHours: CurrentOpeningHours(openNow: false), primaryType: "police", displayName: DisplayName(text: "Police Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+            PlaceModel(id: "2", location: Location(latitude: -6.214621, longitude: 106.84513), currentOpeningHours: CurrentOpeningHours(openNow: false), primaryType: "fire_station", displayName: DisplayName(text: "Fire Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+            PlaceModel(id: "3", location: Location(latitude: -6.217, longitude: 106.83), currentOpeningHours: CurrentOpeningHours(openNow: false), primaryType: "hospital", displayName: DisplayName(text: "Hospital", languageCode: "en"), shortFormattedAddress: "Jakarta")
+        ]
+        
+        let dummyCustomPlaces = [
+            MapPoint(name: "Custom Place 1", coordinate: CLLocationCoordinate2D(latitude: -6.22, longitude: 106.85), markerIndex: 0)
+        ]
+        
+        // Act
+        let sortedPlaces = SafePlaceUtils.sortSafePlaces(dummyPlaces, customPlaces: dummyCustomPlaces, from: userLocation)
+        
+        // Assert
+        XCTAssertEqual(sortedPlaces.count, 1, "Expected 1 place in the sorted list, which is the custom place.")
+        XCTAssertEqual(sortedPlaces.first?.displayName?.text, "Custom Place 1", "Custom places should be prioritized when no other places are open.")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testSortSafePlaces_withEqualDistanceDifferentPriority() {
+        // Arrange
+        let userLocation = CLLocation(latitude: -6.200000, longitude: 106.816666)
+        let dummyPlaces = [
+            PlaceModel(id: "1", location: Location(latitude: -6.200000, longitude: 106.816666), currentOpeningHours: CurrentOpeningHours(openNow: true), primaryType: "police", displayName: DisplayName(text: "Police Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+            PlaceModel(id: "2", location: Location(latitude: -6.200000, longitude: 106.816666), currentOpeningHours: CurrentOpeningHours(openNow: true), primaryType: "fire_station", displayName: DisplayName(text: "Fire Station", languageCode: "en"), shortFormattedAddress: "Jakarta"),
+        ]
+        
+        let dummyCustomPlaces = [
+            MapPoint(name: "Custom Place 1", coordinate: CLLocationCoordinate2D(latitude: -6.22, longitude: 106.85), markerIndex: 0)
+        ]
+        
+        // Act
+        let sortedPlaces = SafePlaceUtils.sortSafePlaces(dummyPlaces, customPlaces: dummyCustomPlaces, from: userLocation)
+        
+        // Assert
+        XCTAssertEqual(sortedPlaces.first?.displayName?.text, "Police Station", "Police stations should have a higher priority than fire stations.")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
+

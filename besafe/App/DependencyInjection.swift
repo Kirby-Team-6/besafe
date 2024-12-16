@@ -10,14 +10,20 @@ import Foundation
 class DI {
     static let shared = DI()
     
-    private init() {
-        
-    }
+    private init() {}
     
-    lazy var localDataSource: LocalDataSource = LocalDataSourceImpl()
-    lazy var remoteDataSource: RemoteDataSource  = RemoteDataSourceImpl()
+    private var swiftDataSource: SwiftDataService?
+    private lazy var remoteDataSource: RemoteDataSource = RemoteDataSourceImpl()
+    
+    func initialize() async {
+        swiftDataSource = await SwiftDataService.shared
+    }
     
     func page1Viewmodel() -> Page1Viewmodel {
         return Page1Viewmodel()
+    }
+        
+    func mainViewmodel() -> MainViewModel {
+        MainViewModel(remoteDataSource: remoteDataSource, swiftDataSource: swiftDataSource!)
     }
 }
